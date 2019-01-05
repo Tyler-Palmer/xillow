@@ -40,7 +40,7 @@ authRouter.post("/signup", (req, res) => {
     })
 })
 
-//Signup Post Route
+//Login Post Route
 
 authRouter.post("/login", (req,res) => {
     //Find the user with the submitted username
