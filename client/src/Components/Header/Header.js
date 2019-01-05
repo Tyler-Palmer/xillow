@@ -22,6 +22,7 @@ class Header extends React.Component {
             isActive: activeNumber,
             slideNumber
         }, () =>{
+            //Help to reload the video
             this.refs.video.load();
         })
     }
@@ -51,7 +52,7 @@ class Header extends React.Component {
                                     className="transparent-button"
                                     onClick={() => this.handleSlide(3, 2)}
                                     style = {{backgroundColor: this.state.isActive === 3 && "rgba(0,116,228,0.7)"}}>
-                                    Zestimate
+                                    Xestimate
                                     </button>
                             </div>
                             <form>
