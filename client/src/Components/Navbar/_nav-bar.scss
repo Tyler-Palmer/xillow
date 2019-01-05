@@ -1,0 +1,35 @@
+@import "_base";
+
+.nav-container {
+    display: flex;
+    background-color: whitesmoke;
+    height: 50px;
+    font-family: $roboto;
+
+    .navbar-brand__image {
+        height: 100px;
+        width: 100px;
+        background-size: $bg-cover;
+        background-position: $bg-center;
+        position: absolute
+    }
+
+    .nav-container__list-container {
+        width: 80%;
+        margin-left: 100px;
+
+        .nav-container__list-small-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            li {
+                display: flex;
+                margin: 0 10px;
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+}
