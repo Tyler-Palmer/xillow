@@ -1,5 +1,11 @@
 @import "../../ComponentStyles/base";
+@import "./testimony-slider";
 
-.customer-testimony__container{
-    font-family: $roboto
+.customer-testimony__container {
+    font-family: $roboto;
+    display: flex;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: 50px 0;
 }

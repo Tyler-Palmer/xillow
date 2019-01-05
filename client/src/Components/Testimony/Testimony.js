@@ -29,7 +29,7 @@ class Testimony extends React.Component {
                 })
                 )
             }
-        }, 8000)
+        }, 30000)
     }
     render() {
 
@@ -40,7 +40,8 @@ class Testimony extends React.Component {
                     {...each}
                     key={id}
                     id={id}
-                    slide={this.state.slide} />)}
+                    slide={this.state.slide} 
+                    />)}
             </div>
         )
     }
