@@ -1,4 +1,4 @@
-@import "_base";
+@import "../../ComponentStyles/_base.scss";
 
 .nav-container {
     display: flex;
@@ -11,16 +11,20 @@
         width: 100px;
         background-size: $bg-cover;
         background-position: $bg-center;
-        position: absolute
+        position: absolute;
+        left: 50px;
+        z-index: 50;
+        box-shadow: 0 0 10px 2px rgba(1,1,1,0.5)
     }
 
     .nav-container__list-container {
-        width: 80%;
+        width: 50%;
         margin-left: 100px;
 
         .nav-container__list-small-container {
             display: flex;
             align-items: center;
+            justify-content: space-evenly;
             height: 100%;
 
             li {

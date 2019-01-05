@@ -1,11 +1,10 @@
 import React from "react"
-import Nav from "./Components/Navbar/Nav"
+import Header from "./Components/Header/Header"
 
 const App = () =>{
     return(
         <div>
-            <Nav />
-            <h1>Hello WORLD</h1>
+            <Header />
         </div>
     )
 }
