@@ -1,23 +1,28 @@
 const express = require('express')
-const User = require('../models/User')
 const authRouter = express.Router()
+const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 
+//Get All
+
 authRouter.get("/", (req, res, next) => {
+    // return res.status(200).send("Hello")
+    console.log("Im")
     User.find((err, users) => {
+        console.log("hey")
         if (err) {
             res.status(500)
-            console.log(res)
             return next(err)
         }
-        console.log(res)
         return res.status(200).send(users)
     })
 })
 
+//Signup Post Route
 authRouter.post("/signup", (req, res) => {
     //Look for user with the requested username
-    User.findOne({username: req.body.username}, (err, existingUser) => {
+    console.log(req.body)
+    User.findOne({email: req.body.email}, (err, existingUser) => {
         if(err){
             return res.status(500).send({success: false, err})
         //If the db doesn't return "null", it means there is already a user with that username
@@ -35,9 +40,11 @@ authRouter.post("/signup", (req, res) => {
     })
 })
 
+//Signup Post Route
+
 authRouter.post("/login", (req,res) => {
     //Find the user with the submitted username
-    User.findOne({username: req.body.username.toLowerCase()}, (err, user) => {
+    User.findOne({email: req.body.email.toLowerCase()}, (err, user) => {
         if(err) return res.status(500).send(err)
         //If submitted user isn't in the db or password is wrong:
         if(!user || user.password !== req.body.password){

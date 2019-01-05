@@ -14,7 +14,7 @@ app.use(morgan('dev'))
 app.use("/api", expressJwt({secret: process.env.SECRET}))
 
 //Routes
-app.use("/auth", require("./routes.auth"))
+app.use("/auth", require("./routes/auth"))
 
 //Database
 mongoose.connect('mongodb://http:localhost:27017',{ useNewUrlParser:true }, () => {
@@ -23,10 +23,10 @@ mongoose.connect('mongodb://http:localhost:27017',{ useNewUrlParser:true }, () =
 
 //Error Handling
 app.use((err,req, res,next) => {
-    console.error(err)
-    if(err.name === "UnauthorizedError"){
-        res.status(err.status)
-    }
+    // console.error(err)
+    // if(err.name === "UnauthorizedError"){
+    //     res.status(err.status)
+    // }
     return res.send({message: err.message})
 })
 
