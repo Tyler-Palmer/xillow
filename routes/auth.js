@@ -3,6 +3,18 @@ const User = require('../models/User')
 const authRouter = express.Router()
 const jwt = require('jsonwebtoken')
 
+authRouter.get("/", (req, res, next) => {
+    User.find((err, users) => {
+        if (err) {
+            res.status(500)
+            console.log(res)
+            return next(err)
+        }
+        console.log(res)
+        return res.status(200).send(users)
+    })
+})
+
 authRouter.post("/signup", (req, res) => {
     //Look for user with the requested username
     User.findOne({username: req.body.username}, (err, existingUser) => {
