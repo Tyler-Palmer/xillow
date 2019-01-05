@@ -17,6 +17,9 @@ mongoose.connect('mongodb://http:localhost:27017',{ useNewUrlParser:true }, () =
 })
 
 //Error Handling
+app.use((res,req,next,err) => {
+    return res.status(500).send(err)
+})
 
 // Server listen
 app.listen(PORT, () => {
