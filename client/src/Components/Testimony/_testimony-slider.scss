@@ -1,0 +1,12 @@
+@import "../../ComponentStyles/base";
+
+.customer-testimony__small-container{
+    display: flex;
+
+    .customer-testimony__image{
+        height: 200px;
+        width: 200px;
+        background-size: $bg-cover;
+        background-position: $bg-center 
+    }
+}
