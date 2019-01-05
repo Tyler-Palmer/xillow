@@ -44,6 +44,7 @@
 
                 form {
                     position: relative;
+                    z-index: 100;
 
                     input {
                         width: 100%;
@@ -51,6 +52,7 @@
                         font-size: 20px;
                         padding: 10px 10px;
                         border-radius: 5px;
+                        z-index: 100;
                     }
 
                     button {

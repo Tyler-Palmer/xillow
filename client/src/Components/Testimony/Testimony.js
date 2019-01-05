@@ -29,7 +29,7 @@ class Testimony extends React.Component {
                 })
                 )
             }
-        }, 30000)
+        }, 10000)
     }
     render() {
 
