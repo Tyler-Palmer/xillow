@@ -3,6 +3,7 @@ const app = express()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const PORT = process.env.PORT || 8000
+require("dotenv").config()
 
 //Middleware
 app.use(express.json())
