@@ -3,8 +3,8 @@ import axios from 'axios'
 
 const { Consumer, Provider } = React.createContext()
 
-class UserProvider extends Component{
-    constructor(){
+class UserProvider extends Component {
+    constructor() {
         super()
         this.state = {
             users: [],
@@ -16,26 +16,28 @@ class UserProvider extends Component{
 
     signup = (userInfo) => {
         return axios.post('/auth/signup', userInfo)
-        .then(response => {
-            const { user, token } =response.data
-            this.setState({
-                activeUser: user,
-                token: token
+            .then(response => {
+                const { user, token } = response.data
+                localStorage.setItem("token", token);
+                localStorage.setItem("user", JSON.stringify(user));
+                this.setState({
+                    activeUser: user,
+                    token: token
+                })
+                //Pass on response so that it can be used 
+                return response
             })
-            //Pass on response so that it can be used 
-            return response
-        })
     }
-    render(){
-        return(
+    render() {
+        return (
             <Provider value={{
-                    signup: this.signup,
-                    ...this.state
+                signup: this.signup,
+                ...this.state
             }}>
                 {this.props.children}
             </Provider>
         )
-    } 
+    }
 }
 
 export const withUser = C => props => (

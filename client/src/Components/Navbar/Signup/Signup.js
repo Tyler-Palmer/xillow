@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withUser } from '../../Context/UserProvider'
 
 class Signup extends Component {
     constructor() {
@@ -8,6 +9,13 @@ class Signup extends Component {
             password: ""
         }
     }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.props.signup(this.state)
+        .then(() => this.props.history.push("/auth"))
+    }
+
     render() {
         return (
             <div className="signup-form-container">
@@ -32,4 +40,4 @@ class Signup extends Component {
     }
 }
 
-export default Signup
+export default withUser(Signup)
