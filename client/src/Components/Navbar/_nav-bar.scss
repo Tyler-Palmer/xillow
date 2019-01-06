@@ -18,14 +18,15 @@
         box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5);
         transition: all 0.5s linear
     }
-    .nav-container__bars-container{
+
+    .nav-container__bars-container {
         position: absolute;
         right: 20px;
         top: 10px;
         z-index: 50;
         cursor: pointer;
 
-        .nav-container__bars{
+        .nav-container__bars {
             color: whitesmoke;
             font-size: 25px;
             width: 50px;
@@ -39,15 +40,16 @@
         }
 
         @keyframes exist {
-            from{
+            from {
                 opacity: 0.2
             }
-            to{
+
+            to {
                 opacity: 1;
             }
-        }    
+        }
     }
-   
+
     .nav-container__list-container {
         width: 50%;
         margin-left: 100px;
@@ -68,14 +70,55 @@
             }
         }
     }
+}
 
-    .nav__modal-pop-up{
-        
-        .nav__small-modal{
-            
-            h3{
-                color: white;
+.nav__modal-pop-up {
+    display: flex;
+    justify-content: flex-end;
+
+    .nav__small-modal {
+        background: white;
+        width: 300px; 
+        animation: modalMoveOut 0.3s linear;
+
+        h3 {
+            color: black;
+            font-size: 18px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background: whitesmoke;
+            cursor: pointer;
+
+            .arrow-icons{
+                margin: 0 15px;
+                font-size: 13px;
             }
+
+            &:hover{
+                color: rgba(82, 179, 217, 1);
+            }
+        }
+
+        ul{
+            margin: 15px;
+
+            li{
+                cursor: pointer;
+
+                &:hover{
+                    color: crimson
+                }
+            }
+        }
+    }
+
+    @keyframes modalMoveOut {
+        from{
+            width: 0
+        }
+        to{
+            width: 300px;
         }
     }
 }
@@ -99,7 +142,7 @@
 
 @media (max-width: 768px) and (min-width: 561px) {
     .nav-container {
-        .navbar-brand__image{
+        .navbar-brand__image {
             width: 50px;
             height: 50px;
         }
@@ -108,7 +151,7 @@
 
 @media (max-width: 560px) and (min-width: 425px) {
     .nav-container {
-        .navbar-brand__image{
+        .navbar-brand__image {
             width: 50px;
             height: 50px;
         }
@@ -117,7 +160,7 @@
 
 @media (max-width: 424px) {
     .nav-container {
-        .navbar-brand__image{
+        .navbar-brand__image {
             width: 50px;
             height: 50px;
         }

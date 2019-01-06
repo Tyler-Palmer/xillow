@@ -12,7 +12,7 @@ const customStyle = {
         right: 0,
         bottom: 0,
         backgroundColor: 'rgba(255, 255, 255, 0.75)',
-        zIndex: 100,
+        zIndex: 150,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
@@ -51,11 +51,15 @@ class Nav extends React.Component {
 
     handleUserCheckingNav = (category, number) => {
         this.setState({
-            isCurious: category ? category : "",
-            checking: true,
+            isCurious: category ? this.state.isCurious === category ? "" : category : "",
             currentChecking: number
+        }, () => {
+            this.setState({
+                checking: this.state.isCurious && true,
+            })
         })
     }
+
 
     handleOpenNav = () => {
         this.setState({
@@ -65,7 +69,10 @@ class Nav extends React.Component {
 
     handleCloseNav = () => {
         this.setState({
-            isCheckingNav: false
+            isCheckingNav: false,
+            isCurious: "",
+            checking: false,
+            currentChecking: 0
         })
     }
 
@@ -133,26 +140,29 @@ class Nav extends React.Component {
                     isOpen={this.state.isCheckingNav}
                     onRequestClose={this.handleCloseNav}
                     ariaHideApp={false}
-                    className="nav__modal-pop-up"
-                >
+                    className="nav__modal-pop-up">
                     <div className="nav__small-modal">
                         <h3
+                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 1 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 1 && "white" }}
                             onClick={() => this.handleUserCheckingNav("myXillow", 1)}>
-                            My Xillow
-                        <FontAwesomeIcon
+                            <FontAwesomeIcon
+                                className="arrow-icons"
                                 icon={this.state.currentChecking === 1 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
+                            My Xillow
                         </h3>
                         {this.state.isCurious === "myXillow" &&
                             <ul>
-                                <li>Hello</li>
+                                <li onClick = {this.openModal}>Sign up</li>
                             </ul>
                         }
 
                         <h3
+                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 2 && "rgba(82, 179, 217, 1)", color: this.state.isCurious &&  this.state.currentChecking === 2 && "white" }}
                             onClick={() => this.handleUserCheckingNav("buy", 2)}>
-                            Buy
-                        <FontAwesomeIcon
+                            <FontAwesomeIcon
+                                className="arrow-icons"
                                 icon={this.state.currentChecking === 2 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
+                            Buy
                         </h3>
                         {this.state.isCurious === "buy" &&
                             <ul>
@@ -161,10 +171,13 @@ class Nav extends React.Component {
                         }
 
                         <h3
+                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 3 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 3 && "white" }}
                             onClick={() => this.handleUserCheckingNav("rent", 3)}>
+                            <FontAwesomeIcon
+                                className="arrow-icons"
+                                icon={this.state.currentChecking === 3 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
                             Rent
-                        <FontAwesomeIcon icon={this.state.currentChecking === 3 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} /
-                            ></h3>
+                            </h3>
                         {this.state.isCurious === "rent" &&
                             <ul>
                                 <li>Rent</li>
@@ -172,9 +185,12 @@ class Nav extends React.Component {
                         }
 
                         <h3
+                            style={{ backgroundColor: this.state.isCurious &&  this.state.currentChecking === 4 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 4 && "white" }}
                             onClick={() => this.handleUserCheckingNav("mortgages", 4)}>
+                            <FontAwesomeIcon
+                                className="arrow-icons"
+                                icon={this.state.currentChecking === 4 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
                             Mortgages
-                        <FontAwesomeIcon icon={this.state.currentChecking === 4 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
                         </h3>
                         {this.state.isCurious === "mortgages" &&
                             <ul>
@@ -183,16 +199,18 @@ class Nav extends React.Component {
                         }
 
                         <h3
+                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 5 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 5 && "white" }}
                             onClick={() => this.handleUserCheckingNav("agent", 5)}>
+                            <FontAwesomeIcon
+                                className="arrow-icons"
+                                icon={this.state.currentChecking === 5 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
                             Agent Finder
-                        <FontAwesomeIcon icon={this.state.currentChecking === 5 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
                         </h3>
                         {this.state.isCurious === "agent" &&
                             <ul>
                                 <li>Agents</li>
                             </ul>
                         }
-
                     </div>
                 </Modal>
             </div>
@@ -200,5 +218,5 @@ class Nav extends React.Component {
     }
 }
 
-export default Nav
+export default Nav;
 
