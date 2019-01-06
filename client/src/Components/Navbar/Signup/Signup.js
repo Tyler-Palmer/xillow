@@ -44,12 +44,14 @@ class Signup extends Component {
     render() {
         return (
             <div className="signup-form-container">
+                <button onClick={this.props.closeModal}>Close</button>
                 <SignupForm 
                     email= {this.state.email}
                     password = {this.state.password}
                     handleSubmit = {this.handleSignup}
                     handleChange = {this.handleChange}
                     btnText = "SignUp" />
+                
             </div>
         )
     }
