@@ -8,15 +8,18 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faSearch, faCircle, faQuoteLeft, faHome, faCopyright } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./Context/UserProvider"
+import SearchProvider from "./Context/SearchProvider"
 
 library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright);
 
 
 ReactDOM.render(
     <BrowserRouter>
-        <UserProvider>
-            <App />
-        </UserProvider>
+        <SearchProvider>
+            <UserProvider>
+                <App />
+            </UserProvider>
+        </SearchProvider>
     </BrowserRouter>
     , document.getElementById("root"))
 

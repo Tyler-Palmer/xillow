@@ -39,27 +39,18 @@ class Nav extends React.Component {
         super()
         this.state = {
             modalIsOpen: false,
-            hey: "hey"
         }
     }
 
     openModal = () => {
         this.setState({ modalIsOpen: true });
     }
-    // openModal2 = () => {
-    //     this.setState({ modal2IsOpen: true });
-    // }
 
-    closeModal = (id) => {
-        console.log(id)
+    closeModal = () => {
+        console.log('hey')
         this.setState({
             modalIsOpen: false,
-            hey: "not hey"
-        }, () => {
-            console.log(this.state.hey)
-            console.log(this.state.modalIsOpen)
-        });
-
+        })
     }
 
     render() {
@@ -87,31 +78,24 @@ class Nav extends React.Component {
                             <a href="#"> More </a>
                         </li>
                         <li className="nav-item" onClick={this.openModal}>
-                            <a href="#">Signup</a>
-                            <Modal
-                                isOpen={this.state.modalIsOpen}
-                                onRequestClose={this.closeModal}
-                                className="sign-up-container"
-                                style={customStyle}
-                                ariaHideApp={false}
-                            >
-                                <div>
-                                    <Signup className="sign-up" closeModal={this.closeModal} />
-                                </div>
-                            </Modal>
+                        <a href="#">Signup</a>
                         </li>
-                        <li className="nav-item" onClick={this.openModal2}>
+                        <li className="nav-item">
                             <a href="#">Login</a>
-                            {/* <Modal
-                                isOpen={this.state.modalIsOpen}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                                error="false"
-                                ariaHideApp={false}
-                            >
-                            </Modal> */}
+
                         </li>
                     </ul>
+                    <Modal
+                        isOpen={this.state.modalIsOpen}
+                        onRequestClose={this.closeModal}
+                        className="sign-up-container"
+                        style={customStyle}
+                        ariaHideApp={false}
+                    >
+                        <div>
+                            <Signup className="sign-up" closeModal={this.closeModal} />
+                        </div>
+                    </Modal>
                 </div>
             </div>
         )
@@ -121,4 +105,12 @@ class Nav extends React.Component {
 export default Nav
 
 
-// style={customStyles}
+
+{/* <Modal
+                                isOpen={this.state.modalIsOpen}
+                                onRequestClose={this.closeModal}
+                                contentLabel="Example Modal"
+                                error="false"
+                                ariaHideApp={false}
+                            >
+                            </Modal> */}

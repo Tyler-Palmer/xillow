@@ -12,7 +12,8 @@ class Header extends React.Component {
             isActive: 1,
             slideNumber: 0,
             texts: ["Find your way home", "Find your next rental", "Your Home on Xillow"],
-            videos: [homeVideo, leggyGirl, firePits]
+            videos: [homeVideo, leggyGirl, firePits],
+            
         }
         this.myRef = React.createRef()
     }
