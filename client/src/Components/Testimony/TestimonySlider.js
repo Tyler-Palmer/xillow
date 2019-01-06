@@ -2,7 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const TestimonySlider = (props) => {
-    console.log(props.slide)
+
     return (
         <div className={`customer-testimony__small-container ${props.slide === props.id ? "is-selected" : "not-selected"}`}>
             <div className="customer-testimony__image" style={{ backgroundImage: `url(${props.image})` }}>

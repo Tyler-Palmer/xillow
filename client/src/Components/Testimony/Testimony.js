@@ -29,8 +29,13 @@ class Testimony extends React.Component {
                 })
                 )
             }
-        }, 30000)
+        }, 8000)
     }
+
+    componentWillUnmount(){
+        clearInterval(this.setIntervalId);
+    }
+
     render() {
 
         return (
