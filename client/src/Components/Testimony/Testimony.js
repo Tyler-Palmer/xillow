@@ -29,7 +29,10 @@ class Testimony extends React.Component {
                 })
                 )
             }
+
+        }, 10000)
         }, 8000)
+      
     }
 
     componentWillUnmount(){
