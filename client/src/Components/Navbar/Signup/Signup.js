@@ -30,7 +30,7 @@ class Signup extends Component {
 
     toggler = () => {
         this.setState({
-            toggle: !toggle
+            toggle: !this.state.toggle
         })
     }
 
@@ -47,8 +47,9 @@ class Signup extends Component {
                 <SignupForm 
                     email= {this.state.email}
                     password = {this.state.password}
-                    handleSubmit = {this.state.handleSubmit}
-                    handleChange = {this.handleChange}/>
+                    handleSubmit = {this.handleSignup}
+                    handleChange = {this.handleChange}
+                    btnText = "SignUp" />
             </div>
         )
     }
