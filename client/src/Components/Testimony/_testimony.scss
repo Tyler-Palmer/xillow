@@ -9,3 +9,16 @@
     overflow: hidden;
     margin: 30px 0;
 }
+
+
+@media (max-width: 560px) and (min-width: 425px) {
+    .customer-testimony__container {
+        height: 550px;
+    }
+}
+
+@media (max-width: 424px) {
+    .customer-testimony__container {
+        height: 500px;
+    }
+}
