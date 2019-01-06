@@ -5,18 +5,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ComponentStyles/_styles.scss"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faSearch, faCircle, faQuoteLeft, faHome, faCopyright } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./Context/UserProvider"
-
-library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright);
+import SearchProvider from "./Context/SearchProvider"
+library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight);
 
 
 ReactDOM.render(
     <BrowserRouter>
-        <UserProvider>
-            <App />
-        </UserProvider>
+        <SearchProvider>
+            <UserProvider>
+                <App />
+            </UserProvider>
+        </SearchProvider>
     </BrowserRouter>
     , document.getElementById("root"))
 

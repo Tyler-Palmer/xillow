@@ -2,7 +2,7 @@ import React from "react"
 import logo from "../../assets/zillowlogo.png"
 import Modal from 'react-modal'
 import Signup from './Signup/Signup'
-import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const customStyle = {
     overlay: {
@@ -31,78 +31,79 @@ const customStyle = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
-        
-    }};
+
+    }
+};
 
 class Nav extends React.Component {
     constructor() {
         super()
         this.state = {
-            modal1IsOpen: false,
-            modal2IsOpen: false
+            modalIsOpen: false,
         }
     }
 
-    openModal1 = () => {
-        this.setState({ modal1IsOpen: true });
-    }
-    openModal2 = () => {
-        this.setState({ modal2IsOpen: true });
+    openModal = () => {
+        this.setState({ modalIsOpen: true });
     }
 
     closeModal = () => {
-        this.setState({ modal1IsOpen: false });
+        console.log('hey')
+        this.setState({
+            modalIsOpen: false,
+        })
     }
 
     render() {
         return (
-            <div className="nav-container">
+            <div className="nav-container" style={{ position: this.props.currentWidth <= 768 && "relative", height: this.props.currentWidth <= 768 && 0 }}>
                 <a className="navbar-brand" href="/">
                     <div className="navbar-brand__image" style={{ backgroundImage: `url(${logo})` }}>
                     </div>
                 </a>
-                <div className="nav-container__list-container">
-                    <ul className="nav-container__list-small-container">
-                        <li className="nav-item active">
-                            <a href="#">Buy</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Rent</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Mortgages</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Agent Finder</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#"> More </a>
-                        </li>
-                        <li className="nav-item" onClick={this.openModal1}>
-                            <a href="#">Signup</a>
-                            <Modal
-                                isOpen={this.state.modal1IsOpen}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                                error="false"
-                                className="sign-up-container"
-                                style={customStyle}
-                            >
-                                <Signup className="sign-up" />
-                            </Modal>
-                        </li>
-                        <li className="nav-item" onClick={this.openModal2}>
-                            <a href="#">Login</a>
-                            <Modal
-                                isOpen={this.state.modalIsOpen}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                                error="false"
-                            >
-                            </Modal>
-                        </li>
-                    </ul>
-                </div>
+                {this.props.currentWidth <= 768 ?
+                    <div className = "nav-container__bars-container">
+                        <p className="nav-container__bars"><FontAwesomeIcon icon="bars" /> </p>
+                    </div>
+                    :
+                    <div className="nav-container__list-container">
+                        <ul className="nav-container__list-small-container">
+                            <li className="nav-item active">
+                                <a href="#">Buy</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Rent</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Mortgages</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Agent Finder</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#"> More </a>
+                            </li>
+                            <li className="nav-item" onClick={this.openModal}>
+                                <a href="#">Signup</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Login</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                }
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    className="sign-up-container"
+                    style={customStyle}
+                    ariaHideApp={false}
+                >
+                    <div>
+                        <Signup className="sign-up" closeModal={this.closeModal} />
+                    </div>
+                </Modal>
             </div>
         )
     }
@@ -111,4 +112,12 @@ class Nav extends React.Component {
 export default Nav
 
 
-// style={customStyles}
+
+{/* <Modal
+                                isOpen={this.state.modalIsOpen}
+                                onRequestClose={this.closeModal}
+                                contentLabel="Example Modal"
+                                error="false"
+                                ariaHideApp={false}
+                            >
+                            </Modal> */}
