@@ -38,7 +38,6 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(this.state.currentWidth)
         return (
             <div>
                 <Nav currentWidth = {this.state.currentWidth} alreadyChange = {this.state.alredyChange} />
@@ -50,7 +49,7 @@ class App extends React.Component {
                         </Fragment>}
                     />
                 </Switch>
-                <Footer />
+                <Footer currentWidth = {this.state.currentWidth} />
             </div>
         )
     }
