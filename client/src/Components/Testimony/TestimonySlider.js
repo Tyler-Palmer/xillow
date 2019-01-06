@@ -16,6 +16,7 @@ const TestimonySlider = (props) => {
                 <p className="customer-testimony__saying">
                     <FontAwesomeIcon icon = "quote-left" className = "customer-testimony__saying-quotes"/>
                     <i>{props.words}</i>
+                    <FontAwesomeIcon icon = "quote-right" className = "customer-testimony__saying-quotes right"/>
                 </p>
                 <div className="customer-testimony__page">
                     <p>
