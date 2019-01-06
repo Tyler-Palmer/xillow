@@ -4,6 +4,7 @@ import Testimony from "./Components/Testimony/Testimony"
 import Footer from "./Components/Footer/Footer"
 import { Switch, Route } from "react-router-dom"
 import Nav from "./Components/Navbar/Nav"
+import Search from "./Components/Search/Search"
 
 class App extends React.Component {
     constructor() {
@@ -42,12 +43,14 @@ class App extends React.Component {
             <div>
                 <Nav currentWidth = {this.state.currentWidth} alreadyChange = {this.state.alredyChange} />
                 <Switch>
-                    <Route path="/" render={props =>
+                    <Route exact path="/" render={props =>
                         <Fragment>
                             <Header {...props} />
                             <Testimony {...props} />
                         </Fragment>}
                     />
+
+                    <Route path ="/search" component = {Search} />
                 </Switch>
                 <Footer currentWidth = {this.state.currentWidth} />
             </div>

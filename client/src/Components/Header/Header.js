@@ -1,8 +1,8 @@
 import React from "react"
-import Nav from "../Navbar/Nav"
 import homeVideo from "../../assets/home-video.mp4"
 import leggyGirl from "../../assets/leggy-girl.mp4"
 import firePits from "../../assets/fire-pits.mp4"
+import { withSearchData } from "../../Context/SearchProvider"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends React.Component {
@@ -13,10 +13,22 @@ class Header extends React.Component {
             slideNumber: 0,
             texts: ["Find your way home", "Find your next rental", "Your Home on Xillow"],
             videos: [homeVideo, leggyGirl, firePits],
+            address: "",
         }
         this.myRef = React.createRef()
     }
 
+    handleUserSearchInput = (e) => {
+        const { name, value } = e.target
+        this.setState({
+            [name]: value 
+        })
+    }
+
+    handleUserSearchSubmit = (e) => {
+        e.preventDefault()
+        this.props.history.push('/search')
+    }
 
     handleSlide = (activeNumber, slideNumber) => {
         this.setState({
@@ -55,8 +67,14 @@ class Header extends React.Component {
                                     Xestimate
                                     </button>
                             </div>
-                            <form>
-                                <input placeholder="Enter an adress, neighborhood, city, or ZIP code" />
+                            <form onSubmit = {this.handleUserSearchSubmit}>
+
+                                <input
+                                name= "address"
+                                value = {this.state.address}
+                                onChange = {this.handleUserSearchInput}
+                                placeholder="Enter an adress, neighborhood, city, or ZIP code" />
+
                                 <button><FontAwesomeIcon icon="search" /></button>
                             </form>
                         </div>
@@ -71,4 +89,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default withSearchData(Header);
