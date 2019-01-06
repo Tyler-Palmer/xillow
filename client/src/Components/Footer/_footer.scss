@@ -1,0 +1,70 @@
+@import "./sub-footer";
+
+.sub-footer__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-infos__container {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: rgba(255, 255, 255, 0.7);
+
+    .xillow-group__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+
+        li {
+            margin: 0 10px;
+            font-size: 13px;
+            border-right: 1px solid rgba(255, 255, 255, 0.7);
+            padding: 0 20px 0 0;
+        }
+    }
+
+    hr {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .xillow-quick-links__container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 0 0 0;
+
+        li {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .xillow-copy-right__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li{
+            p{
+                margin: 0 10px;
+                font-size: 20px;
+            }
+        }
+
+        .xillow__copyright{
+            p{
+                font-size: 12px;
+            }
+        }
+
+        .xillow__brands {
+            display: flex;
+
+            p{
+                margin: 0 10px;
+            }
+        }
+    }
+
+}
