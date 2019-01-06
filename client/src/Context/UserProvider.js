@@ -38,10 +38,10 @@ class UserProvider extends Component{
     } 
 }
 
-export const withUser = C => props => {
+export const withUser = C => props => (
     <Consumer>
-        {value = <C {...props} {...value} />}
+        {value => <C {...props} {...value} />}
     </Consumer>
-}
+)
 
 export default UserProvider
