@@ -1,7 +1,34 @@
 import React from "react"
 import logo from "../../assets/zillowlogo.png"
+import Modal from 'react-modal'
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    }
+};
 
 class Nav extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            modalIsOpen: false
+        }
+    }
+
+    openModal = () => {
+        this.setState({ modalIsOpen: true });
+    }
+
+    closeModal = () => {
+        this.setState({ modalIsOpen: false });
+    }
+
     render() {
         return (
             <div className="nav-container">
@@ -25,6 +52,28 @@ class Nav extends React.Component {
                         </li>
                         <li className="nav-item">
                             <a href="#"> More </a>
+                        </li>
+                        <li className="nav-item" onClick={this.openModal}>
+                            <a href="#">Signup</a>
+                            <Modal
+                                isOpen={this.state.modalIsOpen}
+                                onRequestClose={this.closeModal}
+                                style={customStyles}
+                                contentLabel="Example Modal"
+                                error="false"
+                            >
+                            </Modal>
+                        </li>
+                        <li className="nav-item" onClick={this.openModal}>
+                            <a href="#">Login</a>
+                            <Modal
+                                isOpen={this.state.modalIsOpen}
+                                onRequestClose={this.closeModal}
+                                style={customStyles}
+                                contentLabel="Example Modal"
+                                error="false"
+                            >
+                            </Modal>
                         </li>
                     </ul>
                 </div>
