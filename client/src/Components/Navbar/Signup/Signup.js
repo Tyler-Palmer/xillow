@@ -18,10 +18,14 @@ class Signup extends Component {
         })
     }
 
-    handleSubmit = (e) => {
+    handleSignup= (e) => {
         e.preventDefault()
-        this.props.signup(this.state)
-        .then(() => this.props.history.push("/auth"))
+        const userInfo = {
+            email: this.state.email,
+            password: this.state.password
+        }
+        this.props.signup(userInfo)
+        this.clearInputs()
     }
 
     toggler = () => {
