@@ -13,16 +13,41 @@ class Header extends React.Component {
             slideNumber: 0,
             texts: ["Find your way home", "Find your next rental", "Your Home on Xillow"],
             videos: [homeVideo, leggyGirl, firePits],
-            
+            currentWidth: window.innerWidth,
+            alredyChange: false,
+            position: ""
         }
         this.myRef = React.createRef()
+    }
+
+    componentDidMount(){
+        window.addEventListener("resize", this.handleResize)
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener("resize", this.handleResize)
+    }
+    handleResize = () =>{
+        console.log(window.innerWidth)
+        if(window.innerWidth < 800 && !this.state.alredyChange){
+            this.setState({
+                currentWidth: window.innerWidth,
+                alredyChange: true
+            })
+        }
+        else if (window.innerWidth > 800 && this.state.alredyChange){
+            this.setState({
+                currentWidth: "",
+                alredyChange: false  
+            })
+        }
     }
 
     handleSlide = (activeNumber, slideNumber) => {
         this.setState({
             isActive: activeNumber,
             slideNumber
-        }, () =>{
+        }, () => {
             //Help to reload the video
             this.refs.video.load();
         })
@@ -40,19 +65,19 @@ class Header extends React.Component {
                                 <button
                                     className="transparent-button"
                                     onClick={() => this.handleSlide(1, 0)}
-                                    style = {{backgroundColor: this.state.isActive === 1 && "rgba(0,116,228,0.7)"}}>
+                                    style={{ backgroundColor: this.state.isActive === 1 && "rgba(0,116,228,0.7)" }}>
                                     Buy
                                     </button>
                                 <button
                                     className="transparent-button"
                                     onClick={() => this.handleSlide(2, 1)}
-                                    style = {{backgroundColor: this.state.isActive === 2 && "rgba(0,116,228,0.7)"}}>
+                                    style={{ backgroundColor: this.state.isActive === 2 && "rgba(0,116,228,0.7)" }}>
                                     Rent
                                     </button>
                                 <button
                                     className="transparent-button"
                                     onClick={() => this.handleSlide(3, 2)}
-                                    style = {{backgroundColor: this.state.isActive === 3 && "rgba(0,116,228,0.7)"}}>
+                                    style={{ backgroundColor: this.state.isActive === 3 && "rgba(0,116,228,0.7)" }}>
                                     Xestimate
                                     </button>
                             </div>
@@ -62,12 +87,10 @@ class Header extends React.Component {
                             </form>
                         </div>
                     </div>
-                    {this.state.slideNumber === this.state.slideNumber &&
                     <video className="header-small-container__image" loop autoPlay ref="video">
                         <source src={this.state.videos[this.state.slideNumber]} type="video/mp4" />
                         <source src={this.state.videos[this.state.slideNumber]} type="video/ogg" />
                     </video>
-                    }
                 </div>
             </div >
         )

@@ -12,9 +12,10 @@
         background-size: $bg-cover;
         background-position: $bg-center;
         position: absolute;
-        left: 50px;
+        top: 10px;
+        left: 30px;
         z-index: 50;
-        box-shadow: 0 0 10px 2px rgba(1,1,1,0.5)
+        box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.5)
     }
 
     .nav-container__list-container {
@@ -30,6 +31,7 @@
             li {
                 display: flex;
                 margin: 0 10px;
+
                 a {
                     color: black;
                 }
@@ -38,7 +40,7 @@
     }
 }
 
-.sign-up-container{
+.sign-up-container {
     z-index: 150;
     height: 100%;
     width: 100%;
@@ -46,3 +48,17 @@
     justify-content: center;
     align-self: center;
 }
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-container {
+        .nav-container__list-container {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 561px) {}
+
+@media (max-width: 560px) and (min-width: 425px) {}
+
+@media (max-width: 424px) {}
