@@ -7,9 +7,10 @@ class UserProvider extends Component {
     constructor() {
         super()
         this.state = {
-            users: [],
-            houses: [],
-            activeUser: {},
+            allUsers: [],
+            user: {},
+            isAuthenticated: false,
+            authErr: "",
             token: ""
         }
     }
@@ -18,10 +19,11 @@ class UserProvider extends Component {
         return axios.post('/auth/signup', userInfo)
             .then(response => {
                 const { user, token } = response.data
+                 // On successful signup/login, add user object to localstorage
                 localStorage.setItem("token", token);
                 localStorage.setItem("user", JSON.stringify(user));
                 this.setState({
-                    activeUser: user,
+                    user: user,
                     token: token
                 })
                 //Pass on response so that it can be used 
