@@ -11,6 +11,7 @@ class Signup extends Component {
     render() {
         return (
             <div className="signup-form-container">
+                <button onClick={() => this.props.closeModal(1)}>X</button>
                 <form className="signup-form">
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>

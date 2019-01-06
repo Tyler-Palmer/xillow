@@ -2,7 +2,6 @@ import React from "react"
 import logo from "../../assets/zillowlogo.png"
 import Modal from 'react-modal'
 import Signup from './Signup/Signup'
-import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
 
 const customStyle = {
     overlay: {
@@ -31,27 +30,36 @@ const customStyle = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
-        
-    }};
+
+    }
+};
 
 class Nav extends React.Component {
     constructor() {
         super()
         this.state = {
-            modal1IsOpen: false,
-            modal2IsOpen: false
+            modalIsOpen: false,
+            hey: "hey"
         }
     }
 
-    openModal1 = () => {
-        this.setState({ modal1IsOpen: true });
+    openModal = () => {
+        this.setState({ modalIsOpen: true });
     }
-    openModal2 = () => {
-        this.setState({ modal2IsOpen: true });
-    }
+    // openModal2 = () => {
+    //     this.setState({ modal2IsOpen: true });
+    // }
 
-    closeModal = () => {
-        this.setState({ modal1IsOpen: false });
+    closeModal = (id) => {
+        console.log(id)
+        this.setState({
+            modalIsOpen: false,
+            hey: "not hey"
+        }, () => {
+            console.log(this.state.hey)
+            console.log(this.state.modalIsOpen)
+        });
+
     }
 
     render() {
@@ -78,28 +86,30 @@ class Nav extends React.Component {
                         <li className="nav-item">
                             <a href="#"> More </a>
                         </li>
-                        <li className="nav-item" onClick={this.openModal1}>
+                        <li className="nav-item" onClick={this.openModal}>
                             <a href="#">Signup</a>
                             <Modal
-                                isOpen={this.state.modal1IsOpen}
+                                isOpen={this.state.modalIsOpen}
                                 onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                                error="false"
                                 className="sign-up-container"
                                 style={customStyle}
+                                ariaHideApp={false}
                             >
-                                <Signup className="sign-up" />
+                                <div>
+                                    <Signup className="sign-up" closeModal={this.closeModal} />
+                                </div>
                             </Modal>
                         </li>
                         <li className="nav-item" onClick={this.openModal2}>
                             <a href="#">Login</a>
-                            <Modal
+                            {/* <Modal
                                 isOpen={this.state.modalIsOpen}
                                 onRequestClose={this.closeModal}
                                 contentLabel="Example Modal"
                                 error="false"
+                                ariaHideApp={false}
                             >
-                            </Modal>
+                            </Modal> */}
                         </li>
                     </ul>
                 </div>
