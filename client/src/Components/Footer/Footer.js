@@ -24,7 +24,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="footer-infos__container">
                     <ul className="xillow-group__container">
-                        <li className= {this.props.currentWidth <= 560 ? "xillow-grounp__brand" : ""}><p>Xillow Group®Brands:</p></li>
+                        <li className= {this.props.currentWidth <= 560 ? "xillow-group__brand" : ""}><p>Xillow Group®Brands:</p></li>
                         <li>Trulia</li>
                         <li>StreeEasy</li>
                         <li>HotPads</li>

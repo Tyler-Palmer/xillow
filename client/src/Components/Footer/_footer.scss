@@ -25,13 +25,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            p{
+                margin: 0 
+            }
         }
-        .xillow-grounp__brand{
+        .xillow-group__brand{
             width: 100%;
             display: flex;
             justify-content: center;
             padding: 0;
             border: none;
+            p{
+                margin: 0 
+            }
         }
     }
 
