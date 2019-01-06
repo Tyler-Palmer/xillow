@@ -19,7 +19,7 @@
             .header-small-container__form {
                 width: 500px;
 
-                h1{
+                h1 {
                     text-align: center;
                 }
 
@@ -58,6 +58,7 @@
                         right: 10px;
                         height: 50px;
                         font-size: 20px;
+                        background: white;
                     }
                 }
             }
@@ -68,6 +69,96 @@
             height: 600px;
             object-fit: inherit;
             z-index: -1;
+            transition: all 1s linear
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {}
+
+@media (max-width: 768px) and (min-width: 561px) {
+    .header-container {
+        .header-small-container {
+
+            .header-small-container__image {
+                height: 500px;
+                object-fit: inherit;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) and (min-width: 425px) {
+    .header-container {
+        .header-small-container {
+            .header-small-container__search {
+                .header-small-container__form {
+
+                    h1 {
+                        font-size: 30px; 
+                    }
+
+                    .header-small-container__buttons {
+                        .transparent-button {
+                            height: 45px;
+                            font-size: 18px;
+                            width: 30%;
+                        }
+                    }
+                    form{
+                        input{
+                            height: 45px;
+                            font-size: 18px;
+                        }
+                        button{
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+
+            .header-small-container__image {
+                height: 400px;
+                object-fit: inherit;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@media (max-width: 424px) {
+    .header-container {
+        .header-small-container {
+            .header-small-container__search {
+                .header-small-container__form {
+                    h1 {
+                        font-size: 28px; 
+                    }
+                    .header-small-container__buttons {
+                        .transparent-button {
+                            height: 40px;
+                            font-size: 15px;
+                            width: 30%;
+                        }
+                    }
+                    form{
+                        input{
+                            height: 40px;
+                            font-size: 15px;
+                        }
+                        button{
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+            .header-small-container__image {
+                height: 350px;
+                object-fit: inherit;
+                z-index: -1;
+            }
         }
     }
 }
