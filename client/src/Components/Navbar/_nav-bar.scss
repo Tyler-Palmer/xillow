@@ -23,6 +23,7 @@
         right: 20px;
         top: 10px;
         z-index: 50;
+        cursor: pointer;
 
         .nav-container__bars{
             color: whitesmoke;
@@ -64,6 +65,16 @@
                 a {
                     color: black;
                 }
+            }
+        }
+    }
+
+    .nav__modal-pop-up{
+        
+        .nav__small-modal{
+            
+            h3{
+                color: white;
             }
         }
     }

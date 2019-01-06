@@ -35,12 +35,38 @@ const customStyle = {
     }
 };
 
+Modal.defaultStyles.overlay.backgroundColor = 'rgba(1,1,1,0.6)';
+Modal.defaultStyles.overlay.zIndex = 100
 class Nav extends React.Component {
     constructor() {
         super()
         this.state = {
             modalIsOpen: false,
+            isCheckingNav: false,
+            isCurious: "",
+            checking: false,
+            currentChecking: 0
         }
+    }
+
+    handleUserCheckingNav = (category, number) => {
+        this.setState({
+            isCurious: category ? category : "",
+            checking: true,
+            currentChecking: number
+        })
+    }
+
+    handleOpenNav = () => {
+        this.setState({
+            isCheckingNav: true
+        })
+    }
+
+    handleCloseNav = () => {
+        this.setState({
+            isCheckingNav: false
+        })
     }
 
     openModal = () => {
@@ -48,7 +74,6 @@ class Nav extends React.Component {
     }
 
     closeModal = () => {
-        console.log('hey')
         this.setState({
             modalIsOpen: false,
         })
@@ -62,7 +87,7 @@ class Nav extends React.Component {
                     </div>
                 </a>
                 {this.props.currentWidth <= 768 ?
-                    <div className = "nav-container__bars-container">
+                    <div className="nav-container__bars-container" onClick={this.handleOpenNav}>
                         <p className="nav-container__bars"><FontAwesomeIcon icon="bars" /> </p>
                     </div>
                     :
@@ -98,10 +123,76 @@ class Nav extends React.Component {
                     onRequestClose={this.closeModal}
                     className="sign-up-container"
                     style={customStyle}
-                    ariaHideApp={false}
-                >
+                    ariaHideApp={false}>
                     <div>
                         <Signup className="sign-up" closeModal={this.closeModal} />
+                    </div>
+                </Modal>
+
+                <Modal
+                    isOpen={this.state.isCheckingNav}
+                    onRequestClose={this.handleCloseNav}
+                    ariaHideApp={false}
+                    className="nav__modal-pop-up"
+                >
+                    <div className="nav__small-modal">
+                        <h3
+                            onClick={() => this.handleUserCheckingNav("myXillow", 1)}>
+                            My Xillow
+                        <FontAwesomeIcon
+                                icon={this.state.currentChecking === 1 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
+                        </h3>
+                        {this.state.isCurious === "myXillow" &&
+                            <ul>
+                                <li>Hello</li>
+                            </ul>
+                        }
+
+                        <h3
+                            onClick={() => this.handleUserCheckingNav("buy", 2)}>
+                            Buy
+                        <FontAwesomeIcon
+                                icon={this.state.currentChecking === 2 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
+                        </h3>
+                        {this.state.isCurious === "buy" &&
+                            <ul>
+                                <li>Buy</li>
+                            </ul>
+                        }
+
+                        <h3
+                            onClick={() => this.handleUserCheckingNav("rent", 3)}>
+                            Rent
+                        <FontAwesomeIcon icon={this.state.currentChecking === 3 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} /
+                            ></h3>
+                        {this.state.isCurious === "rent" &&
+                            <ul>
+                                <li>Rent</li>
+                            </ul>
+                        }
+
+                        <h3
+                            onClick={() => this.handleUserCheckingNav("mortgages", 4)}>
+                            Mortgages
+                        <FontAwesomeIcon icon={this.state.currentChecking === 4 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
+                        </h3>
+                        {this.state.isCurious === "mortgages" &&
+                            <ul>
+                                <li>Mortgages</li>
+                            </ul>
+                        }
+
+                        <h3
+                            onClick={() => this.handleUserCheckingNav("agent", 5)}>
+                            Agent Finder
+                        <FontAwesomeIcon icon={this.state.currentChecking === 5 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
+                        </h3>
+                        {this.state.isCurious === "agent" &&
+                            <ul>
+                                <li>Agents</li>
+                            </ul>
+                        }
+
                     </div>
                 </Modal>
             </div>
@@ -111,13 +202,3 @@ class Nav extends React.Component {
 
 export default Nav
 
-
-
-{/* <Modal
-                                isOpen={this.state.modalIsOpen}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                                error="false"
-                                ariaHideApp={false}
-                            >
-                            </Modal> */}
