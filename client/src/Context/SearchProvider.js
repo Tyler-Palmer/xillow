@@ -12,8 +12,8 @@ class SearchProvider extends Component {
         }
     }
 
-    getZillowData = () => {
-
+    getZillowData = (info) => {
+        axios.get()
     }
 
     render() {
