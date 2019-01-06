@@ -2,6 +2,7 @@ import React from "react"
 import logo from "../../assets/zillowlogo.png"
 import Modal from 'react-modal'
 import Signup from './Signup/Signup'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const customStyle = {
     overlay: {
@@ -55,48 +56,54 @@ class Nav extends React.Component {
 
     render() {
         return (
-            <div className="nav-container">
+            <div className="nav-container" style={{ position: this.props.currentWidth <= 768 && "relative", height: this.props.currentWidth <= 768 && 0 }}>
                 <a className="navbar-brand" href="/">
                     <div className="navbar-brand__image" style={{ backgroundImage: `url(${logo})` }}>
                     </div>
                 </a>
-                <div className="nav-container__list-container">
-                    <ul className="nav-container__list-small-container">
-                        <li className="nav-item active">
-                            <a href="#">Buy</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Rent</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Mortgages</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Agent Finder</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#"> More </a>
-                        </li>
-                        <li className="nav-item" onClick={this.openModal}>
-                        <a href="#">Signup</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#">Login</a>
+                {this.props.currentWidth <= 768 ?
+                    <div className = "nav-container__bars-container">
+                        <p className="nav-container__bars"><FontAwesomeIcon icon="bars" /> </p>
+                    </div>
+                    :
+                    <div className="nav-container__list-container">
+                        <ul className="nav-container__list-small-container">
+                            <li className="nav-item active">
+                                <a href="#">Buy</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Rent</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Mortgages</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Agent Finder</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#"> More </a>
+                            </li>
+                            <li className="nav-item" onClick={this.openModal}>
+                                <a href="#">Signup</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#">Login</a>
 
-                        </li>
-                    </ul>
-                    <Modal
-                        isOpen={this.state.modalIsOpen}
-                        onRequestClose={this.closeModal}
-                        className="sign-up-container"
-                        style={customStyle}
-                        ariaHideApp={false}
-                    >
-                        <div>
-                            <Signup className="sign-up" closeModal={this.closeModal} />
-                        </div>
-                    </Modal>
-                </div>
+                            </li>
+                        </ul>
+                    </div>
+                }
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    className="sign-up-container"
+                    style={customStyle}
+                    ariaHideApp={false}
+                >
+                    <div>
+                        <Signup className="sign-up" closeModal={this.closeModal} />
+                    </div>
+                </Modal>
             </div>
         )
     }

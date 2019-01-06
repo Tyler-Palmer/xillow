@@ -13,35 +13,10 @@ class Header extends React.Component {
             slideNumber: 0,
             texts: ["Find your way home", "Find your next rental", "Your Home on Xillow"],
             videos: [homeVideo, leggyGirl, firePits],
-            currentWidth: window.innerWidth,
-            alredyChange: false,
-            position: ""
         }
         this.myRef = React.createRef()
     }
 
-    componentDidMount(){
-        window.addEventListener("resize", this.handleResize)
-    }
-
-    componentWillUnmount(){
-        window.removeEventListener("resize", this.handleResize)
-    }
-    handleResize = () =>{
-        console.log(window.innerWidth)
-        if(window.innerWidth < 800 && !this.state.alredyChange){
-            this.setState({
-                currentWidth: window.innerWidth,
-                alredyChange: true
-            })
-        }
-        else if (window.innerWidth > 800 && this.state.alredyChange){
-            this.setState({
-                currentWidth: "",
-                alredyChange: false  
-            })
-        }
-    }
 
     handleSlide = (activeNumber, slideNumber) => {
         this.setState({
@@ -56,7 +31,6 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header-container">
-                <Nav />
                 <div className="header-small-container">
                     <div className="header-small-container__search">
                         <div className="header-small-container__form">
