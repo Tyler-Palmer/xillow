@@ -16,6 +16,7 @@ class Footer extends React.Component {
         }
     }
     render() {
+        console.log(this.props.currentWidth)
         return (
             <div>
                 <div className="sub-footer__container">
@@ -23,7 +24,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="footer-infos__container">
                     <ul className="xillow-group__container">
-                        <li>Xillow Group®Brands:</li>
+                        <li className= {this.props.currentWidth <= 560 ? "xillow-grounp__brand" : ""}><p>Xillow Group®Brands:</p></li>
                         <li>Trulia</li>
                         <li>StreeEasy</li>
                         <li>HotPads</li>
@@ -42,13 +43,13 @@ class Footer extends React.Component {
                     </ul>
                     <hr />
                     <ul className="xillow-copy-right__container">
-                        <li className = "xillow__home">
+                        <li className="xillow__home">
                             <p><FontAwesomeIcon icon="home" /></p>
                         </li>
-                        <li className = "xillow__copyright">
+                        <li className="xillow__copyright">
                             <p><FontAwesomeIcon icon="copyright" />Xillow 2018-2019</p>
                         </li>
-                        <li className = "xillow__brands">
+                        <li className="xillow__brands">
                             <p><FontAwesomeIcon icon={['fab', 'facebook']} /></p>
                             <p><FontAwesomeIcon icon={['fab', 'twitter']} /></p>
                             <p><FontAwesomeIcon icon={['fab', 'google-plus']} /></p>

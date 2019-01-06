@@ -22,6 +22,16 @@
             font-size: 13px;
             border-right: 1px solid rgba(255, 255, 255, 0.7);
             padding: 0 20px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .xillow-grounp__brand{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            border: none;
         }
     }
 
@@ -45,15 +55,15 @@
         justify-content: center;
         align-items: center;
 
-        li{
-            p{
+        li {
+            p {
                 margin: 0 10px;
                 font-size: 20px;
             }
         }
 
-        .xillow__copyright{
-            p{
+        .xillow__copyright {
+            p {
                 font-size: 12px;
             }
         }
@@ -61,8 +71,69 @@
         .xillow__brands {
             display: flex;
 
-            p{
+            p {
                 margin: 0 10px;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 768px) and (min-width: 561px) {}
+
+@media (max-width: 560px) and (min-width: 425px) {
+    .sub-footer__container {
+        flex-wrap: wrap
+    }
+    .footer-infos__container{
+        .xillow-group__container{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            li{
+                font-size: 11px;
+                margin: 0 5px 10px 5px;
+            }
+            .xillow-grounp__brand{
+                margin: 0;
+            }
+        }
+        .xillow-quick-links__container{
+            flex-wrap: wrap;
+
+            li{
+                margin: 0 5px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 424px) {
+    .sub-footer__container {
+        flex-wrap: wrap
+    }
+    .footer-infos__container{
+        .xillow-group__container{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            li{
+                font-size: 11px;
+                margin: 0 5px 10px 5px;
+            }
+            .xillow-grounp__brand{
+                margin: 0;
+            }
+        }
+
+        .xillow-quick-links__container{
+            flex-wrap: wrap;
+
+            li{
+                margin: 0 6px;
+                font-size: 11px;
             }
         }
     }
