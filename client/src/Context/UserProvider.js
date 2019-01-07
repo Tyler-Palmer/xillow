@@ -55,6 +55,7 @@ class UserProvider extends Component {
         return (
             <Provider value={{
                 signup: this.signup,
+                login: this.login,
                 ...this.state
             }}>
                 {this.props.children}

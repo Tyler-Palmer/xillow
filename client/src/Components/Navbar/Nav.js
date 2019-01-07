@@ -40,22 +40,22 @@ class Nav extends React.Component {
         super()
         this.state = {
             modalIsOpen: false,
-            signup: false,
-            login: false
+            signupModal: false,
+            loginModal: false
         }
     }
 
     openSignupModal = () => {
         this.setState({
             modalIsOpen: true,
-            signup: true
+            signupModal: true
         })
     }
 
     openLoginModal = () => {
         this.setState({
             modalIsOpen: true,
-            login: true
+            loginModal: true
         })
     }
 
@@ -63,8 +63,8 @@ class Nav extends React.Component {
         console.log('hey')
         this.setState({
             modalIsOpen: false,
-            signup: false,
-            login: false
+            signupModal: false,
+            loginModal: false
         })
     }
 
@@ -117,8 +117,8 @@ class Nav extends React.Component {
                     <div>
                         <Signup className="sign-up"
                             closeModal={this.closeModal}
-                            signup={this.state.signup}
-                            login={this.state.login} />
+                            signupModal={this.state.signupModal}
+                            loginModal={this.state.loginModal} />
                     </div>
                 </Modal>
             </div>

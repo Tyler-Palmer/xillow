@@ -47,17 +47,18 @@ class Signup extends Component {
     }
 
     render() {
+        console.log(this.props.signupModal)
         return (
             <div className="signup-form-container">
                 <button onClick={this.props.closeModal}>Close</button>
                 <div>
-                    {this.props.signup ?
+                    {this.props.signupModal ?
                         <h1>Signup</h1>
                         :
                         <h1>Login</h1>
                     }
                 </div>
-                {this.props.signup ?
+                {this.props.signupModal ?
 
                     <SignupForm
                         email={this.state.email}
