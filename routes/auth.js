@@ -1,6 +1,6 @@
 const express = require('express')
 const authRouter = express.Router()
-const User = require('../models/User')
+const User = require('../models/User.js')
 const jwt = require('jsonwebtoken')
 
 //Get All
@@ -19,40 +19,64 @@ authRouter.get("/", (req, res, next) => {
 })
 
 //Signup Post Route
-authRouter.post("/signup", (req, res) => {
+authRouter.post("/signup", (req, res, next) => {
     //Look for user with the requested username
     console.log(req.body)
-    User.findOne({email: req.body.email}, (err, existingUser) => {
-        if(err){
-            return res.status(500).send({success: false, err})
-        //If the db doesn't return "null", it means there is already a user with that username
-        }else if (existingUser !== null){
-            return res.status(400).send({success: false, err: "That username already exists!"})
+    User.findOne({ email: req.body.email }, (err, existingUser) => {
+        if (err) {
+            res.status(500)
+            return next(err)
+            //If the db doesn't return "null", it means there is already a user with that username
+        } else if (existingUser !== null) {
+            res.status(400)
+            return next(new Error("That username already exists!"))
         }
         //Create new user from the req.body
         const newUser = new User(req.body)
         newUser.save((err, user) => {
-            if (err) return res.status(500).send({success: false, err})
-             //Give the user a jwt token
+            if (err) {
+                res.status(500)
+                return next(err)
+            }
+            //Give the user a jwt token
             const token = jwt.sign(user.toObject(), process.env.SECRET)
-            return res.status(201).send({success: true, user: user.toObject(), token})
+            return res.status(201).send({ success: true, user: user.toObject(), token })
         })
     })
 })
 
 //Login Post Route
 
-authRouter.post("/login", (req,res) => {
+authRouter.post("/login", (req, res, next) => {
     //Find the user with the submitted username
-    User.findOne({email: req.body.email.toLowerCase()}, (err, user) => {
-        if(err) return res.status(500).send(err)
-        //If submitted user isn't in the db or password is wrong:
-        if(!user || user.password !== req.body.password){
-            return res.status(403).send({success: false, err: "Username or password are incorrect"})
+    User.findOne({ email: req.body.email.toLowerCase() }, (err, user) => {
+        if (err) {
+            res.status(500)
+            return next(err)
         }
-        const token = jwt.sign(user.toObject(), process.env.SECRET)
-        //Send the token back to the client app
-        return res.status(201).send({token: token, user: user.toObject(), success: true})
+        //If submitted user isn't in the db or password is wrong:
+        if (!user) {
+            res.status(403)
+            return next(new Error("Username or password are incorrect"))
+        }
+
+
+        console.log(req.body.password)
+        console.log(User.checkPassword)
+        User.checkPassword(req.body.password, (err, match) => {
+            console.log("Hey")
+            if (err) {
+                res.status(500)
+                return next(err)
+            }
+            if (!match) {
+                res.status(401)
+                return next(new Error("Username or password are incorrect"))
+            }
+            const token = jwt.sign(user, process.env.SECRET)
+            //Send the token back to the client app
+            return res.status(200).send({ token: token, user: user, token })
+        })
     })
 })
 
