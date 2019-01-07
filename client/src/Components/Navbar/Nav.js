@@ -40,17 +40,31 @@ class Nav extends React.Component {
         super()
         this.state = {
             modalIsOpen: false,
+            signup: false,
+            login: false
         }
     }
 
-    openModal = () => {
-        this.setState({ modalIsOpen: true });
+    openSignupModal = () => {
+        this.setState({
+            modalIsOpen: true,
+            signup: true
+        })
+    }
+
+    openLoginModal = () => {
+        this.setState({
+            modalIsOpen: true,
+            login: true
+        })
     }
 
     closeModal = () => {
         console.log('hey')
         this.setState({
             modalIsOpen: false,
+            signup: false,
+            login: false
         })
     }
 
@@ -62,7 +76,7 @@ class Nav extends React.Component {
                     </div>
                 </a>
                 {this.props.currentWidth <= 768 ?
-                    <div className = "nav-container__bars-container">
+                    <div className="nav-container__bars-container">
                         <p className="nav-container__bars"><FontAwesomeIcon icon="bars" /> </p>
                     </div>
                     :
@@ -83,10 +97,10 @@ class Nav extends React.Component {
                             <li className="nav-item">
                                 <a href="#"> More </a>
                             </li>
-                            <li className="nav-item" onClick={this.openModal}>
+                            <li className="nav-item" onClick={this.openSignupModal}>
                                 <a href="#">Signup</a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={this.openLoginModal}>
                                 <a href="#">Login</a>
 
                             </li>
@@ -101,7 +115,10 @@ class Nav extends React.Component {
                     ariaHideApp={false}
                 >
                     <div>
-                        <Signup className="sign-up" closeModal={this.closeModal} />
+                        <Signup className="sign-up"
+                            closeModal={this.closeModal}
+                            signup={this.state.signup}
+                            login={this.state.login} />
                     </div>
                 </Modal>
             </div>

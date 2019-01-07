@@ -7,8 +7,7 @@ class Signup extends Component {
         super()
         this.state = {
             email: "",
-            password: "",
-            toggle: false
+            password: ""
         }
     }
 
@@ -18,7 +17,7 @@ class Signup extends Component {
         })
     }
 
-    handleSignup= e => {
+    handleSignup = e => {
         e.preventDefault()
         const userInfo = {
             email: this.state.email,
@@ -40,12 +39,6 @@ class Signup extends Component {
         this.props.closeModal()
     }
 
-    toggler = () => {
-        this.setState( prevState => ({
-            toggle: !prevState.toggle
-        })
-    )}
-
     clearInputs = () => {
         this.setState({
             email: "",
@@ -57,14 +50,32 @@ class Signup extends Component {
         return (
             <div className="signup-form-container">
                 <button onClick={this.props.closeModal}>Close</button>
-                <SignupForm 
-                    email= {this.state.email}
-                    password = {this.state.password}
-                    handleSubmit = {this.handleSignup}
-                    handleChange = {this.handleChange}
-                    btnText = "SignUp" 
-                   />
-                
+                <div>
+                    {this.props.signup ?
+                        <h1>Signup</h1>
+                        :
+                        <h1>Login</h1>
+                    }
+                </div>
+                {this.props.signup ?
+
+                    <SignupForm
+                        email={this.state.email}
+                        password={this.state.password}
+                        handleSubmit={this.handleSignup}
+                        handleChange={this.handleChange}
+                        btnText="SignUp"
+                    />
+                    :
+                    <SignupForm
+                        email={this.state.email}
+                        password={this.state.password}
+                        handleSubmit={this.handleSignup}
+                        handleChange={this.handleChange}
+                        btnText="Login"
+                    />
+                }
+
             </div>
         )
     }
