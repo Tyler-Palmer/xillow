@@ -148,7 +148,7 @@ class Nav extends React.Component {
                             <li className="nav-item" onClick={this.openLoginModal}>
                                 <a href="#">Login</a>
                             </li>
-                            <li className="nav-item" onClick={this.logOut}>
+                            <li className="nav-item" onClick={this.props.logOut}>
                                 <a href="#">Log out</a>
                             </li>
                         </ul>

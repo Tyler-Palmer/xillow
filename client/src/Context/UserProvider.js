@@ -52,6 +52,7 @@ class UserProvider extends Component {
                 isAuthenticated: true
             })
         })
+        console.log("logged in")
     }
 
     logOut = () => {
@@ -61,6 +62,7 @@ class UserProvider extends Component {
             user: {},
             token: ""
         })
+        console.log("Logged out")
     }
 
     handleError = (err) => {
@@ -73,7 +75,7 @@ class UserProvider extends Component {
             <Provider value={{
                 signup: this.signup,
                 login: this.login,
-                logout: this.logOut,
+                logOut: this.logOut,
                 ...this.state
             }}>
                 {this.props.children}
