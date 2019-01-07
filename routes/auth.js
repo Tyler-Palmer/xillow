@@ -19,20 +19,25 @@ authRouter.get("/", (req, res, next) => {
 })
 
 //Signup Post Route
-authRouter.post("/signup", (req, res) => {
+authRouter.post("/signup", (req, res, next) => {
     //Look for user with the requested username
     console.log(req.body)
     User.findOne({email: req.body.email}, (err, existingUser) => {
         if(err){
-            return res.status(500).send({success: false, err})
+            res.status(500)
+            return next(err)
         //If the db doesn't return "null", it means there is already a user with that username
         }else if (existingUser !== null){
-            return res.status(400).send({success: false, err: "That username already exists!"})
+            res.status(400)
+            return next(new Error("That username already exists!"))
         }
         //Create new user from the req.body
         const newUser = new User(req.body)
         newUser.save((err, user) => {
-            if (err) return res.status(500).send({success: false, err})
+            if (err){
+                res.status(500)
+                return next(err)
+            }
              //Give the user a jwt token
             const token = jwt.sign(user.toObject(), process.env.SECRET)
             return res.status(201).send({success: true, user: user.toObject(), token})
@@ -42,13 +47,17 @@ authRouter.post("/signup", (req, res) => {
 
 //Login Post Route
 
-authRouter.post("/login", (req,res) => {
+authRouter.post("/login", (req,res, next) => {
     //Find the user with the submitted username
     User.findOne({email: req.body.email.toLowerCase()}, (err, user) => {
-        if(err) return res.status(500).send(err)
+        if(err){
+        res.status(500)
+        return next(err)
+        }
         //If submitted user isn't in the db or password is wrong:
         if(!user || user.password !== req.body.password){
-            return res.status(403).send({success: false, err: "Username or password are incorrect"})
+            res.status(403)
+            return next( new Error("Username or password are incorrect"))
         }
         const token = jwt.sign(user.toObject(), process.env.SECRET)
         //Send the token back to the client app
