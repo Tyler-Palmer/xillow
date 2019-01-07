@@ -104,6 +104,14 @@ class Nav extends React.Component {
         })
     }
 
+
+    toggleLogSign = () => {
+        this.setState( prevState => ({
+            signupModal: !prevState.signupModal,
+            loginModal: !prevState.signupModal
+        }))
+    }
+
     render() {
         return (
             <div className="nav-container" style={{ position: this.props.currentWidth <= 768 && "relative", height: this.props.currentWidth <= 768 && 0 }}>
@@ -153,7 +161,8 @@ class Nav extends React.Component {
                         <Signup className="sign-up"
                             closeModal={this.closeModal}
                             signupModal={this.state.signupModal}
-                            loginModal={this.state.loginModal} />
+                            loginModal={this.state.loginModal}
+                            toggleLogSign={this.toggleLogSign} />
                     </div>
                 </Modal>
 
