@@ -46,6 +46,15 @@ class UserProvider extends Component {
         })
     }
 
+    logOut = () => {
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        this.setState({
+            user: {},
+            token: ""
+        })
+    }
+
     handleError = (err) => {
         this.setState({
             authErr: err
@@ -56,6 +65,7 @@ class UserProvider extends Component {
             <Provider value={{
                 signup: this.signup,
                 login: this.login,
+                logout: this.logOut,
                 ...this.state
             }}>
                 {this.props.children}

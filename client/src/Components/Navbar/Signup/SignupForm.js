@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SignupForm = (props) => {
-    const { handleChange, handleSubmit, btnText, email, password } = props
+    const { handleChange, handleSubmit, btnText, email, password, toggleLogSign} = props
     return (
         <form className="signup-form" onSubmit={handleSubmit}>
             <div className="form-group">
@@ -26,7 +26,7 @@ const SignupForm = (props) => {
                         id="exampleInputPassword1" 
                         placeholder="Password" />
             </div>
-            <div className="form-check">
+            <div className="form-check" onClick={toggleLogSign}>
                 <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                 <label className="form-check-label" htmlFor="exampleCheck1">Already have an account?</label>
             </div>
