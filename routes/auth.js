@@ -54,15 +54,13 @@ authRouter.post("/login", (req, res, next) => {
             res.status(500)
             return next(err)
         }
+   
         //If submitted user isn't in the db or password is wrong:
         if (!user) {
             res.status(403)
             return next(new Error("Username or password are incorrect"))
         }
 
-
-        console.log(req.body.password)
-        console.log(User.checkPassword)
         User.checkPassword(req.body.password, (err, match) => {
             console.log("Hey")
             if (err) {
