@@ -46,6 +46,12 @@ class Signup extends Component {
         })
     }
 
+    toggle = () => {
+        this.setState({
+            
+        })
+    }
+
     render() {
         console.log(this.props.signupModal)
         return (
@@ -71,7 +77,7 @@ class Signup extends Component {
                     <SignupForm
                         email={this.state.email}
                         password={this.state.password}
-                        handleSubmit={this.handleSignup}
+                        handleSubmit={this.handleLogin}
                         handleChange={this.handleChange}
                         btnText="Login"
                     />

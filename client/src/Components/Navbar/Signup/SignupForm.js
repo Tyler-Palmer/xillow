@@ -28,7 +28,7 @@ const SignupForm = (props) => {
             </div>
             <div className="form-check">
                 <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                <label className="form-check-label" htmlFor="exampleCheck1">Already have an account?</label>
             </div>
             <button type="submit" className="btn btn-primary">{btnText}</button>
         </form>
