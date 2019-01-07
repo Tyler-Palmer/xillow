@@ -34,11 +34,10 @@ userSchema.pre("save", function(next){
 })
 
 //Check hashed password
-userSchema.methods.checkPassword = function(passwordAttempt, callback) {
+userSchema.methods.checkPassword = function(passwordAttempt, callback){
     bcrypt.compare(passwordAttempt, this.password, (err, isMatch) => {
         if (err) return callback(err)
         callback(null, isMatch)
-        next()
     })
 }
 

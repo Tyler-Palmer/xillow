@@ -58,12 +58,9 @@ authRouter.post("/login", (req, res, next) => {
         if (!user) {
             res.status(403)
             return next(new Error("Username or password are incorrect"))
-        }
+        };
 
-
-        console.log(req.body.password)
-        console.log(User.checkPassword)
-        User.checkPassword(req.body.password, (err, match) => {
+        user.checkPassword(req.body.password, (err, match) => {
             console.log("Hey")
             if (err) {
                 res.status(500)
@@ -73,9 +70,9 @@ authRouter.post("/login", (req, res, next) => {
                 res.status(401)
                 return next(new Error("Username or password are incorrect"))
             }
-            const token = jwt.sign(user, process.env.SECRET)
+            const token = jwt.sign(user.toObject(), process.env.SECRET)
             //Send the token back to the client app
-            return res.status(200).send({ token: token, user: user, token })
+            return res.status(200).send({ token: token, user: user.toObject(), token })
         })
     })
 })
