@@ -21,7 +21,6 @@ class SearchProvider extends Component {
         {headers: {"Accept": "application/x-www-form-urlencoded"} })
         .then(res => {
             parseString(res.data, {trim: true}, (err, response) => {
-                console.log(response)
                 console.dir(response)
             })
         })
