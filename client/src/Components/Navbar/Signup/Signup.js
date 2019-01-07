@@ -18,7 +18,7 @@ class Signup extends Component {
         })
     }
 
-    handleSignup= (e) => {
+    handleSignup= e => {
         e.preventDefault()
         const userInfo = {
             email: this.state.email,
@@ -26,13 +26,25 @@ class Signup extends Component {
         }
         this.props.signup(userInfo)
         this.clearInputs()
+        this.props.closeModal()
+    }
+
+    handleLogin = e => {
+        e.preventDefault()
+        const userInfo = {
+            email: this.state.email,
+            password: this.state.password
+        }
+        this.props.login(userInfo)
+        this.clearInputs()
+        this.props.closeModal()
     }
 
     toggler = () => {
-        this.setState({
-            toggle: !this.state.toggle
+        this.setState( prevState => ({
+            toggle: !prevState.toggle
         })
-    }
+    )}
 
     clearInputs = () => {
         this.setState({
@@ -50,7 +62,8 @@ class Signup extends Component {
                     password = {this.state.password}
                     handleSubmit = {this.handleSignup}
                     handleChange = {this.handleChange}
-                    btnText = "SignUp" />
+                    btnText = "SignUp" 
+                   />
                 
             </div>
         )

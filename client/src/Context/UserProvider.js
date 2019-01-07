@@ -15,20 +15,41 @@ class UserProvider extends Component {
         }
     }
 
-    signup = (userInfo) => {
-        return axios.post('/auth/signup', userInfo)
-            .then(response => {
-                const { user, token } = response.data
+    signup = userInfo => {
+        axios.post('/auth/signup', userInfo)
+            .then(res => {
+                const { user, token } = res.data
                  // On successful signup/login, add user object to localstorage
-                localStorage.setItem("token", token);
-                localStorage.setItem("user", JSON.stringify(user));
+                localStorage.setItem("token", token)
+                localStorage.setItem("user", JSON.stringify(user))
                 this.setState({
                     user: user,
-                    token: token
+                    token: token,
+                    isAuthenticated: true
                 })
-                //Pass on response so that it can be used 
-                return response
+                //Pass on response so that it can be used again
+                return res
+            }).catch(err => this.handleError(err.res.data.errMsg))
+    }
+    
+    login = userInfo => {
+        axios.post('/auth/login', userInfo)
+        .then(res => {
+            const { user, token } =res.data
+            localStorage.setItem("token", token)
+            localStorage.setItem("user", JSON.stringify(user))
+            this.setState({
+                user: user,
+                token: token,
+                isAuthenticated: true
             })
+        })
+    }
+
+    handleError = (err) => {
+        this.setState({
+            authErr: err
+        })
     }
     render() {
         return (

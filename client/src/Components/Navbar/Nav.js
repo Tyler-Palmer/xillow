@@ -110,14 +110,3 @@ class Nav extends React.Component {
 }
 
 export default Nav
-
-
-
-{/* <Modal
-                                isOpen={this.state.modalIsOpen}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                                error="false"
-                                ariaHideApp={false}
-                            >
-                            </Modal> */}
