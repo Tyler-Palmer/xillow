@@ -3,6 +3,14 @@ import axios from 'axios'
 
 const { Consumer, Provider } = React.createContext()
 
+const userAxios = axios.create()
+
+userAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token")
+    config.headers.Authorization = `Bearer ${token}`
+    return config
+})
+
 class UserProvider extends Component {
     constructor() {
         super()
@@ -16,7 +24,7 @@ class UserProvider extends Component {
     }
 
     signup = userInfo => {
-        axios.post('/auth/signup', userInfo)
+        userAxios.post('/auth/signup', userInfo)
             .then(res => {
                 const { user, token } = res.data
                  // On successful signup/login, add user object to localstorage
@@ -33,7 +41,7 @@ class UserProvider extends Component {
     }
     
     login = userInfo => {
-        axios.post('/auth/login', userInfo)
+        userAxios.post('/auth/login', userInfo)
         .then(res => {
             const { user, token } =res.data
             localStorage.setItem("token", token)
