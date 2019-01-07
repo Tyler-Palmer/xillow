@@ -21,11 +21,11 @@ const userSchema = new Schema({
 
 //Save password to the db as encrypted token "Pre-save hook"
 //Can't use ES6 arrow function because it won't use the correct instance of 'this'
-userSchema.pre("save", function(next){
+userSchema.pre("save", function (next) {
     const user = this
     if (!user.isModified("password")) return next()
     bcrypt.hash(user.password, 10, (err, hash) => {
-        if (err){
+        if (err) {
             return next(err)
         }
         user.password = hash
@@ -34,11 +34,18 @@ userSchema.pre("save", function(next){
 })
 
 //Check hashed password
-userSchema.methods.checkPassword = function(passwordAttempt, callback){
+userSchema.methods.checkPassword = function (passwordAttempt, callback) {
     bcrypt.compare(passwordAttempt, this.password, (err, isMatch) => {
         if (err) return callback(err)
         callback(null, isMatch)
     })
+}
+
+userSchema.methods.withoutPassword = function () {
+    const user = this.toObject()
+    delete user.password
+    return user
+
 }
 
 module.exports = mongoose.model("User", userSchema)
