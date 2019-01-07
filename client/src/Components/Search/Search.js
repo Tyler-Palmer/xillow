@@ -1,15 +1,18 @@
 import React from 'react'
+import { withSearchData } from "../../Context/SearchProvider"
 
-const Search = () => {
-    return (
-        <div>
-            <h2>
-                <div>
-                    Search 
-                </div>
-            </h2>
-        </div>
-    )
+class Search extends React.Component {
+    render() {
+        return (
+            <div>
+                <h2>
+                    <div>
+                        <p>Search For Something</p>
+                    </div>
+                </h2>
+            </div>
+        )
+    }
 }
 
-export default Search;
+export default withSearchData(Search);
