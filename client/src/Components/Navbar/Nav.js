@@ -42,11 +42,27 @@ class Nav extends React.Component {
         super()
         this.state = {
             modalIsOpen: false,
+            signupModal: false,
+            loginModal: false,
             isCheckingNav: false,
             isCurious: "",
             checking: false,
             currentChecking: 0
         }
+    }
+
+    openSignupModal = () => {
+        this.setState({
+            modalIsOpen: true,
+            signupModal: true
+        })
+    }
+
+    openLoginModal = () => {
+        this.setState({
+            modalIsOpen: true,
+            loginModal: true
+        })
     }
 
     handleUserCheckingNav = (category, number) => {
@@ -83,6 +99,8 @@ class Nav extends React.Component {
     closeModal = () => {
         this.setState({
             modalIsOpen: false,
+            signupModal: false,
+            loginModal: false
         })
     }
 
@@ -115,10 +133,10 @@ class Nav extends React.Component {
                             <li className="nav-item">
                                 <a href="#"> More </a>
                             </li>
-                            <li className="nav-item" onClick={this.openModal}>
+                            <li className="nav-item" onClick={this.openSignupModal}>
                                 <a href="#">Signup</a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={this.openLoginModal}>
                                 <a href="#">Login</a>
 
                             </li>
@@ -132,7 +150,10 @@ class Nav extends React.Component {
                     style={customStyle}
                     ariaHideApp={false}>
                     <div>
-                        <Signup className="sign-up" closeModal={this.closeModal} />
+                        <Signup className="sign-up"
+                            closeModal={this.closeModal}
+                            signupModal={this.state.signupModal}
+                            loginModal={this.state.loginModal} />
                     </div>
                 </Modal>
 
@@ -219,4 +240,3 @@ class Nav extends React.Component {
 }
 
 export default Nav;
-

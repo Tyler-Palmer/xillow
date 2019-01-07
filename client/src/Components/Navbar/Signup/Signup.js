@@ -7,8 +7,7 @@ class Signup extends Component {
         super()
         this.state = {
             email: "",
-            password: "",
-            toggle: false
+            password: ""
         }
     }
 
@@ -18,7 +17,7 @@ class Signup extends Component {
         })
     }
 
-    handleSignup= (e) => {
+    handleSignup = e => {
         e.preventDefault()
         const userInfo = {
             email: this.state.email,
@@ -26,12 +25,18 @@ class Signup extends Component {
         }
         this.props.signup(userInfo)
         this.clearInputs()
+        this.props.closeModal()
     }
 
-    toggler = () => {
-        this.setState({
-            toggle: !this.state.toggle
-        })
+    handleLogin = e => {
+        e.preventDefault()
+        const userInfo = {
+            email: this.state.email,
+            password: this.state.password
+        }
+        this.props.login(userInfo)
+        this.clearInputs()
+        this.props.closeModal()
     }
 
     clearInputs = () => {
@@ -41,17 +46,43 @@ class Signup extends Component {
         })
     }
 
+    toggle = () => {
+        this.setState({
+            
+        })
+    }
+
     render() {
+        console.log(this.props.signupModal)
         return (
             <div className="signup-form-container">
                 <button onClick={this.props.closeModal}>Close</button>
-                <SignupForm 
-                    email= {this.state.email}
-                    password = {this.state.password}
-                    handleSubmit = {this.handleSignup}
-                    handleChange = {this.handleChange}
-                    btnText = "SignUp" />
-                
+                <div>
+                    {this.props.signupModal ?
+                        <h1>Signup</h1>
+                        :
+                        <h1>Login</h1>
+                    }
+                </div>
+                {this.props.signupModal ?
+
+                    <SignupForm
+                        email={this.state.email}
+                        password={this.state.password}
+                        handleSubmit={this.handleSignup}
+                        handleChange={this.handleChange}
+                        btnText="SignUp"
+                    />
+                    :
+                    <SignupForm
+                        email={this.state.email}
+                        password={this.state.password}
+                        handleSubmit={this.handleLogin}
+                        handleChange={this.handleChange}
+                        btnText="Login"
+                    />
+                }
+
             </div>
         )
     }
