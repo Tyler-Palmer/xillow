@@ -5,11 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ComponentStyles/_styles.scss"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./Context/UserProvider"
 import SearchProvider from "./Context/SearchProvider"
-library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight);
+library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp);
 
 
 ReactDOM.render(
