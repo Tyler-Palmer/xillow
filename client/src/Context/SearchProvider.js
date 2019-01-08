@@ -13,11 +13,10 @@ class SearchProvider extends Component {
             searchObject: {}
         }
     }
-   
 
     getZillowData = (info) => {
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
-        axios.get(`${serverUrl}http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=${process.env.REACT_APP_ZILLOWKEY}&address=2114+Bigelow+Ave&citystatezip=Seattle%2C+WA`,
+        axios.get(`${serverUrl}http://www.zillow.com/webservice/GetDeepSearchResults.htm?zws-id=${process.env.REACT_APP_ZILLOWKEY}&address=2114+Bigelow+Ave&citystatezip=Seattle%2C+WA`,
         {headers: {"Accept": "application/x-www-form-urlencoded"} })
         .then(res => {
             parseString(res.data, {trim: true}, (err, response) => {

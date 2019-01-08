@@ -16,6 +16,7 @@ app.use("/api", expressJwt({secret: process.env.SECRET}))
 
 //Routes
 app.use("/auth", require("./routes/auth"))
+app.use("/listing", require("./routes/listingsServer"))
 
 //Database
 mongoose.connect('mongodb://localhost:27017/myapp', {useNewUrlParser: true }, () => {
