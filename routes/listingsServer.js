@@ -2,6 +2,7 @@ const express = require("express")
 const listingServerRouter = express.Router()
 const ListingSchema = require("../models/listingServer")
 
+
 listingServerRouter.post("/", (req, res, next) => {
     const newListing = new ListingSchema(req.body);
     newListing.save((err, data)=>{
