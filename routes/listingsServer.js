@@ -3,7 +3,7 @@ const listingServerRouter = express.Router()
 const ListingSchema = require("../models/listingServer")
 
 listingServerRouter.post("/", (req, res, next) => {
-    const newListing = new ListingSchema;
+    const newListing = new ListingSchema(req.body);
     newListing.save((err, data)=>{
         if(err){
             res.status(500)
