@@ -82,6 +82,12 @@ class UserProvider extends Component {
             authErr: err
         })
     }
+    clearAuthErr = () =>{
+        this.setState({
+            authErr: ""
+        })
+    }
+
     render() {
         console.log(this.state.authErr)
         return (
@@ -89,6 +95,7 @@ class UserProvider extends Component {
                 signup: this.signup,
                 login: this.login,
                 logOut: this.logOut,
+                clearAuthErr: this.clearAuthErr,
                 ...this.state
             }}>
                 {this.props.children}

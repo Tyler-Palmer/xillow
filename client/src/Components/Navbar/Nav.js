@@ -103,6 +103,7 @@ class Nav extends React.Component {
             signupModal: false,
             loginModal: false
         })
+        this.props.clearAuthErr()
     }
 
 
