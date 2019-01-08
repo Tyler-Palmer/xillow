@@ -1,7 +1,8 @@
 import React from 'react'
 
 const SignupForm = (props) => {
-    const { handleChange, handleSubmit, btnText, email, password, toggleLogSign} = props
+    console.log(props)
+    const { handleChange, handleSubmit, btnText, email, password, toggleLogSign, signInButton, signIn} = props
     return (
         <form className="signup-form" onSubmit={handleSubmit}>
             <div className="form-group">
@@ -27,8 +28,13 @@ const SignupForm = (props) => {
                         placeholder="Password" />
             </div>
             <div className="form-check" onClick={toggleLogSign}>
-                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                <label className="form-check-label" htmlFor="exampleCheck1">Already have an account?</label>
+                <input type="checkbox" className="form-check-input" id="exampleCheck1" onClick={signIn}/>
+                {
+                    signInButton ?
+                    <label className="form-check-label" htmlFor="exampleCheck2">Already have an account?</label>
+                    :
+                    <label className="form-check-label" htmlFor="exampleCheck1">Sign up</label>
+                }
             </div>
             <button type="submit" className="btn btn-primary">{btnText}</button>
         </form>

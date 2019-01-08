@@ -27,7 +27,7 @@ class UserProvider extends Component {
         userAxios.post('/auth/signup', userInfo)
             .then(res => {
                 const { user, token } = res.data
-                 // On successful signup/login, add user object to localstorage
+                // On successful signup/login, add user object to localstorage
                 localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
                 this.setState({
@@ -37,21 +37,33 @@ class UserProvider extends Component {
                 })
                 //Pass on response so that it can be used again
                 return res
-            }).catch(err => this.handleError(err.res.data.errMsg))
+            }).catch(err => {
+                console.log(err)
+                console.log(typeof err)
+                this.setState({
+                    authErr: err.response.data.message
+                })
+            })
     }
-    
+
     login = userInfo => {
         userAxios.post('/auth/login', userInfo)
-        .then(res => {
-            const { user, token } =res.data
-            localStorage.setItem("token", token)
-            localStorage.setItem("user", JSON.stringify(user))
-            this.setState({
-                user: user,
-                token: token,
-                isAuthenticated: true
+            .then(res => {
+                const { user, token } = res.data
+                localStorage.setItem("token", token)
+                localStorage.setItem("user", JSON.stringify(user))
+                this.setState({
+                    user: user,
+                    token: token,
+                    isAuthenticated: true
+                })
+            }).catch(err => {
+                console.log(err)
+                console.log(typeof err)
+                this.setState({
+                    authErr: err.response.data.message
+                })
             })
-        })
         console.log("logged in")
     }
 
@@ -70,12 +82,20 @@ class UserProvider extends Component {
             authErr: err
         })
     }
+    clearAuthErr = () =>{
+        this.setState({
+            authErr: ""
+        })
+    }
+
     render() {
+        console.log(this.state.authErr)
         return (
             <Provider value={{
                 signup: this.signup,
                 login: this.login,
                 logOut: this.logOut,
+                clearAuthErr: this.clearAuthErr,
                 ...this.state
             }}>
                 {this.props.children}
@@ -91,3 +111,5 @@ export const withUser = C => props => (
 )
 
 export default UserProvider
+
+//this.handleError(err.res.data.errMsg)

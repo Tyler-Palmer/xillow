@@ -7,7 +7,8 @@ class Signup extends Component {
         super()
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            signInButton: false
         }
     }
 
@@ -21,22 +22,30 @@ class Signup extends Component {
         e.preventDefault()
         const userInfo = {
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            signInButton: true
         }
         this.props.signup(userInfo)
         this.clearInputs()
-        this.props.closeModal()
+        console.log(this.props.token)
+        if(this.props.token){
+            this.props.closeModal()
+        }
     }
 
     handleLogin = e => {
         e.preventDefault()
         const userInfo = {
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            signInButton: false
         }
         this.props.login(userInfo)
         this.clearInputs()
-        this.props.closeModal()
+        console.log(this.props.token)
+        if(this.props.token){
+            this.props.closeModal()
+        }
     }
 
     clearInputs = () => {
@@ -44,6 +53,12 @@ class Signup extends Component {
             email: "",
             password: ""
         })
+    }
+
+    signIn = () => {
+        this.setState( prevState => ({
+            signInButton: !prevState.signInButton
+        }))
     }
 
     render() {
@@ -67,6 +82,9 @@ class Signup extends Component {
                         handleChange={this.handleChange}
                         btnText="SignUp"
                         toggleLogSign={this.props.toggleLogSign}
+                        signIn={this.signIn}
+                        signInButton={this.state.signInButton}
+                        
                     />
                     :
                     <SignupForm
@@ -76,9 +94,16 @@ class Signup extends Component {
                         handleChange={this.handleChange}
                         btnText="Login"
                         toggleLogSign={this.props.toggleLogSign}
+                        signIn={this.signIn}
+                        signInButton={this.state.signInButton}
                     />
                 }
-
+                {
+                    this.props.authErr ?
+                    <p>{this.props.authErr}</p>
+                    :
+                    ""
+                }
             </div>
         )
     }
