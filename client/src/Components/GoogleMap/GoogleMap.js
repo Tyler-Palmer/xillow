@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import GoogleMapReact from "google-map-react";
 import { withGoogleData } from "../../Context/NearbyData"
+import GoogleIcon from "./GoogleIcons"
 
 class GoogleMap extends Component {
     constructor(props) {
@@ -32,7 +33,12 @@ class GoogleMap extends Component {
                             defaultCenter={this.center}
                             defaultZoom={this.zoom}
                         >
-                        
+                        <GoogleIcon
+                                lat={this.center.lat}
+                                lng={this.center.lng}
+                                house = {true} />
+
+                        {this.props.nearbyInfos.map(each => <GoogleIcon lat ={each.geometry.location.lat} lng = {each.geometry.location.lng} icon = {each.icon}/>)}        
                         </GoogleMapReact>
                     </div>
                 }
