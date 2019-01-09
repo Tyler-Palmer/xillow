@@ -22,6 +22,7 @@ class GoogleMap extends Component {
     }
 
     render() {
+        console.log(this.props.nearbyInfos)
         return (
             <Fragment>
                 {this.center.lat > 1 &&
