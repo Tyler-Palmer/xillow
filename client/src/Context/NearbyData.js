@@ -45,6 +45,7 @@ class NearbyData extends React.Component {
 
 
     render() {
+        console.log(this.state.imageData)
         return (
             <NearbyDataProvider.Provider
                 value={{
