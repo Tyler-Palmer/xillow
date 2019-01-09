@@ -11,7 +11,7 @@ class GoogleMap extends Component {
             lat: 0,
             lng: 0
         }
-        this.zoom = 10
+        this.zoom = 17
     }
 
     componentWillReceiveProps(nextProps) {
