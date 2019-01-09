@@ -14,16 +14,15 @@ class NearbyData extends React.Component {
 
 
     getNearbyLocationData = async (address) => {
-        const geocoding = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GOOGLEKEY}`)
-        console.log(geocoding)
-        console.log(geocoding.data.results[0].geometry.location.lat)
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
-        const data = await axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${geocoding.data.results[0].geometry.location.lat},${geocoding.data.results[0].geometry.location.lng}&rankby=distance&type=food&key=${process.env.REACT_APP_GOOGLEPLACEKEYY}`)
-        console.log(data)   
+        const geocoding = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GOOGLEKEY}`)
+        const data = await axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${geocoding.data.results[0].geometry.location.lat},${geocoding.data.results[0].geometry.location.lng}&rankby=distance&type=food&key=${process.env.REACT_APP_GOOGLEPLACEKEY}`)
+        this.setState({
+            nearbyInfos: data.results
+        })   
     }
 
     
-
 
     render() {
         return (
