@@ -6,11 +6,11 @@ class GoogleIcon extends React.Component {
         return (
             <div>
                 {
-                    this.props.house ? <FontAwesomeIcon className = "home-icon" icon="home" /> :
-                      
-                            <div className="google-icon__image" style={{ backgroundImage: `url(${this.props.icon})` }}></div>
-                     
+                    this.props.house ? <FontAwesomeIcon className="home-icon" icon="home" /> :
+                        <div className="google-icon__image" style={{ backgroundImage: `url(${this.props.icon})` }}>
+                        </div>
                 }
+                
             </div>
         )
 
@@ -18,5 +18,3 @@ class GoogleIcon extends React.Component {
 }
 
 export default GoogleIcon
-{/* <FontAwesomeIcon icon = "map-marker"  className = "map-mark-icon" >
-</FontAwesomeIcon> */}

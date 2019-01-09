@@ -1,6 +1,6 @@
 .home-icon{
     font-size: 20px;
-    color: darkcyan
+    color: crimson;
 }
 .google-icon__image{
     height: 20px;
@@ -8,12 +8,8 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 200;
+    z-index: 100;
     position: absolute;
 }
 
-.map-mark-icon{
-    font-size: 25px;
-    color: red;
-    z-index: -1;
-}
+
