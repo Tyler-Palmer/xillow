@@ -1,4 +1,4 @@
-    import React from "react"
+import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class GoogleIcon extends React.Component {
