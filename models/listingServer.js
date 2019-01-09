@@ -23,6 +23,7 @@ const listingServer = new Schema({
         type: String,
         required: true,
     },
+    Headline: String,
     area: String,
     viewing_time: String,
     property_overview: String,
@@ -30,10 +31,13 @@ const listingServer = new Schema({
         type: String,
         required: true
     },
+    description: String,
     thumbnail_preview: String,
-    description: {
-        type: String
-    }   
+    Trans_header: String,
+    transp_score: String,
+    walk_score: String,
+    transit_score: String,
+    biking_score: String
 })
 
 
