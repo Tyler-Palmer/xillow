@@ -12,6 +12,13 @@ class Signup extends Component {
         }
     }
 
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps)
+        if(nextProps.token){
+            this.props.closeModal()
+        }
+    }
+
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -26,11 +33,11 @@ class Signup extends Component {
             signInButton: true
         }
         this.props.signup(userInfo)
-        this.clearInputs()
         console.log(this.props.token)
         if(this.props.token){
             this.props.closeModal()
         }
+        this.clearInputs()
     }
 
     handleLogin = e => {
@@ -41,11 +48,8 @@ class Signup extends Component {
             signInButton: false
         }
         this.props.login(userInfo)
-        this.clearInputs()
         console.log(this.props.token)
-        if(this.props.token){
-            this.props.closeModal()
-        }
+        this.clearInputs()
     }
 
     clearInputs = () => {
@@ -62,6 +66,7 @@ class Signup extends Component {
     }
 
     render() {
+        console.log(this.props)
         console.log(this.props.signupModal)
         return (
             <div className="signup-form-container">
@@ -84,7 +89,7 @@ class Signup extends Component {
                         toggleLogSign={this.props.toggleLogSign}
                         signIn={this.signIn}
                         signInButton={this.state.signInButton}
-                        
+                        isAuthenticated={this.props.isAuthenticated}                        
                     />
                     :
                     <SignupForm
@@ -96,6 +101,7 @@ class Signup extends Component {
                         toggleLogSign={this.props.toggleLogSign}
                         signIn={this.signIn}
                         signInButton={this.state.signInButton}
+                        isAuthenticated={this.props.isAuthenticated}
                     />
                 }
                 {
