@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter } from "react-router-dom";
+import NearbyData from "./Context/NearbyData"
 import UserProvider from "./Context/UserProvider"
 import SearchProvider from "./Context/SearchProvider"
 library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer);
@@ -14,11 +15,13 @@ library.add(fab, faSearch, faCircle, faQuoteLeft, faHome, faCopyright, faBars, f
 
 ReactDOM.render(
     <BrowserRouter>
-        <SearchProvider>
-            <UserProvider>
-                <App />
-            </UserProvider>
-        </SearchProvider>
+        <NearbyData>
+            <SearchProvider>
+                <UserProvider>
+                    <App />
+                </UserProvider>
+            </SearchProvider>
+        </NearbyData>
     </BrowserRouter>
     , document.getElementById("root"))
 
