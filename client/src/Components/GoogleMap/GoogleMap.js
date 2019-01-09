@@ -5,7 +5,7 @@ class GoogleMap extends Component{
     static default = {
         center: {
             lat: this.props.lat || 59.9,
-            long: this.prop.long || 30.33,
+            long: this.props.long || 30.33,
         },
         zoom: 15
     }
@@ -17,7 +17,7 @@ class GoogleMap extends Component{
                 defaultCenter = {this.props.center}
                 defaultZoom = {this.props.zoom}
                 >
-                    
+            
                 </GoogleMapReact>
             </div>
         )
