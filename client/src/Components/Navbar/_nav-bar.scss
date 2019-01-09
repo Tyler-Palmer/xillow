@@ -130,6 +130,10 @@
     display: flex;
     justify-content: center;
     align-self: center;
+
+    .signup{
+        animation: modalMoveOut 0.3s linear;
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {

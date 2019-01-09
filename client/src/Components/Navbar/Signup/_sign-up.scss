@@ -2,6 +2,7 @@
 
 .signup-form-container{
     display:flex;
+    flex-direction: column;
     background-color: whitesmoke;
     font-family: $roboto;
     justify-content: center;
@@ -9,4 +10,9 @@
     z-index: 150;
     height: 500px;
     width: 500px; 
+    
+    #error-display{
+        font-size: .8em;
+        color: red;
+    }
 }

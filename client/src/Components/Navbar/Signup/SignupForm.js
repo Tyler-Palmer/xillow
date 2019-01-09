@@ -35,7 +35,7 @@ const SignupForm = (props) => {
                     <label className="form-check-label" htmlFor="exampleCheck1">Sign up</label>
                 }
             </div>
-            <button type="submit" className="btn btn-primary">{btnText}</button>
+            <button id="signup-form-button" type="submit" className="btn btn-primary">{btnText}</button>
         </form>
     )
 }

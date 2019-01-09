@@ -112,7 +112,6 @@ class Nav extends React.Component {
         this.setState( prevState => ({
             signupModal: !prevState.signupModal,
             loginModal: !prevState.signupModal,
-            modalIsOpen: !prevState.modalIsOpen
         }))
     }
 
@@ -145,12 +144,23 @@ class Nav extends React.Component {
                             <li className="nav-item">
                                 <a href="#"> More </a>
                             </li>
+                            
+                            {
+                                this.props.isAuthenticated ?
+                                ""
+                                :
                             <li className="nav-item" onClick={this.openSignupModal}>
                                 <a href="#">Signup</a>
                             </li>
+                            }
+                            {
+                                this.props.isAuthenticated ?
+                                ""
+                                :
                             <li className="nav-item" onClick={this.openLoginModal}>
                                 <a href="#">Login</a>
                             </li>
+                            }
                             {
                                 this.props.isAuthenticated ?
                             <li className="nav-item" onClick={this.props.logOut}>

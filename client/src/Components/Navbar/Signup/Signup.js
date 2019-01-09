@@ -106,7 +106,7 @@ class Signup extends Component {
                 }
                 {
                     this.props.authErr ?
-                    <p>{this.props.authErr}</p>
+                    <p id="error-display">{this.props.authErr}</p>
                     :
                     ""
                 }
