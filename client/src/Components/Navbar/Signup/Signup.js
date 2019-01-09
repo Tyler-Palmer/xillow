@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { withUser } from '../../../Context/UserProvider'
 import SignupForm from './SignupForm'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 
 class Signup extends Component {
     constructor() {
@@ -12,9 +14,9 @@ class Signup extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(nextProps) {
         console.log(nextProps)
-        if(nextProps.token){
+        if (nextProps.token) {
             this.props.closeModal()
         }
     }
@@ -34,10 +36,11 @@ class Signup extends Component {
         }
         this.props.signup(userInfo)
         console.log(this.props.token)
-        if(this.props.token){
+        if (this.props.token) {
             this.props.closeModal()
         }
         this.clearInputs()
+        this.props.handleCloseNav()
     }
 
     handleLogin = e => {
@@ -50,6 +53,7 @@ class Signup extends Component {
         this.props.login(userInfo)
         console.log(this.props.token)
         this.clearInputs()
+        this.props.handleCloseNav()
     }
 
     clearInputs = () => {
@@ -60,7 +64,7 @@ class Signup extends Component {
     }
 
     signIn = () => {
-        this.setState( prevState => ({
+        this.setState(prevState => ({
             signInButton: !prevState.signInButton
         }))
     }
@@ -70,7 +74,11 @@ class Signup extends Component {
         console.log(this.props.signupModal)
         return (
             <div className="signup-form-container">
-                <button onClick={this.props.closeModal}>Close</button>
+                <div id="close-container">
+                    <button id="close-container-button" onClick={this.props.closeModal}>
+                        <FontAwesomeIcon className="window-close" icon={faWindowClose}/>
+                    </button>
+                </div>
                 <div>
                     {this.props.signupModal ?
                         <h1>Signup</h1>
@@ -89,7 +97,7 @@ class Signup extends Component {
                         toggleLogSign={this.props.toggleLogSign}
                         signIn={this.signIn}
                         signInButton={this.state.signInButton}
-                        isAuthenticated={this.props.isAuthenticated}                        
+                        isAuthenticated={this.props.isAuthenticated}
                     />
                     :
                     <SignupForm
@@ -106,9 +114,9 @@ class Signup extends Component {
                 }
                 {
                     this.props.authErr ?
-                    <p id="error-display">{this.props.authErr}</p>
-                    :
-                    ""
+                        <p id="error-display">{this.props.authErr}</p>
+                        :
+                        ""
                 }
             </div>
         )

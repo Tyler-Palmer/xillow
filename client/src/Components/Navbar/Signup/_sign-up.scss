@@ -8,11 +8,28 @@
     justify-content: center;
     align-items: center;
     z-index: 150;
-    height: 500px;
-    width: 500px; 
+    height: 100%;
+    width: 100%; 
     
     #error-display{
         font-size: .8em;
         color: red;
+    }
+
+    #close-container{
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        height: 40px;
+        width: 90%;
+
+        #close-container-button{
+            background-color: whitesmoke;
+
+            svg{
+                height: 5vh;
+                width: 5vw;
+            }
+        }
     }
 }

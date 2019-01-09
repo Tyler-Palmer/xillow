@@ -14,7 +14,7 @@ const SignupForm = (props) => {
                         id="exampleInputEmail1" 
                         aria-describedby="emailHelp" 
                         placeholder="Enter email" />
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                {/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small> */}
             </div>
             <div className="form-group">
                 <label htmlFor="exampleInputPassword1">Password</label>
@@ -30,9 +30,9 @@ const SignupForm = (props) => {
                 <input type="checkbox" className="form-check-input" id="exampleCheck1" onClick={signIn}/>
                 {
                     signInButton ?
-                    <label className="form-check-label" htmlFor="exampleCheck2">Already have an account?</label>
-                    :
                     <label className="form-check-label" htmlFor="exampleCheck1">Sign up</label>
+                    :
+                    <label className="form-check-label" htmlFor="exampleCheck2">Already have an account?</label>
                 }
             </div>
             <button id="signup-form-button" type="submit" className="btn btn-primary">{btnText}</button>
