@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import GoogleMapReact from "google-map-react";
 import { withGoogleData } from "../../Context/NearbyData"
 import GoogleIcon from "./GoogleIcons"
+import GoogleProperties from "./GoogleProperties"
 
 class GoogleMap extends Component {
     constructor(props) {
@@ -10,11 +11,10 @@ class GoogleMap extends Component {
             lat: 0,
             lng: 0
         }
-        this.zoom = 15
+        this.zoom = 10
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
         this.center = {
             lat: nextProps.latitude,
             lng: nextProps.longitude
@@ -22,8 +22,6 @@ class GoogleMap extends Component {
     }
 
     render() {
-        console.log(this.center)
-        console.log(this.props.nearbyInfos)
         return (
             <Fragment>
                 {this.center.lat > 1 &&
@@ -42,6 +40,9 @@ class GoogleMap extends Component {
                         </GoogleMapReact>
                     </div>
                 }
+                <div>
+                    {this.props.nearbyInfos.map(each => <GoogleProperties {...each}/>)}
+                </div>
             </Fragment>
         )
     }
