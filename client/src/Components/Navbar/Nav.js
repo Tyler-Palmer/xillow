@@ -108,9 +108,11 @@ class Nav extends React.Component {
 
 
     toggleLogSign = () => {
+        console.log('togglelogsign works')
         this.setState( prevState => ({
             signupModal: !prevState.signupModal,
-            loginModal: !prevState.signupModal
+            loginModal: !prevState.signupModal,
+            modalIsOpen: !prevState.modalIsOpen
         }))
     }
 
@@ -149,9 +151,14 @@ class Nav extends React.Component {
                             <li className="nav-item" onClick={this.openLoginModal}>
                                 <a href="#">Login</a>
                             </li>
+                            {
+                                this.props.isAuthenticated ?
                             <li className="nav-item" onClick={this.props.logOut}>
                                 <a href="#">Log out</a>
                             </li>
+                            :
+                            ""
+                            }
                         </ul>
                     </div>
                 }

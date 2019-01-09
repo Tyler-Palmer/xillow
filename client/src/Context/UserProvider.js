@@ -72,7 +72,8 @@ class UserProvider extends Component {
         localStorage.removeItem("user")
         this.setState({
             user: {},
-            token: ""
+            token: "",
+            isAuthenticated: false
         })
         console.log("Logged out")
     }
@@ -90,6 +91,7 @@ class UserProvider extends Component {
 
     render() {
         console.log(this.state.authErr)
+        console.log(this.state.token)
         return (
             <Provider value={{
                 signup: this.signup,
