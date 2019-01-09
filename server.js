@@ -8,7 +8,7 @@ const expressJwt = require("express-jwt")
 
 
 //Middleware
-app.use(express.json())
+app.use(express.json({limit: '200mb'}))
 app.use(morgan('dev'))
 
 
