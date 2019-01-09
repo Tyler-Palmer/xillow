@@ -4,36 +4,56 @@ const Schema = mongoose.Schema
 
 const listingServer = new Schema({
     title: {
-        type: String,
-        lowercase: true,
-        unique: true,
-        required: true
-    },
-    title_link: {
         type: String
     },
-    price: {
-       type: Number,
-
+    title_link:{
+        type: String
     },
-    bedrooms: {
-        type: String, 
+    price:{
+        type: Number
+    },
+    bedrooms:{
+        type: String
     },
     address: {
-        type: String,
-        required: true,
+        type: String
     },
-    area: String,
-    viewing_time: String,
-    property_overview: String,
+    Headline: {
+        type: String
+    },
+    area: {
+        type: String
+    },
+    viewing_time: {
+        type: String
+    },
+    property_overview: {
+        type:String
+    },
     main_image: {
-        type: String,
-        required: true
+        type: String
     },
-    thumbnail_preview: String,
     description: {
         type: String
-    }   
+    },
+    thumbnail_preview: {
+        type: String
+    },
+    Trans_header: {
+        type: String
+    },
+    transp_score: {
+        type: String
+    },
+    walk_score: {
+        type: String
+    },
+    transit_score: {
+        type: String
+    },
+    biking_score: {
+        type: String
+    }
 })
 
 
