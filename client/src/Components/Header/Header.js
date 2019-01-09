@@ -2,7 +2,7 @@ import React from "react"
 import homeVideo from "../../assets/home-video.mp4"
 import leggyGirl from "../../assets/leggy-girl.mp4"
 import firePits from "../../assets/fire-pits.mp4"
-import { withSearchData } from "../../Context/SearchProvider"
+import { withGoogleData } from "../../Context/NearbyData"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Header extends React.Component {
@@ -27,7 +27,7 @@ class Header extends React.Component {
 
     handleUserSearchSubmit = (e) => {
         e.preventDefault()
-        this.props.history.push('/search')
+        this.props.getNearbyLocationData(this.state.address)
     }
 
     handleSlide = (activeNumber, slideNumber) => {
@@ -89,4 +89,6 @@ class Header extends React.Component {
     }
 }
 
-export default withSearchData(Header);
+export default withGoogleData(Header);
+
+//1600+Amphitheatre+Parkway,+Mountain+View
