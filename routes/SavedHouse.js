@@ -19,12 +19,12 @@ SavedHouseRouter.get('/', (req,res,next) => {
 //Get One
 
 SavedHouseRouter.get('/:userID/:productID', (req,res,next) => {
-    SavedHouse.findOne({user: req.params.userID, _id: req.params.productID}, (err, wishHouse) =>{
+    SavedHouse.findOne({user: req.params.userID, _id: req.params.productID}, (err, house) =>{
         if(err){
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(wishHouse)
+        return res.status(200).send(house)
     })
 })
 

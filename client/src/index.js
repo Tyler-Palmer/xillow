@@ -11,20 +11,23 @@ import NearbyData from "./Context/NearbyData"
 import UserProvider from "./Context/UserProvider"
 import SearchProvider from "./Context/SearchProvider"
 import ServerListingContext from "./Context/ServerListingContext";
-library.add(fab, faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome, faWindowClose, faBath, faBed, faArrowAltCircleLeft, faArrowAltCircleRight );
+import SavedHouseProvider from "./Context/SavedHouseProvider"
+library.add(fab, faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome, faWindowClose, faBath, faBed, faArrowAltCircleLeft, faArrowAltCircleRight);
 
 
 ReactDOM.render(
     <BrowserRouter>
-        <NearbyData>
-            <SearchProvider>
-                <ServerListingContext>
-                    <UserProvider>
-                        <App />
-                    </UserProvider>
-                </ServerListingContext>
-            </SearchProvider>
-        </NearbyData>
+        <SavedHouseProvider>
+            <NearbyData>
+                <SearchProvider>
+                    <ServerListingContext>
+                        <UserProvider>
+                            <App />
+                        </UserProvider>
+                    </ServerListingContext>
+                </SearchProvider>
+            </NearbyData>
+        </SavedHouseProvider>
     </BrowserRouter>
     , document.getElementById("root"))
 
