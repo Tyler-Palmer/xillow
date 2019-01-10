@@ -1,8 +1,6 @@
 const express = require("express")
 const listingServerRouter = express.Router()
 const ListingSchema = require("../models/listingServer")
-const data = require("../data/converted.json")
-const uuid = require("uuid")
 const ListingCollection = require("../models/listingCollection")
 
 listingServerRouter.get("/", (req, res, next) => {

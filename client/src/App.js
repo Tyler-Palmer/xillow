@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/Footer"
 import { Switch, Route } from "react-router-dom"
 import Nav from "./Components/Navbar/Nav"
 import Search from "./Components/Search/Search"
+import Mortgage from "./Components/Mortgage/Mortgage";
 import ServerListing from "./Components/ServerListing/ServerListing"
 
 class App extends React.Component {
@@ -53,6 +54,7 @@ class App extends React.Component {
                     />
 
                     <Route path ="/search" component = {Search} />
+                    <Route path ="/mortgage" component = {Mortgage} />
                 </Switch>
                 <Footer currentWidth = {this.state.currentWidth} />
             </div>
