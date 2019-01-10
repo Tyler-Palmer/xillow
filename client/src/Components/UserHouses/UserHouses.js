@@ -31,8 +31,8 @@ class UserHouses extends Component{
     render(){
         console.log(this.props.savedHouses)
         return(
-            <div>
-                Welcome @{this.props.user.email}
+            <div className ="saved-container">
+                <h2>Welcome @{this.props.user.email}</h2>
                 {
                     this.props.savedHouses.map(house => <Link to={`/savedHouses/${house._id}`}>{house}</Link>)
                 }

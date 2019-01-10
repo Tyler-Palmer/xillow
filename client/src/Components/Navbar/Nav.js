@@ -4,6 +4,7 @@ import Modal from 'react-modal'
 import Signup from './Signup/Signup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withUser } from '../../Context/UserProvider'
+import { Link } from 'react-router-dom'
 
 const customStyle = {
     overlay: {
@@ -160,6 +161,14 @@ class Nav extends React.Component {
                                     <li className="nav-item" onClick={this.openLoginModal}>
                                         <a href="#">Login</a>
                                     </li>
+                            }
+                            {
+                                this.props.isAuthenticated ?
+                                <li className="nav-item">
+                                    <Link to='/savedHouses/'>Saved</Link>
+                                    </li>
+                                    :
+                                    ""
                             }
                             {
                                 this.props.isAuthenticated ?

@@ -13,7 +13,7 @@ class SavedHouseProvider extends Component {
         }
     }
 
-    //Get all houses
+    //Get all of a User's houses
     getUserHouses = userID => {
         axios.get(`/savedhouse/${userID}`).then(res => {
             this.setState({
