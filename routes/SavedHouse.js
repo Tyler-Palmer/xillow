@@ -1,13 +1,13 @@
 const express = require('express')
-const wishListRouter = express.Router()
-const WishHouse = require('../models/Wishlist')
+const SavedHouseRouter = express.Router()
+const SavedHouse = require('../models/SavedHouse')
 const ListingCollection = require("../models/listingCollection")
  
 
 //Get All
 
-wishListRouter.get('/', (req,res,next) => {
-    WishHouse.find((err, houses) => {
+SavedHouseRouter.get('/', (req,res,next) => {
+    SavedHouse.find((err, houses) => {
         if(err){
             res.send(500)
             return next(err)
@@ -18,8 +18,8 @@ wishListRouter.get('/', (req,res,next) => {
 
 //Get One
 
-wishListRouter.get('/:userID/:productID', (req,res,next) => {
-    WishHouse.findOne({user: req.params.userID, _id: req.params.productID}, (err, wishHouse) =>{
+SavedHouseRouter.get('/:userID/:productID', (req,res,next) => {
+    SavedHouse.findOne({user: req.params.userID, _id: req.params.productID}, (err, wishHouse) =>{
         if(err){
             res.status(500)
             return next(err)
@@ -29,9 +29,9 @@ wishListRouter.get('/:userID/:productID', (req,res,next) => {
 })
 
 //Post one
-wishListRouter.post('/:userID/:productID', async (req,res,next) => {
+SavedHouseRouter.post('/:userID/:productID', async (req,res,next) => {
     const product  = await ListingCollection.findOne({_id: req.params.productID})
-    WishHouse.update({userID: req.params.userID}, {$push: { Wishlist: {product}}}, (err, data) =>{
+    SavedHouse.update({userID: req.params.userID}, {$push: { Wishlist: {product}}}, (err, data) =>{
         if(err){
             res.status(500)
             return next(err)
@@ -40,4 +40,4 @@ wishListRouter.post('/:userID/:productID', async (req,res,next) => {
     })
 })
 
-module.exports = wishListRouter
+module.exports = SavedHouseRouter

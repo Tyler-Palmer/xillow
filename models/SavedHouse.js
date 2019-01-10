@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const WishlistSchema = new Schema({
+const SavedHouseSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
@@ -11,4 +11,4 @@ const WishlistSchema = new Schema({
     }]
 })
 
-module.exports = mongoose.model("Wishlist", WishlistSchema)
+module.exports = mongoose.model("SavedHouse", SavedHouseSchema)
