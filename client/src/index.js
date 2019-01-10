@@ -12,22 +12,25 @@ import UserProvider from "./Context/UserProvider"
 import SearchProvider from "./Context/SearchProvider"
 import ServerListingContext from "./Context/ServerListingContext";
 import SavedHouseProvider from "./Context/SavedHouseProvider"
+import NewContext from "./Context/NewContext"
 library.add(fab, faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome, faWindowClose, faBath, faBed, faArrowAltCircleLeft, faArrowAltCircleRight);
 
 
 ReactDOM.render(
     <BrowserRouter>
-        <SavedHouseProvider>
-            <NearbyData>
-                <SearchProvider>
+      <SavedHouseProvider>
+        <NearbyData>
+            <SearchProvider>
+                <NewContext>
                     <ServerListingContext>
                         <UserProvider>
                             <App />
                         </UserProvider>
                     </ServerListingContext>
-                </SearchProvider>
-            </NearbyData>
-        </SavedHouseProvider>
+                </NewContext>
+            </SearchProvider>
+        </NearbyData>
+      </SavedHouseProvider>
     </BrowserRouter>
     , document.getElementById("root"))
 
