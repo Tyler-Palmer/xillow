@@ -4,9 +4,55 @@
 .listings__container {
     margin: 30px 0 30px 50px;
     font-family: "Roboto";
+    position: relative;
 
     .listings__small-container {
         display: flex;
         overflow: hidden;
+    }
+    .is-selected-listing{
+        animation: selected-listing 0.5 ease-in;
+        transition: all 1s linear;
+    }
+    @keyframes selected-listing {
+        from{
+            transform: translateX(2000px)
+        }
+        to{
+            transform: translateX(0)
+        }
+    }
+
+    .not-selected-listing{
+        position: absolute;
+        right: 100%;
+        animation: not-selected-listing 0.5 ease-out;
+        transition: all 1s linear 
+    }
+
+    @keyframes not-selected-listing {
+        from{
+            left: 0;
+        }
+        to{
+           left: -100%
+        }
+    }
+
+    .left-arrow-icons{
+        font-size: 40px;
+        position: absolute;
+        left:0;
+        bottom: 50%;
+        top: 50%;
+        cursor: pointer;
+    }
+    .right-arrow-icons{
+        font-size: 40px;
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+        top: 50%;
+        cursor: pointer;
     }
 }
