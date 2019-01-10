@@ -18,6 +18,19 @@ authRouter.get("/", (req, res, next) => {
     })
 })
 
+//Get One User
+
+authRouter.get("/:id", (req, res, next) => {
+    const userID = req.params.id
+    User.findOne({_id: userID}, (err, user) => {
+        if (err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(user)
+    })
+})
+
 //Signup Post Route
 authRouter.post("/signup", (req, res, next) => {
     //Look for user with the requested username

@@ -2,15 +2,28 @@ const express = require('express')
 const wishListRouter = express.Router()
 const WishHouse = require('../models/Wishlist')
 
-//Get all
+
+//Get All
+
+wishListRouter.get('/', (req,res,next) => {
+    WishHouse.find((err, houses) => {
+        if(err){
+            res.send(500)
+            return next(err)
+        }
+        return res.status(200).send(houses)
+    })
+})
+
+//Get One
 
 wishListRouter.get('/:userID', (req,res,next) => {
-    WishHouse.find(({user: req.params.userID}), (err, listings) =>{
+    WishHouse.findOne({user: req.params.userID}, (err, wishHouse) =>{
         if(err){
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(listings)
+        return res.status(200).send(wishHouse)
     })
 })
 
