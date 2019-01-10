@@ -6,24 +6,28 @@ const { Provider, Consumer } = React.createContext()
 class NewContext extends React.Component {
     constructor() {
         super()
-        this.state = {}
+        this.state = {
+            newsData: []
+        }
     }
 
-    getNewData = () => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a2b02d46338149c3bb4469ba8b36d478`)
+    getNewsData = () => {
+        axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWAPI}`)
             .then(res => {
-                console.log(res)
+                this.setState({
+                    newsData: res.data.articles
+                })
             })
     }
 
     render() {
+        console.log(this.state.newsData)
         return (
             <Provider
                 value={{
                     ...this.state,
-                    getNewData: this.getNewData
+                    getNewsData: this.getNewsData
                 }}>
-
                 {this.props.children}
             </Provider>
         )
