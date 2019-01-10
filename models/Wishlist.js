@@ -6,10 +6,9 @@ const WishlistSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
     },
-    wishlistItem: {
-        type: Schema.Types.ObjectId,
-        ref: "ListingCollection"
-    }
+    wishList: [{
+        type: Object
+    }]
 })
 
 module.exports = mongoose.model("Wishlist", WishlistSchema)
