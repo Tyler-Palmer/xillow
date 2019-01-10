@@ -6,8 +6,8 @@ import { Switch, Route } from "react-router-dom"
 import Nav from "./Components/Navbar/Nav"
 import Search from "./Components/Search/Search"
 import ServerListings from "./Components/ServerListing/ServerListings"
-import ServerListing from "./Components/ServerListing/ServerListing"
 import Mortgage from "./Components/Mortgage/Mortgage";
+import News from "./Components/News/News"
 
 
 class App extends React.Component {
@@ -45,20 +45,21 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Nav currentWidth = {this.state.currentWidth} alreadyChange = {this.state.alredyChange} />
+                <Nav currentWidth={this.state.currentWidth} alreadyChange={this.state.alredyChange} />
                 <Switch>
                     <Route exact path="/" render={props =>
                         <Fragment>
                             <Header {...props} />
-                            <ServerListings {...props}/>
+                            <ServerListings {...props} />
                             <Testimony {...props} />
                         </Fragment>}
                     />
 
-                    <Route path ="/search" component = {Search} />
-                    <Route path ="/mortgage" component = {Mortgage} />
+                    <Route path="/search" component={Search} />
+                    <Route path="/mortgage" component={Mortgage} />
+                    <Route path="/news" component={News} />
                 </Switch>
-                <Footer currentWidth = {this.state.currentWidth} />
+                <Footer currentWidth={this.state.currentWidth} />
             </div>
         )
     }
