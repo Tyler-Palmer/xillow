@@ -33,11 +33,29 @@
 }
 
 .section {
+    display: flex;
+    margin: 50px 0;
     .xillow__new-image {
         width: 240px;
-        height: 200px;
+        height: 160px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat
+    }
+
+    .xillow__new-tools{
+        display: flex;
+        align-items: center;
+
+        p{
+            margin: 0 10px;;
+        }
+    }
+
+    .xillow__new-small-container{
+        padding: 0 20px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
     }
 }
