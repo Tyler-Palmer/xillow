@@ -1,0 +1,43 @@
+.first-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: 10px;
+    color: whitesmoke;
+    width: 33%;
+    justify-content: space-between;
+
+    h4 {
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .xillow__new-source {
+        margin-top: 20px;
+
+        h5 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.first-section:nth-child(2) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0 20px;
+}
+
+.section {
+    .xillow__new-image {
+        width: 240px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat
+    }
+}
