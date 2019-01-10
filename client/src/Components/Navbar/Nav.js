@@ -4,6 +4,7 @@ import Modal from 'react-modal'
 import Signup from './Signup/Signup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withUser } from '../../Context/UserProvider'
+import SavedHouse from '../UserHouses/UserHouses'
 
 const customStyle = {
     overlay: {
@@ -282,6 +283,7 @@ class Nav extends React.Component {
                         }
                     </div>
                 </Modal>
+                <SavedHouse />
             </div>
         )
     }
