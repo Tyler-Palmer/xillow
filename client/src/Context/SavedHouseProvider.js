@@ -16,9 +16,14 @@ class SavedHouseProvider extends Component {
     //Get all of a User's houses
     getUserHouses = userID => {
         axios.get(`/savedhouse/${userID}`).then(res => {
+            console.log(res.data)
             this.setState({
-                savedHouses: res.data,
-                numberSaved: res.data.length
+                savedHouses: res.data[0].savedHouse[0]
+                
+            }, () => {
+                this.setState({
+                    numberSaved: this.state.savedHouses.length
+                })
             })
         }).catch(err => console.log(err))
     }
@@ -27,7 +32,7 @@ class SavedHouseProvider extends Component {
     getSelectedHouse = (houseID, userID) => {
         axios.get(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({
-                house: res.data
+                house: res.savedHouse
             })
         }).catch(err => console.log(err))
     }
@@ -50,7 +55,8 @@ class SavedHouseProvider extends Component {
             <Provider value={{
                 ...this.state,
                 getUserHouses: this.getUserHouses,
-                addUserHouse: this.addUserHouse
+                addUserHouse: this.addUserHouse,
+                getSelectedHouse: this.getSelectedHouse
             }}>
                 { this.props.children }
             </Provider>

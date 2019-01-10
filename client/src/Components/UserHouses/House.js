@@ -7,12 +7,14 @@ class House extends Component {
 
     componentDidMount() {
         this.props.getSelectedHouse(this.props.match.params.id, this.props.user._id)
+        console.log()
     }
 
     render() {
         return (
             <div className="listing__container">
-                <div className="listing__image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}>
+
+                 <div className="listing__image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}>
                 </div>
                 <div className="listing__texts">
                     <p>{this.props.listings.price}</p>
