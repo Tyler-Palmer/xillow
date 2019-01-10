@@ -27,7 +27,7 @@
         position: absolute;
         right: 100%;
         animation: not-selected-listing 0.5 ease-out;
-        transition: all 1s linear 
+        transition: all 1s linear;
     }
 
     @keyframes not-selected-listing {
@@ -46,6 +46,10 @@
         bottom: 50%;
         top: 50%;
         cursor: pointer;
+
+        &:hover{
+            color: darkcyan
+        }
     }
     .right-arrow-icons{
         font-size: 40px;
@@ -54,5 +58,9 @@
         bottom: 50%;
         top: 50%;
         cursor: pointer;
+
+        &:hover{
+            color: darkcyan
+        }
     }
 }
