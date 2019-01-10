@@ -38,7 +38,8 @@ class SavedHouseProvider extends Component {
         return (
             <Provider value={{
                 ...this.state,
-                getUserHouses: this.getUserHouses
+                getUserHouses: this.getUserHouses,
+                addUserHouse: this.addUserHouse
             }}>
                 { this.props.children }
             </Provider>
