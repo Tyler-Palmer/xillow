@@ -5,9 +5,11 @@ const SavedHouseSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
+        required: true
     },
     savedHouse: [{
-        type: Object
+        type: Object,
+        default: []
     }]
 })
 
