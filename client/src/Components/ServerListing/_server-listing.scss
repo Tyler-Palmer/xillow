@@ -1,6 +1,7 @@
 .listing__container{
-    margin: 20px 15px; 
+    margin: 20px 10px; 
     box-shadow: 0 1px 3px 1px rgba(1,1,1,.5);
+    cursor: pointer;
 
     .listing__image{
         width: 280px;
@@ -12,6 +13,8 @@
 
     .listing__texts{
         p{
+            font-size: 18px;
+            font-weight: bolder;
             margin: 10px 0 0 10px;
         }
 
@@ -20,8 +23,15 @@
             
             p{
                 font-size: 13px;
-                margin: 10px 10px
+                margin: 10px 10px;
+                font-weight: normal;
             }
+        }
+
+        .listing__address{
+            margin: 5px 0 5px 10px;
+            font-size: 15px;
+            font-weight: normal
         }
     }
 
