@@ -60,6 +60,7 @@ listingServerRouter.post("/", (req, res, next) => {
 })
 
 // listingServerRouter.post("/listingCollection", (req, res, next) => {
+
 //     for (let each of data) {
 //         // each.id = uuid()
 //         const newData = new ListingCollection({ listings: each })

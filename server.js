@@ -18,7 +18,7 @@ app.use("/api", expressJwt({secret: process.env.SECRET}))
 app.use("/auth", require("./routes/auth"))
 app.use("/listing", require("./routes/listingsServer"))
 app.use("/mortgages", require("./routes/mortgages"))
-
+app.use("/savedhouse", require("./routes/SavedHouse"))
 //Database
 mongoose.connect('mongodb://localhost:27017/myapp', {useNewUrlParser: true }, () => {
     console.log("The database is connected, Guv'nor!")
