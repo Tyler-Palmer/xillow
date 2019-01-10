@@ -14,7 +14,19 @@ listingServerRouter.get("/", (req, res, next) => {
 })
 
 
-listingServerRouter.get("/listingCollection", (req, res, next) =>{
+listingServerRouter.get("/listings", (req, res, next) =>{
+    ListingCollection.find()
+    .limit(20) 
+    .exec((err,data) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+    })
+})
+
+listingServerRouter.get("/", (req, res, next) =>{
     ListingSchema.find((err, data) =>{
         if(err){
             res.status(500)
@@ -48,7 +60,8 @@ listingServerRouter.post("/", (req, res, next) => {
 })
 
 // listingServerRouter.post("/listingCollection", (req, res, next) => {
-//     for (let each of req.body) {
+
+//     for (let each of data) {
 //         // each.id = uuid()
 //         const newData = new ListingCollection({ listings: each })
 //         newData.save((err, data) => {
