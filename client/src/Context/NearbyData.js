@@ -28,23 +28,11 @@ class NearbyData extends React.Component {
         })
     }
 
-    getPlaceData = (placeid) => {
-        const serverUrl = "https://vschool-cors.herokuapp.com?url="
-        axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&fields=name,rating,address_component,photo&key=${process.env.REACT_APP_GOOGLEPLACEKEY}`).then(res => {
-            if (res.data.result.photos) {
-                const photoReference = res.data.result.photos[0].photo_reference
-                this.setState(prevState => ({
-                    placeData: res.data.result,
-                    imageData: photoReference
-                }))
-            }
-        }).catch(err => {
-            console.log(err)
-        })
-    }
+
 
 
     render() {
+        console.log(this.state.imageData)
         return (
             <NearbyDataProvider.Provider
                 value={{

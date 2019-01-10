@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router-dom"
 import Nav from "./Components/Navbar/Nav"
 import Search from "./Components/Search/Search"
 import Mortgage from "./Components/Mortgage/Mortgage";
+import ServerListing from "./Components/ServerListing/ServerListing"
 
 class App extends React.Component {
     constructor() {
@@ -47,6 +48,7 @@ class App extends React.Component {
                     <Route exact path="/" render={props =>
                         <Fragment>
                             <Header {...props} />
+                            <ServerListing {...props}/>
                             <Testimony {...props} />
                         </Fragment>}
                     />
