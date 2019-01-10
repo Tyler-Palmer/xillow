@@ -26,7 +26,7 @@ class ServerListings extends React.Component {
     render() {
         return (
             <div className = "listings__container">
-                <h2>Our Listings in Salt Lake City: </h2>
+                <h5>Our Listings in Salt Lake City: </h5>
                 <div className="listings__small-container">
                     {this.props.listingsData.map(each => <ServerListing {...each} />)}
                 </div>
