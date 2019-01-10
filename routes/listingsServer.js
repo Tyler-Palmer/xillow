@@ -14,7 +14,7 @@ listingServerRouter.get("/", (req, res, next) => {
 })
 
 
-listingServerRouter.get("/", (req, res, next) =>{
+listingServerRouter.get("/listingCollection", (req, res, next) =>{
     ListingSchema.find((err, data) =>{
         if(err){
             res.status(500)
@@ -47,18 +47,18 @@ listingServerRouter.post("/", (req, res, next) => {
     })
 })
 
-listingServerRouter.post("/listingCollection", (req, res, next) => {
-    for (let each of req.body) {
-        // each.id = uuid()
-        const newData = new ListingCollection({ listings: each })
-        newData.save((err, data) => {
-            if (err) {
-                res.status(500)
-                return next(err)
-            }
-            console.log(data)
-        })
-    }
-})
+// listingServerRouter.post("/listingCollection", (req, res, next) => {
+//     for (let each of req.body) {
+//         // each.id = uuid()
+//         const newData = new ListingCollection({ listings: each })
+//         newData.save((err, data) => {
+//             if (err) {
+//                 res.status(500)
+//                 return next(err)
+//             }
+//             console.log(data)
+//         })
+//     }
+// })
 
 module.exports = listingServerRouter
