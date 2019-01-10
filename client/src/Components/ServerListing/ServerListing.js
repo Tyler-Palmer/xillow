@@ -3,17 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ServerListing = (props) => {
     console.log(props)
+    console.log(props.main_image)
     return (
-        <div>
-            <div className = "listing__image" style = {{backgroundImage: `url(${props.main_image})`}}>
+        <div className ="listing__container">
+            <div className = "listing__image" style = {{backgroundImage: `url(${props.listings.main_image})`}}>
             </div>
             <div className = "listing__texts">
-                <h3>{props.Headline}</h3>
-                <p>{props.price}</p>
-                <div>
-                    <p><FontAwesomeIcon icon = "bath"/>{props.title}</p>
-                    <p><FontAwesomeIcon icon = "bed"/>{props.bedrooms}</p> 
-                    <p><FontAwesomeIcon icon = "home"/>{props.area}</p>  
+                <p>{props.listings.price}</p>
+                <div className = "listing__icons">
+                    <p><FontAwesomeIcon icon = "bath"/>{props.listings.title}</p>
+                    <p><FontAwesomeIcon icon = "bed"/>{props.listings.bedrooms}</p> 
+                    <p><FontAwesomeIcon icon = "home"/>{props.listings.area}</p>  
                 </div>
             </div>
         </div>
