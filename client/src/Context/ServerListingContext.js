@@ -3,21 +3,28 @@ import axios from "axios"
 
 const { Provider, Consumer } = React.createContext()
 
-class ServerListingContext extends React.Component{
-    constructor(){
+class ServerListingContext extends React.Component {
+    constructor() {
         super()
-        this.state = {}
+        this.state = {
+            listingsData: []
+        }
     }
 
-    getListingData = () =>{
+    getListingData = () => {
         axios.get("/listing/listings").then(res => {
-            console.log(res)
+            this.setState({
+                listingsData: res.data
+            })
         })
     }
 
-    render(){
-        return(
-            <Provider value ={{
+
+
+    render() {
+        return (
+            <Provider value={{
+                ...this.state,
                 getListingData: this.getListingData
             }}>
                 {this.props.children}
@@ -31,7 +38,7 @@ export default ServerListingContext
 export const withServerListing = (C) => props => (
     <Consumer>
         {
-            value => < C {...props} {...value}/>
+            value => < C {...props} {...value} />
         }
     </Consumer>
 )
