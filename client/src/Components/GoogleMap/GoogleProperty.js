@@ -1,6 +1,8 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withServerListing } from "../../Context/ServerListingContext"
+import { withUser } from '../../Context/UserProvider'
+import { withHouses } from '../../Context/SavedHouseProvider'
 
 class GoogleProperty extends React.Component {
     constructor() {
@@ -21,7 +23,7 @@ class GoogleProperty extends React.Component {
             <div className="google-property__small-container" onMouseOver={() => this.handleHoverImage(this.props._id)} onMouseLeave={this.handleLeaveImage}>
                 <div className="google-property__image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}>
                     <div className="google-property__wish-list">
-                        <h3><FontAwesomeIcon icon="heart" className="google-property__heart" /></h3>
+                        <h3><FontAwesomeIcon icon="heart" className="google-property__heart" onClick={()=> this.props.addUserHouse(this.props.user._id, this.props._id)}/></h3>
                     </div>
                     <div className="google-property__listing-area">
                         <p><FontAwesomeIcon icon="circle" className="home-for-sale__circle" />House For Sale</p>
@@ -43,4 +45,4 @@ class GoogleProperty extends React.Component {
 }
 // pagination.map((each, id) => <p onClick={() => this.handlePagination(id + 1)}>{each}</p>)
 
-export default withServerListing(GoogleProperty);
+export default withHouses(withUser(withServerListing(GoogleProperty)));

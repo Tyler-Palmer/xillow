@@ -147,7 +147,7 @@ class Nav extends React.Component {
                             </li>
 
                             {
-                                this.props.isAuthenticated ?
+                                this.props.token ?
                                     ""
                                     :
                                     <li className="nav-item" onClick={this.openSignupModal}>
@@ -155,7 +155,7 @@ class Nav extends React.Component {
                                     </li>
                             }
                             {
-                                this.props.isAuthenticated ?
+                                this.props.token ?
                                     ""
                                     :
                                     <li className="nav-item" onClick={this.openLoginModal}>
@@ -163,7 +163,7 @@ class Nav extends React.Component {
                                     </li>
                             }
                             {
-                                this.props.isAuthenticated ?
+                                this.props.token ?
                                 <li className="nav-item">
                                     <Link to='/savedHouses/'>Saved</Link>
                                     </li>
@@ -171,7 +171,7 @@ class Nav extends React.Component {
                                     ""
                             }
                             {
-                                this.props.isAuthenticated ?
+                                this.props.token ?
                                     <li className="nav-item" onClick={this.props.logOut}>
                                         <a href="#">Log out</a>
                                     </li>

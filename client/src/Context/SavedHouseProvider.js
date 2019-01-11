@@ -39,16 +39,19 @@ class SavedHouseProvider extends Component {
     }
 
     //Add house to saved houses
-    addUserHouse = (userID, houseObj) => {
-        axios.post(`/savedhouse/${userID}`, {houseObj}).then(res =>{
-            this.setstate(prevState => {
+    addUserHouse = (userID, houseID) => {
+        axios.post(`/savedhouse/${userID}/${houseID}`).then(res =>{
+            console.log("addhouse route hit client-side")
+            this.setState(prevState => {
                 return {
                 savedHouses: [...prevState.savedHouses, res.data],
                 numberSaved: res.data.length
                 }
             })
-        }).catch(err => console.log.log(err))
+            console.log("house added")
+        }).catch(err => console.log(err))
         console.log(this.state.savedHouses)
+        
     }
 
     removeHouse = (userID, houseID) => {
