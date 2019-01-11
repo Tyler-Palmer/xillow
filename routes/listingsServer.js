@@ -16,7 +16,7 @@ listingServerRouter.get("/", (req, res, next) => {
 
 listingServerRouter.get("/listings", (req, res, next) =>{
     ListingCollection.find()
-    .limit(20) 
+    .limit(25) 
     .exec((err,data) => {
         if(err){
             res.status(500)

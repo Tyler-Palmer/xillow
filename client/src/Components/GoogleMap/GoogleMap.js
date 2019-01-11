@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import GoogleMapReact from "google-map-react";
-import { withGoogleData } from "../../Context/NearbyData"
+import { withGoogleData } from "../../Context/NearbyData";
+import { withServerListing } from "../../Context/ServerListingContext";
 import GoogleIcon from "./GoogleIcons"
 import GoogleProperties from "./GoogleProperties"
 
@@ -14,6 +15,10 @@ class GoogleMap extends Component {
         this.zoom = 17
     }
 
+    componentDidMount(){
+        this.props.displayListingsData()
+    }
+
     componentWillReceiveProps(nextProps) {
         this.center = {
             lat: nextProps.latitude,
@@ -22,7 +27,7 @@ class GoogleMap extends Component {
     }
 
     render() {
-        console.log(this.props.nearbyInfos)
+        // console.log(this.props)
         return (
             <Fragment>
                 {this.center.lat > 1 &&
@@ -37,7 +42,7 @@ class GoogleMap extends Component {
                                 lng={this.center.lng}
                                 house = {true} />
 
-                        {this.props.nearbyInfos.map(each => <GoogleIcon lat ={  each.geometry.location.lat} lng = {each.geometry.location.lng} icon = {each.icon}/>)}        
+                        {this.props.nearbyInfos.map(each => <GoogleIcon lat ={each.geometry.location.lat} lng = {each.geometry.location.lng} icon = {each.icon}/>)}        
                         </GoogleMapReact>
                     </div>
                 }
@@ -49,7 +54,7 @@ class GoogleMap extends Component {
     }
 }
 
-export default withGoogleData(GoogleMap);
+export default withServerListing(withGoogleData(GoogleMap));
 
 {/* console.log(each)
                     console.log(each.geometry.location)
