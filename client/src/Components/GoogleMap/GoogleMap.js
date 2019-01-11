@@ -68,7 +68,7 @@ class GoogleMap extends Component {
                                 {this.props.newListingData.map(each => <GoogleProperty {...each} />)}
                             </div>
                             <div className="pagination__section">
-                                {pagination.map((each, id) => <p style ={{color: this.state.atThePage === id + 1 ? "darkCyan" : ""}}onClick = {() => this.handlePagination(id+1)}>{each}</p>)}
+                                {pagination.map((each, id) => <p style ={{color: this.state.atThePage === id + 1 ? "darkCyan" : ""}} onClick = {() => this.handlePagination(id+1)}>{each}</p>)}
                             </div>
                         </div>
                     </div>
