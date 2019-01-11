@@ -14,9 +14,11 @@ class ServerListingContext extends React.Component {
     }
 
     getListingData = () => {
-        axios.get("/listing/listings").then(res => {
+        axios.get("/listing/pag?page=1").then(res => {
+            console.log(res)
+            console.log(res.data)
             this.setState({
-                listingsData: res.data
+                listingsData: res.data.docs
             }, () => {
                 this.changeDataToLocation();
             })

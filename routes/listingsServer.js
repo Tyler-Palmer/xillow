@@ -36,19 +36,18 @@ listingServerRouter.get("/", (req, res, next) =>{
     })
 })
 
-listingServerRouter.get("/:id", (req, res, next) =>{
-    ListingSchema.findOne({_id: req.params.id}, (err, data) =>{
-        if(err){
-            res.status(500)
-            return next(err)
-        }
-        return res.status(200).send(data)
-    })
-})
+// listingServerRouter.get("/:id", (req, res, next) =>{
+//     ListingSchema.findOne({_id: req.params.id}, (err, data) =>{
+//         if(err){
+//             res.status(500)
+//             return next(err)
+//         }
+//         return res.status(200).send(data)
+//     })
+// })
 
 
 listingServerRouter.post("/", (req, res, next) => {
-    console.log(req.body)
     const newListing = new ListingSchema(req.body);
     newListing.save((err, data) => {
         if (err) {
@@ -56,6 +55,21 @@ listingServerRouter.post("/", (req, res, next) => {
             return next(err)
         }
         return res.status(201).send(data)
+    })
+})
+
+listingServerRouter.get("/pag", (req, res, next) => {
+    console.log("Im running")
+    console.log(req.query.page)
+    ListingCollection.paginate({}, {
+        page: req.query.page,
+        limit: 25,
+    }, (err, data) => {
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
     })
 })
 
