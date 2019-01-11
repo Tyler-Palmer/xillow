@@ -108,17 +108,19 @@ SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
 
 //Delete One User House
 
-savedHouseRouter.delete('/:userID/:houseID', async (req, res, next) => {
-    const product = await SavedHouse.findOne({_id: req.params.houseID})
-    user.id = req.params.userID
+SavedHouseRouter.put('/:userID/:houseID', async (req, res, next) => {
+    const user = await SavedHouse.findOne({user: req.params.userID})
     console.log(user)
-    SavedHouse.findOne({user: req.params.userID}, (err, userHouse) => {
+    SavedHouse.findOne({user: req.params.userID}, (err, user) => {
         if(err){
             res.status(500)
             return next(err)
         }
-        if (userHouse !== null){
-            SavedHouse.findOneAndUpdate({user:req.params.userID}, {$pull: {savedHouse: product}}, (err, data) => {
+        const userHouse = user.toObject()
+        console.log(userHouse)
+        
+        if (user !== null){
+            SavedHouse.update({savedHouse: deleteHouse}, {$pull: {_id: deleteHouse}}, (err, data) => {
                 if(err){
                     res.status(500)
                     return next(err)
@@ -131,18 +133,27 @@ savedHouseRouter.delete('/:userID/:houseID', async (req, res, next) => {
 
 module.exports = SavedHouseRouter
 
-//
+//Delete Attempt
 
-// //Post specific house to specific user
-// SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
-//     const product = await ListingCollection.findOne({ _id: req.params.productID })
-//     console.log(product)
-//     SavedHouse.findOneAndUpdate({ userID: req.params.userID }, { $push: { savedHouse: product } }, { new: true }, (err, data) => {
-//         if (err) {
+// SavedHouseRouter.put('/:userID/:houseID', async (req, res, next) => {
+//     const user = await SavedHouse.findOne({user: req.params.userID})
+//     console.log(user)
+//     SavedHouse.findOne({user: req.params.userID}, (err, user) => {
+//         if(err){
 //             res.status(500)
 //             return next(err)
 //         }
-//         return res.status(201).send(data)
+//         const deleteHouse = req.params.houseID
+//         console.log(deleteHouse)
+//         if (user !== null){
+//             SavedHouse.update({savedHouse: deleteHouse}, {$pull: {_id: deleteHouse}}, (err, data) => {
+//                 if(err){
+//                     res.status(500)
+//                     return next(err)
+//                 }
+//                 return res.status(202).send(data)
+//             })
+//         }
 //     })
 // })
 
