@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import axios from "axios"
 
 const { Provider, Consumer } = React.createContext()
@@ -7,9 +7,9 @@ class ServerListingContext extends React.Component {
     constructor() {
         super()
         this.state = {
-            listingsData: []
+            listingsData: [],
+            newListingData: []
         }
-        this.newData = undefined
     }
 
     getListingData = () => {
@@ -28,22 +28,20 @@ class ServerListingContext extends React.Component {
     }
 
     changeDataToLocation = async () => {
-        // this.state.listingsData.map(each => axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${each.listings.address}&key=${process.env.REACT_APP_GOOGLEKEY}`).then(res => {
-        //     console.log(res.data.results[0].geometry.location.lng)        
-        //         this.newData = this.state.listingsData.map(house => console.log(res.data.results[0].geometry.location.lng))
-        // }
-        // ))
-        for(let each of this.state.listingsData){
-            axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${each.listings.address}&key=${process.env.REACT_APP_GOOGLEKEY}`).then(res=>{
-                console.log(res.data)
-                console.log(res.data.results[0].geometry.location.lng)  
-            
-            })
+        this.state.listingsData.map(each => axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${each.listings.address}&key=${process.env.REACT_APP_GOOGLEKEY}`).then(res => {
+            const newData = this.state.listingsData.find(house => house._id === each._id)
+            newData.longtitude = res.data.results[0].geometry.location.lng;
+            newData.latitude = res.data.results[0].geometry.location.lat;
+            if (this.state.newListingData.length <= 25) {
+                this.setState(prevState => ({
+                    newListingData: [...prevState.newListingData, newData]
+                }))
+            }
         }
+        ))
     }
 
     render() {
-        console.log(this.newData)
         return (
             <Provider value={{
                 ...this.state,
@@ -66,4 +64,3 @@ export const withServerListing = (C) => props => (
     </Consumer>
 )
 
-// house._id === each._id ? { ...house, longtitude: res.data.results[0].geometry.location.lng, latitude: res.data.results[0].geometry.location.lat } : house

@@ -41,8 +41,10 @@ class GoogleProperties extends React.Component {
 
         return (
             <div> 
-                    <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.state.imageData}&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`} />                    
+                    <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.state.imageData}&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`} />
             </div>
+
+
 
         )
     }
