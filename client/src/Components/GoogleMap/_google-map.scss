@@ -1,0 +1,13 @@
+@import "./google-icon";
+@import "./google-property";
+
+.google-map__container{
+    display: flex;  
+    
+    .google-property__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+}
