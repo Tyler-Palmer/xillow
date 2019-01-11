@@ -17,6 +17,7 @@ class GoogleProperties extends React.Component {
 
 
     getPlaceData = (placeid) => {
+        console.log(placeid)
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
         axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&fields=name,rating,address_component,photo&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`).then(res => {
             // if (res.data.result.photos) {
@@ -40,9 +41,9 @@ class GoogleProperties extends React.Component {
 
         return (
             <div> 
-                    <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.state.imageData}&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`} />
-                    
+                    <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.state.imageData}&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`} />                    
             </div>
+
         )
     }
 }
