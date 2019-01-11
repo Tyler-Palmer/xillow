@@ -28,7 +28,7 @@ class GoogleIcon extends React.Component {
             
             <div className="google-icon-container" style ={{display: this.props.address === null && "none"}} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>
                 {
-                    this.props.house ? <FontAwesomeIcon className="home-icon" icon="home" /> :
+                    this.props.house ? <FontAwesomeIcon className="home-icon" icon="home" style ={{ color: this.props._id === this.props.checkingRightNow && "darkCyan"}}/> :
                         <div className="google-icon__image" style={{ backgroundImage: `url(${this.props.icon})` }}>
                         </div>
                 }
@@ -51,7 +51,7 @@ class GoogleIcon extends React.Component {
                     this.props._id === this.props.checkingRightNow &&
                     this.props.listings.address &&
                     <div className = "google-icon__listing-container">
-                        <div className="google-icon__main-image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}></div>
+                        <div className="google-icon__main-image" style={{ backgroundImage: `url(${this.props.listings.main_image})`}}></div>
                         <div className="google-icon__price">
                             <h4>{this.props.listings.price}</h4>
                             <div className="google-icon__icons">
