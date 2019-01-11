@@ -44,7 +44,7 @@ const New = (props) => {
                     </div>
                 </Fragment>
                 :
-                <div className = "xillow__new-small-container">
+                <div className="xillow__new-small-container">
                     <div>
                         <p className="xillow__new-tools"><FontAwesomeIcon className="xillow__new-tool" icon={generateTool()} />{generateClass() === "section" && <p>/ Story <FontAwesomeIcon icon="pencil-alt" /> </p>}</p>
                     </div>

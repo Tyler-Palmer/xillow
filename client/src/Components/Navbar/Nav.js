@@ -134,7 +134,7 @@ class Nav extends React.Component {
                                 <a href="#">Buy</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#">Rent</a>
+                                <a href="#">News</a>
                             </li>
                             <li className="nav-item">
                                 <a href="#">Mortgages</a>
