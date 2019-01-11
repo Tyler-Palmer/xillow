@@ -64,6 +64,12 @@ class SavedHouseProvider extends Component {
         })
     }
 
+    numberHousesSaved = () => {
+        this.setState({
+            numbersaved: this.state.savedHouses.length
+        })
+    }
+
     onHover = () =>{
         this.setState({
             isCheckingHouse: true
@@ -85,7 +91,8 @@ class SavedHouseProvider extends Component {
                 getSelectedHouse: this.getSelectedHouse,
                 removeHouse: this.removeHouse,
                 onHover: this.onHover,
-                onLeave: this.onLeave
+                onLeave: this.onLeave,
+                numberHousesSaved: this.numberHousesSaved
             }}>
                 { this.props.children }
             </Provider>

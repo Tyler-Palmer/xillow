@@ -29,8 +29,8 @@ class House extends Component {
                         <p><FontAwesomeIcon icon="bed" /> {this.props.bedrooms}</p>
                         <p><FontAwesomeIcon icon="home" /> {this.props.area}</p>
                     </div>
-                    <p className="listing__address">{this.props.address.slice(0, this.props.address.indexOf(","))}</p>
-                    <p className="listing__address">{this.props.address.slice(this.props.address.indexOf(",") + 1, -1)}</p>
+                    <p className="listing__address">{this.props.address && this.props.address.slice(0, this.props.address.indexOf(","))}</p>
+                    <p className="listing__address">{this.props.address && this.props.address.slice(this.props.address.indexOf(",") + 1, -1)}</p>
                 </div>
             </div>
         )

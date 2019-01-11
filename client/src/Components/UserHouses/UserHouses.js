@@ -15,6 +15,7 @@ class UserHouses extends Component{
 
     componentDidMount(){
         this.props.getUserHouses(this.props.user._id)
+        this.props.numberHousesSaved()
     }
 
     componentWillReceiveProps(nextProps){

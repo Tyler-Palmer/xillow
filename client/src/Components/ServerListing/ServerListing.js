@@ -8,7 +8,7 @@ const ServerListing = (props) => {
     return (
         <div className="listing__container">
             <div className="listing__image" style={{ backgroundImage: `url(${props.listings.main_image})` }}>
-                <FontAwesomeIcon className="listing-heart" icon="heart" onClick={() => this.props.removeHouse(this.props.user._id, this.props._id)} />
+                <FontAwesomeIcon className="listing-heart" icon="heart" onClick={() => props.addUserHouse(props.user._id, props._id)} />
             </div>
             <div className="listing__texts">
                 <p>{props.listings.price}</p>
