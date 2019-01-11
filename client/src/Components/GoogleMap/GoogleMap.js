@@ -48,7 +48,7 @@ class GoogleMap extends Component {
                         </div>
                         <div className="google-property__detailed-container">
                             <div className = "salt-lake-city">
-                                <p>Homes at Salt Lake City:</p>
+                                <p>Homes in Salt Lake City:</p>
                             </div>
                             <div className="google-property__container">
                                 {this.props.newListingData.map(each => <GoogleProperty {...each} />)}
