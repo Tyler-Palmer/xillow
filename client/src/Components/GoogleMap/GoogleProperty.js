@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withServerListing } from "../../Context/ServerListingContext"
 import { withUser } from '../../Context/UserProvider'
 import { withHouses } from '../../Context/SavedHouseProvider'
+import { Link } from "react-router-dom"
 
 class GoogleProperty extends React.Component {
     constructor() {
@@ -20,6 +21,7 @@ class GoogleProperty extends React.Component {
 
     render() {
         return (
+            <Link to ={`/search/${this.props._id}`} style ={{width: "48%"}}>
             <div className="google-property__small-container" onMouseOver={() => this.handleHoverImage(this.props._id)} onMouseLeave={this.handleLeaveImage}>
                 <div className="google-property__image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}>
                     <div className="google-property__wish-list">
@@ -40,6 +42,7 @@ class GoogleProperty extends React.Component {
                     </div>
                 </div>
             </div>
+            </Link>
         )
     }
 }
