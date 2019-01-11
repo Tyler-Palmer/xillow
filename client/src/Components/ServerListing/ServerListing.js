@@ -2,6 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ServerListing = (props) => {
+    console.log(props)
     return (
         <div className="listing__container">
             <div className="listing__image" style={{ backgroundImage: `url(${props.listings.main_image})` }}>

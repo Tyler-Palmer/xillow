@@ -21,5 +21,15 @@
             justify-content: space-evenly;
             width: 100%;
         }
+        .pagination__section{
+            display: flex;
+            position: absolute;
+            right: 0;
+            p{
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+            }
+        }
     }
 }

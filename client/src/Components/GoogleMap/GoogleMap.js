@@ -9,6 +9,9 @@ import GoogleProperty from "./GoogleProperty"
 class GoogleMap extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            atThePage: 1
+        }
         this.center = {
             lat: 0,
             lng: 0
@@ -27,8 +30,19 @@ class GoogleMap extends Component {
         }
     }
 
+    handlePagination = (id) => {
+        this.props.getListingData(id)
+        this.setState({
+            atThePage: id
+        })
+    }
+
     render() {
-        console.log(this.props.newListingData)
+        const pagination = []
+        for (let i = 1; i <= this.props.pages; i++) {
+            pagination.push(i)
+        }
+        console.log(pagination)
         return (
             <Fragment>
                 {this.center.lat > 1 &&
@@ -47,11 +61,14 @@ class GoogleMap extends Component {
                             </GoogleMapReact>
                         </div>
                         <div className="google-property__detailed-container">
-                            <div className = "salt-lake-city">
+                            <div className="salt-lake-city">
                                 <p>Homes in Salt Lake City:</p>
                             </div>
                             <div className="google-property__container">
                                 {this.props.newListingData.map(each => <GoogleProperty {...each} />)}
+                            </div>
+                            <div className="pagination__section">
+                                {pagination.map((each, id) => <p style ={{color: this.state.atThePage === id + 1 ? "darkCyan" : ""}}onClick = {() => this.handlePagination(id+1)}>{each}</p>)}
                             </div>
                         </div>
                     </div>

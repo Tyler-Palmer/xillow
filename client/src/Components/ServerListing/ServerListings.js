@@ -13,7 +13,7 @@ class ServerListings extends React.Component {
         }
     }
     componentDidMount() {
-        this.props.getListingData()
+        this.props.getNewListingData()
     }
 
     handleSwitchingListing = (id) => {
@@ -29,11 +29,11 @@ class ServerListings extends React.Component {
     }
 
     handleLeftArrow = () => {
-        if(this.state.currentListing <= 1){
+        if (this.state.currentListing <= 1) {
             this.setState({
                 currentListing: 4
             })
-        } else{
+        } else {
             this.setState(prevState => ({
                 currentListing: prevState.currentListing - 1
             }))
@@ -46,45 +46,45 @@ class ServerListings extends React.Component {
         })
     }
 
-    handleMouseLeave = () =>{
+    handleMouseLeave = () => {
         this.setState({
             isChecking: false
         })
     }
 
     render() {
-        console.log(this.state.currentListing)
+        console.log(this.props.listingsData)
         return (
-            <div className="listings__container" onMouseOver = {this.handleMouseOver} onMouseLeave = {this.handleMouseLeave} >
+            <div className="listings__container" onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave} >
                 <h5>Our Listings in Salt Lake City: </h5>
                 {this.state.isChecking &&
-                <FontAwesomeIcon icon="arrow-alt-circle-left" className ="left-arrow-icons" onClick = {this.handleLeftArrow}/>
+                    <FontAwesomeIcon icon="arrow-alt-circle-left" className="left-arrow-icons" onClick={this.handleLeftArrow} />
                 }
 
-    
+
                 <div className={`listings__small-container ${this.state.currentListing === 1 ? "is-selected-listing" : "not-selected-listing"}`}>
-                        {this.props.listingsData.slice().splice(0.5).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(0.5).map(each => <ServerListing {...each} />)}
                 </div>
-            
+
 
                 <div className={`listings__small-container ${this.state.currentListing === 2 ? "is-selected-listing" : "not-selected-listing"}`}>
-                        {this.props.listingsData.slice().splice(5.10).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(5.10).map(each => <ServerListing {...each} />)}
                 </div>
 
 
-    
+
                 <div className={`listings__small-container ${this.state.currentListing === 3 ? "is-selected-listing" : "not-selected-listing"}`}>
-                        {this.props.listingsData.slice().splice(10.15).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(10.15).map(each => <ServerListing {...each} />)}
                 </div>
-                
+
 
                 <div className={`listings__small-container ${this.state.currentListing === 4 ? "is-selected-listing" : "not-selected-listing"}`}>
-                        {this.props.listingsData.slice().splice(15.20).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(15.20).map(each => <ServerListing {...each} />)}
                 </div>
-                
+
 
                 {this.state.isChecking &&
-                <FontAwesomeIcon icon="arrow-alt-circle-right" className ="right-arrow-icons"  onClick = {this.handleSwitchingListing}/>
+                    <FontAwesomeIcon icon="arrow-alt-circle-right" className="right-arrow-icons" onClick={this.handleSwitchingListing} />
                 }
             </div>
 
