@@ -37,15 +37,15 @@ listingServerRouter.get("/", (req, res, next) =>{
     })
 })
 
-// listingServerRouter.get("/:id", (req, res, next) =>{
-//     ListingSchema.findOne({_id: req.params.id}, (err, data) =>{
-//         if(err){
-//             res.status(500)
-//             return next(err)
-//         }
-//         return res.status(200).send(data)
-//     })
-// })
+listingServerRouter.get("/listings/:id", (req, res, next) =>{
+    ListingCollection.findOne({_id: req.params.id}, (err, data) =>{
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+    })
+})
 
 
 listingServerRouter.post("/", (req, res, next) => {
