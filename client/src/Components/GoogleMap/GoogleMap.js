@@ -27,7 +27,7 @@ class GoogleMap extends Component {
             <Fragment>
                 {this.center.lat > 1 &&
                     <div style={{ height: "100vh", width: "50vw" }}>
-                        < GoogleMapReact
+                        <GoogleMapReact
                             bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEKEY }}
                             defaultCenter={this.center}
                             defaultZoom={this.zoom}

@@ -16,11 +16,10 @@ class NearbyData extends React.Component {
         }
     }
 
-
     getNearbyLocationData = async (address) => {
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
         const geocoding = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GOOGLEKEY}`);
-        const data = await axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${geocoding.data.results[0].geometry.location.lat},${geocoding.data.results[0].geometry.location.lng}&rankby=distance&type=food&key=${process.env.REACT_APP_GOOGLEPLACEKEY}`);
+        const data = await axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${geocoding.data.results[0].geometry.location.lat},${geocoding.data.results[0].geometry.location.lng}&rankby=distance&type=food&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`);
         this.setState({
             longitude: geocoding.data.results[0].geometry.location.lng,
             latitude: geocoding.data.results[0].geometry.location.lat,
