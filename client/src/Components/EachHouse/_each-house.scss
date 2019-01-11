@@ -1,0 +1,57 @@
+.each-house__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    margin: 50px 0;
+
+    .each-house__small-container {
+        width: 78%;
+
+        .each-house__address-price-container {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(1, 1, 1, 0.5);
+            box-shadow: 0 1px 5px 1px rgba(1, 1, 1, 0.5);
+            color: rgba(1, 1, 1, 0.8);
+            background: whitesmoke;
+
+            .each-house__nessecity {
+                display: flex;
+
+                p {
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .each-house__images {
+            .each-house__image {
+                width: 100%;
+                height: 450px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .each-house__thumb-nail {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        .each-house__overview {
+            p {
+                line-height: 30px;
+                border-top: 1px solid rgba(1, 1, 1, 0.8);
+                margin: 25px 0;
+            }
+        }
+
+        .each-house__advantages {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+    }
+}
