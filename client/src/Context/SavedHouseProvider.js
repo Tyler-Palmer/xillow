@@ -53,9 +53,9 @@ class SavedHouseProvider extends Component {
 
     removeHouse = (userID, houseID) => {
         console.log("remove house here")
-        axios.delete(`/savedhouse/${userID}/${houseID}`).then(res => {
+        axios.put(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({
-                    savedHouses: res.data[0].savedHouse
+                    savedHouses: res.data.savedHouse
             })
             console.log("removed house")
         })
