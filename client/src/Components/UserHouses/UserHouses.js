@@ -9,6 +9,7 @@ class UserHouses extends Component{
         super()
         this.state = {
             isChecking: false,
+            houseToDelete: {}
         }
     }
     componentWillReceiveProps(nextProps){
@@ -20,8 +21,9 @@ class UserHouses extends Component{
 
     handleMouseOver = () => {
         this.setState({
-            isChecking: true
+            isChecking: true,
         })
+        console.log(this.props.houseToDelete)
     }
 
     handleMouseLeave = () =>{
@@ -35,12 +37,19 @@ class UserHouses extends Component{
         return(
             <div className ="saved-container">
                 <h2>Welcome @{this.props.user.email}</h2>
+                { this.props.numberSaved > 0 &&
+                <h5>You have {this.props.numberSaved} saved houses</h5>
+                }
                 {
                     this.props.savedHouses.length >= 1 &&
 
                 <div className ="saved-container_small">
                 {
-                    this.props.savedHouses.map(house => < House {...house} />)
+                    this.props.savedHouses.map(house => < House 
+                            houseToDelete = {this.state.houseToDelete}
+                            handleMouseOver = {this.handleMouseOver}
+                            handleMouseLeave = {this.handleMouseLeave}
+                             {...house} />)
                 }
                 </div>
                 }

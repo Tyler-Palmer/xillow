@@ -18,9 +18,9 @@ SavedHouseRouter.get('/', (req, res, next) => {
 
 //Get all of a specific user's houses
 
-SavedHouseRouter.get('/:userID', (req,res,next) => {
-    SavedHouse.find({user:req.params.userID}, (err, houses) => {
-        if(err) {
+SavedHouseRouter.get('/:userID', (req, res, next) => {
+    SavedHouse.find({ user: req.params.userID }, (err, houses) => {
+        if (err) {
             res.status(500)
             return next(err)
         }
@@ -90,7 +90,7 @@ SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
             const newHouse = new SavedHouse()
             newHouse.user = req.params.userID
             newHouse.save((err, newHouse) => {
-                if (err){
+                if (err) {
                     res.status(500)
                     return next(err)
                 }
@@ -108,26 +108,22 @@ SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
 
 //Delete One User House
 
-SavedHouseRouter.put('/:userID/:houseID', async (req, res, next) => {
-    const user = await SavedHouse.findOne({user: req.params.userID})
-    console.log(user)
-    SavedHouse.findOne({user: req.params.userID}, (err, user) => {
-        if(err){
+SavedHouseRouter.put('/:userID/:houseID', (req, res, next) => {
+    SavedHouse.findOne({ user: req.params.userID }, (err, user) => {
+        if (err) {
             res.status(500)
             return next(err)
         }
         const userHouse = user.toObject()
         console.log(userHouse)
-        
-        if (user !== null){
-            SavedHouse.update({savedHouse: deleteHouse}, {$pull: {_id: deleteHouse}}, (err, data) => {
-                if(err){
+        const found = userHouse.savedHouse.filter(house => house._id.toString() !== req.params.houseID.toString())
+            SavedHouse.findOneAndUpdate({ user: req.params.userID }, { savedHouse: found }, (err, data) => {
+                if (err) {
                     res.status(500)
                     return next(err)
                 }
-                return res.status(202).send(data)
+                return res.status(201).send(data)
             })
-        }
     })
 })
 

@@ -9,7 +9,8 @@ class SavedHouseProvider extends Component {
         this.state = {
             savedHouses: [],
             house: {},
-            numberSaved: 0
+            numberSaved: 0,
+            isCheckingHouse: false
         }
     }
 
@@ -52,11 +53,21 @@ class SavedHouseProvider extends Component {
 
     removeHouse = (userID, houseID) => {
         axios.delete(`/savedhouse/${userID}/${houseID}`).then(res => {
-            this.setState( prevState => {
-                return {
-                    savedHouses: prevState.filter(houses => houses.id !== houseID)
-                }
+            this.setState({
+                    savedHouses: res.data
             })
+        })
+    }
+
+    onHover = () =>{
+        this.setState({
+            isCheckingHouse: true
+        })
+    }
+
+    onLeave = () => {
+        this.setState({
+            isCheckingHouse: false
         })
     }
 
@@ -67,7 +78,9 @@ class SavedHouseProvider extends Component {
                 getUserHouses: this.getUserHouses,
                 addUserHouse: this.addUserHouse,
                 getSelectedHouse: this.getSelectedHouse,
-                removeHouse: this.removeHouse
+                removeHouse: this.removeHouse,
+                onHover: this.onHover,
+                onLeave: this.onLeave
             }}>
                 { this.props.children }
             </Provider>
