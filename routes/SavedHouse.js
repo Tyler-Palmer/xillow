@@ -71,6 +71,7 @@ SavedHouseRouter.post('/:userID', (req, res, next) => {
 //Post specific house to specific user
 SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
     const product = await ListingCollection.findOne({ _id: req.params.productID })
+    product.id = req.params.productID
     console.log(product)
     SavedHouse.findOne({ user: req.params.userID }, (err, userCollection) => {
         if (err) {
@@ -78,7 +79,7 @@ SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
             return next(err)
         }
         if (userCollection !== null) {
-            SavedHouse.findOneAndUpdate({ user: req.params.userID }, { $push: { savedHouse: product.listings } }, { new: true }, (err, data) => {
+            SavedHouse.findOneAndUpdate({ user: req.params.userID }, { $push: { savedHouse: product } }, { new: true }, (err, data) => {
                 if (err) {
                     res.status(500)
                     return next(err)
@@ -100,6 +101,29 @@ SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
                     }
                     return res.status(201).send(data)
                 })
+            })
+        }
+    })
+})
+
+//Delete One User House
+
+savedHouseRouter.delete('/:userID/:houseID', async (req, res, next) => {
+    const product = await SavedHouse.findOne({_id: req.params.houseID})
+    user.id = req.params.userID
+    console.log(user)
+    SavedHouse.findOne({user: req.params.userID}, (err, userHouse) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        if (userHouse !== null){
+            SavedHouse.findOneAndUpdate({user:req.params.userID}, {$pull: {savedHouse: product}}, (err, data) => {
+                if(err){
+                    res.status(500)
+                    return next(err)
+                }
+                return res.status(202).send(data)
             })
         }
     })

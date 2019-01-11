@@ -16,6 +16,7 @@ class House extends Component {
             <div className="listing__container">
 
                  <div className="listing__image" style={{ backgroundImage: `url(${this.props.main_image})` }}>
+                    <FontAwesomeIcon className="hearts" icon="heart" />
                 </div>
                 <div className="listing__texts">
                     <p>{this.props.price}</p>
