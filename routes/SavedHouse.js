@@ -18,7 +18,15 @@ SavedHouseRouter.get('/', (req, res, next) => {
 
 //Get all of a specific user's houses
 
-SavedHouseRouter.get('/:userID')
+SavedHouseRouter.get('/:userID', (req,res,next) => {
+    SavedHouse.find({user:req.params.userID}, (err, houses) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(houses)
+    })
+})
 
 //Get specific product from a specific user
 

@@ -9,9 +9,9 @@ const ServerListing = (props) => {
             <div className="listing__texts">
                 <p>{props.listings.price}</p>
                 <div className="listing__icons">
-                    <p><FontAwesomeIcon icon="bath" />{props.listings.title}</p>
-                    <p><FontAwesomeIcon icon="bed" />{props.listings.bedrooms}</p>
-                    <p><FontAwesomeIcon icon="home" />{props.listings.area}</p>
+                    <p><FontAwesomeIcon icon="bath" /> {props.listings.title}</p>
+                    <p><FontAwesomeIcon icon="bed" /> {props.listings.bedrooms}</p>
+                    <p><FontAwesomeIcon icon="home" /> {props.listings.area}</p>
                 </div>
                 <p className="listing__address">{props.listings.address.slice(0, props.listings.address.indexOf(","))}</p>
                 <p className="listing__address">{props.listings.address.slice(props.listings.address.indexOf(",") + 1, -1)}</p>
