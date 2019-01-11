@@ -12,10 +12,10 @@ class GoogleMap extends Component {
             lat: 0,
             lng: 0
         }
-        this.zoom = 17
+        this.zoom = 12
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.displayListingsData()
     }
 
@@ -27,7 +27,7 @@ class GoogleMap extends Component {
     }
 
     render() {
-        // console.log(this.props)
+        console.log(this.props.newListingData)
         return (
             <Fragment>
                 {this.center.lat > 1 &&
@@ -37,17 +37,15 @@ class GoogleMap extends Component {
                             defaultCenter={this.center}
                             defaultZoom={this.zoom}
                         >
-                        <GoogleIcon
+                            <GoogleIcon
                                 lat={this.center.lat}
                                 lng={this.center.lng}
-                                house = {true} />
-
-                        {this.props.nearbyInfos.map(each => <GoogleIcon lat ={each.geometry.location.lat} lng = {each.geometry.location.lng} icon = {each.icon}/>)}        
+                                house={true} />
+                            {this.props.newListingData.map(each => <GoogleIcon lng={each.longtitude} lat={each.latitude} house={true}/>)}
                         </GoogleMapReact>
                     </div>
                 }
                 <div>
-                    {this.props.nearbyInfos.map(each => <GoogleProperties {...each}/>)}
                 </div>
             </Fragment>
         )
@@ -57,8 +55,12 @@ class GoogleMap extends Component {
 export default withServerListing(withGoogleData(GoogleMap));
 
 {/* console.log(each)
+
                     console.log(each.geometry.location)
                     console.log(typeof each.geometry.location.lat)
                     console.log(typeof each.geometry.location.lng) */}
 
-                        {/* {this.props.nearbyInfos.length > 1 && this.props.nearbyInfos.map(each => console.log)} */}
+{/* {this.props.nearbyInfos.length > 1 && this.props.nearbyInfos.map(each => console.log)} */ }
+                     // {this.props.nearbyInfos.map(each => <GoogleIcon lat ={each.geometry.location.lat} lng = {each.geometry.location.lng} icon = {each.icon}/>)}  
+
+                     //{this.props.nearbyInfos.map(each => <GoogleProperties {...each} />)}
