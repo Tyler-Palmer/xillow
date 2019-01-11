@@ -4,6 +4,7 @@ import { withGoogleData } from "../../Context/NearbyData";
 import { withServerListing } from "../../Context/ServerListingContext";
 import GoogleIcon from "./GoogleIcons"
 import GoogleProperties from "./GoogleProperties"
+import GoogleProperty from "./GoogleProperty"
 
 class GoogleMap extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class GoogleMap extends Component {
             lat: 0,
             lng: 0
         }
-        this.zoom = 12
+        this.zoom = 10
     }
 
     componentDidMount() {
@@ -31,22 +32,27 @@ class GoogleMap extends Component {
         return (
             <Fragment>
                 {this.center.lat > 1 &&
+                    <div className = "google-map__container">
                     <div style={{ height: "100vh", width: "50vw" }}>
-                        <GoogleMapReact
-                            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEKEY }}
-                            defaultCenter={this.center}
-                            defaultZoom={this.zoom}
-                        >
-                            <GoogleIcon
-                                lat={this.center.lat}
-                                lng={this.center.lng}
-                                house={true} />
-                            {this.props.newListingData.map(each => <GoogleIcon lng={each.longtitude} lat={each.latitude} house={true}/>)}
-                        </GoogleMapReact>
+                            <GoogleMapReact
+                                bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEKEY }}
+                                defaultCenter={this.center}
+                                defaultZoom={this.zoom}
+                            >
+                                <GoogleIcon
+                                    lat={this.center.lat}
+                                    lng={this.center.lng}
+                                    house={true} />
+                                {this.props.newListingData.map(each => <GoogleIcon lng={each.longtitude} lat={each.latitude} house={true} />)}
+                            </GoogleMapReact>
+                        </div>
+                        <div className="google-property__container">
+                            <p>Homes at Salt Lake City:</p>
+                            {this.props.newListingData.map(each => <GoogleProperty {...each} />)}
+                        </div>
                     </div>
                 }
-                <div>
-                </div>
+
             </Fragment>
         )
     }
