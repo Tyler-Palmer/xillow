@@ -5,23 +5,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ComponentStyles/_styles.scss"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome, faWindowClose, faBath, faBed, faArrowAltCircleLeft, faArrowAltCircleRight, faLightbulb, faWrench, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter } from "react-router-dom";
 import NearbyData from "./Context/NearbyData"
 import UserProvider from "./Context/UserProvider"
 import SearchProvider from "./Context/SearchProvider"
-library.add(fab, faSearch, faCircle, faQuoteLeft,  faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome );
+import ServerListingContext from "./Context/ServerListingContext";
+import SavedHouseProvider from "./Context/SavedHouseProvider"
+import NewContext from "./Context/NewContext"
+library.add(fab, faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome, faWindowClose, faBath, faBed, faArrowAltCircleLeft, faArrowAltCircleRight, faLightbulb, faWrench, faPencilAlt);
 
 
 ReactDOM.render(
     <BrowserRouter>
+      <SavedHouseProvider>
         <NearbyData>
             <SearchProvider>
-                <UserProvider>
-                    <App />
-                </UserProvider>
+                <NewContext>
+                    <ServerListingContext>
+                        <UserProvider>
+                            <App />
+                        </UserProvider>
+                    </ServerListingContext>
+                </NewContext>
             </SearchProvider>
         </NearbyData>
+      </SavedHouseProvider>
     </BrowserRouter>
     , document.getElementById("root"))
 

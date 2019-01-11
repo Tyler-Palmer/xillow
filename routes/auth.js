@@ -18,18 +18,38 @@ authRouter.get("/", (req, res, next) => {
     })
 })
 
+//Get One User
+
+authRouter.get("/:id", (req, res, next) => {
+    const userID = req.params.id
+    User.findOne({_id: userID}, (err, user) => {
+        if (err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(user)
+    })
+})
+
 //Signup Post Route
 authRouter.post("/signup", (req, res, next) => {
     //Look for user with the requested username
     console.log(req.body)
     User.findOne({ email: req.body.email }, (err, existingUser) => {
+        //If the db doesn't return "null", it means there is already a user with that username
+        if (existingUser !== null) {
+            res.status(400)
+            return next(new Error("That username already exists!"))
+        }
+
+        //If nothing submitted
+        if (!req.body.email || !req.body.password) {
+            res.status(400)
+            return next(new Error("You must enter an email address and password"))
+        }
         if (err) {
             res.status(500)
             return next(err)
-            //If the db doesn't return "null", it means there is already a user with that username
-        } else if (existingUser !== null) {
-            res.status(400)
-            return next(new Error("That username already exists!"))
         }
         //Create new user from the req.body
         const newUser = new User(req.body)
@@ -50,16 +70,22 @@ authRouter.post("/signup", (req, res, next) => {
 authRouter.post("/login", (req, res, next) => {
     //Find the user with the submitted username
     User.findOne({ email: req.body.email.toLowerCase() }, (err, user) => {
-        if (err) {
-            res.status(500)
-            return next(err)
+  
+        //If nothing submitted
+        if (!req.body.email || !req.body.password) {
+            res.status(400)
+            return next(new Error("You must enter an email address and password"))
         }
-   
         //If submitted user isn't in the db or password is wrong:
         if (!user) {
             res.status(403)
             return next(new Error("Username or password are incorrect"))
-        };
+        }
+
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
 
         user.checkPassword(req.body.password, (err, match) => {
             console.log("Hey")

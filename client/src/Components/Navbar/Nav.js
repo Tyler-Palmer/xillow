@@ -1,9 +1,10 @@
-import React from "react"
+import React, { Fragment } from "react"
 import logo from "../../assets/zillowlogo.png"
 import Modal from 'react-modal'
 import Signup from './Signup/Signup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withUser } from '../../Context/UserProvider'
+import { Link } from 'react-router-dom'
 
 const customStyle = {
     overlay: {
@@ -109,10 +110,9 @@ class Nav extends React.Component {
 
     toggleLogSign = () => {
         console.log('togglelogsign works')
-        this.setState( prevState => ({
+        this.setState(prevState => ({
             signupModal: !prevState.signupModal,
             loginModal: !prevState.signupModal,
-            modalIsOpen: !prevState.modalIsOpen
         }))
     }
 
@@ -145,19 +145,38 @@ class Nav extends React.Component {
                             <li className="nav-item">
                                 <a href="#"> More </a>
                             </li>
-                            <li className="nav-item" onClick={this.openSignupModal}>
-                                <a href="#">Signup</a>
-                            </li>
-                            <li className="nav-item" onClick={this.openLoginModal}>
-                                <a href="#">Login</a>
-                            </li>
+
                             {
                                 this.props.isAuthenticated ?
-                            <li className="nav-item" onClick={this.props.logOut}>
-                                <a href="#">Log out</a>
-                            </li>
-                            :
-                            ""
+                                    ""
+                                    :
+                                    <li className="nav-item" onClick={this.openSignupModal}>
+                                        <a href="#">Signup</a>
+                                    </li>
+                            }
+                            {
+                                this.props.isAuthenticated ?
+                                    ""
+                                    :
+                                    <li className="nav-item" onClick={this.openLoginModal}>
+                                        <a href="#">Login</a>
+                                    </li>
+                            }
+                            {
+                                this.props.isAuthenticated ?
+                                <li className="nav-item">
+                                    <Link to='/savedHouses/'>Saved</Link>
+                                    </li>
+                                    :
+                                    ""
+                            }
+                            {
+                                this.props.isAuthenticated ?
+                                    <li className="nav-item" onClick={this.props.logOut}>
+                                        <a href="#">Log out</a>
+                                    </li>
+                                    :
+                                    ""
                             }
                         </ul>
                     </div>
@@ -167,14 +186,15 @@ class Nav extends React.Component {
                     onRequestClose={this.closeModal}
                     className="sign-up-container"
                     style={customStyle}
-                    ariaHideApp={false}>
-                    <div>
-                        <Signup className="sign-up"
-                            closeModal={this.closeModal}
-                            signupModal={this.state.signupModal}
-                            loginModal={this.state.loginModal}
-                            toggleLogSign={this.toggleLogSign} />
-                    </div>
+                    ariaHideApp={false}
+                    overlayClassName="Overlay">
+
+                    <Signup className="sign-up"
+                        closeModal={this.closeModal}
+                        signupModal={this.state.signupModal}
+                        loginModal={this.state.loginModal}
+                        toggleLogSign={this.toggleLogSign}
+                        handleCloseNav={this.handleCloseNav} />
                 </Modal>
 
                 <Modal
@@ -191,14 +211,31 @@ class Nav extends React.Component {
                                 icon={this.state.currentChecking === 1 ? this.state.checking ? "arrow-up" : "arrow-down" : "arrow-down"} />
                             My Xillow
                         </h3>
-                        {this.state.isCurious === "myXillow" &&
-                            <ul>
-                                <li onClick = {this.openModal}>Sign up</li>
-                            </ul>
+                        {
+                            this.props.isAuthenticated ?
+                                <Fragment>
+                                    {this.state.isCurious === "myXillow" &&
+                                        <ul>
+                                            <li onClick={this.props.logOut}>Log Out</li>
+                                        </ul>
+                                    }
+                                </Fragment>
+                                :
+                                <Fragment>
+                                    {this.state.isCurious === "myXillow" &&
+                                        <ul>
+                                            <li onClick={this.openSignupModal}>Sign up</li>
+                                        </ul>
+                                    }
+                                    {this.state.isCurious === "myXillow" &&
+                                        <ul>
+                                            <li onClick={this.openLoginModal}>Login</li>
+                                        </ul>
+                                    }
+                                </Fragment>
                         }
-
                         <h3
-                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 2 && "rgba(82, 179, 217, 1)", color: this.state.isCurious &&  this.state.currentChecking === 2 && "white" }}
+                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 2 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 2 && "white" }}
                             onClick={() => this.handleUserCheckingNav("buy", 2)}>
                             <FontAwesomeIcon
                                 className="arrow-icons"
@@ -226,7 +263,7 @@ class Nav extends React.Component {
                         }
 
                         <h3
-                            style={{ backgroundColor: this.state.isCurious &&  this.state.currentChecking === 4 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 4 && "white" }}
+                            style={{ backgroundColor: this.state.isCurious && this.state.currentChecking === 4 && "rgba(82, 179, 217, 1)", color: this.state.isCurious && this.state.currentChecking === 4 && "white" }}
                             onClick={() => this.handleUserCheckingNav("mortgages", 4)}>
                             <FontAwesomeIcon
                                 className="arrow-icons"
