@@ -20,7 +20,7 @@ class NearbyData extends React.Component {
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
         const geocoding = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GOOGLEKEY}`);
 
-        const data = await axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${geocoding.data.results[0].geometry.location.lat},${geocoding.data.results[0].geometry.location.lng}&radius=10000d&type=food&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`);
+        const data = await axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${geocoding.data.results[0].geometry.location.lat},${geocoding.data.results[0].geometry.location.lng}&radius=10000d&type=food&key=${process.env.REACT_APP_GOOGLEPLACEKEY}`);
 
         this.setState({
             longitude: geocoding.data.results[0].geometry.location.lng,
@@ -32,7 +32,7 @@ class NearbyData extends React.Component {
 
     getPlaceData = (placeid) => {
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
-        axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&fields=name,rating,address_component,photo&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`).then(res => {
+        axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&fields=name,rating,address_component,photo&key=${process.env.REACT_APP_GOOGLEPLACEKEY}`).then(res => {
             if (res.data.result.photos) {
                 const photoReference = res.data.result.photos[0].photo_reference
                 this.setState(prevState => ({
