@@ -1,7 +1,5 @@
 [{
-    "_id": {
-        "$oid": "5c357a313aea496d5766685a"
-    },
+    "_id": "5c357a313aea496d5766685a",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/5536-S-3465-W-84129/home/86449414",
@@ -21,14 +19,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666857"
-    },
+    "_id": "5c357a313aea496d57666857",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Magna/3406-Marigold-St-W-84044/home/91717017",
@@ -48,14 +43,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "41 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666858"
-    },
+    "_id": "5c357a313aea496d57666858",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3991-Hialeah-Rd-84119/home/86409473",
@@ -75,14 +67,11 @@
         "transit_score": "41 / 100Some TransitTransit Score®",
         "biking_score": "39 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666859"
-    },
+    "_id": "5c357a313aea496d57666859",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/254-E-1700-S-84115/home/91747511",
@@ -102,14 +91,11 @@
         "transit_score": "45 / 100Some TransitTransit Score®",
         "biking_score": "89 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766685b"
-    },
+    "_id": "5c357a313aea496d5766685b",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/6319-Contadora-Dr-84128/home/91721692",
@@ -129,14 +115,11 @@
         "transit_score": "18 / 100Minimal TransitTransit Score®",
         "biking_score": "38 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766685f"
-    },
+    "_id": "5c357a313aea496d5766685f",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/362-Braidhill-Dr-84020/home/91863641",
@@ -156,14 +139,11 @@
         "transit_score": "15 / 100Minimal TransitTransit Score®",
         "biking_score": "21 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766685d"
-    },
+    "_id": "5c357a313aea496d5766685d",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/2629-S-200-E-84115/home/147710782",
@@ -183,14 +163,11 @@
         "transit_score": "44 / 100Some TransitTransit Score®",
         "biking_score": "73 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766685c"
-    },
+    "_id": "5c357a313aea496d5766685c",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/4120-S-6180-W-84128/home/86438761",
@@ -210,14 +187,11 @@
         "transit_score": "27 / 100Some TransitTransit Score®",
         "biking_score": "34 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666864"
-    },
+    "_id": "5c357a313aea496d57666864",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/570-Benbow-Ave-84107/home/91801193",
@@ -237,14 +211,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766685e"
-    },
+    "_id": "5c357a313aea496d5766685e",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1317-S-Montgomery-St-84104/home/91724978",
@@ -264,14 +235,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "69 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666869"
-    },
+    "_id": "5c357a313aea496d57666869",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/14497-Gray-Fox-Dr-84065/home/91675213",
@@ -291,14 +259,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "44 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666865"
-    },
+    "_id": "5c357a313aea496d57666865",
     "listings": {
         "title": "3.25 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10592-Redknife-Dr-84009/home/108501144",
@@ -318,14 +283,11 @@
         "transit_score": "40 / 100Some TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666867"
-    },
+    "_id": "5c357a313aea496d57666867",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/4733-Mile-High-Dr-84124/home/91804376",
@@ -345,14 +307,11 @@
         "transit_score": "25 / 100Some TransitTransit Score®",
         "biking_score": "17 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666866"
-    },
+    "_id": "5c357a313aea496d57666866",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/11994-W-Kenadi-View-Way-84065/home/148568499",
@@ -372,14 +331,11 @@
         "transit_score": "15 / 100Minimal TransitTransit Score®",
         "biking_score": "53 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666863"
-    },
+    "_id": "5c357a313aea496d57666863",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2807-Chadwick-St-E-84106/home/91755139",
@@ -399,14 +355,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "57 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766686e"
-    },
+    "_id": "5c357a313aea496d5766686e",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2397-E-3750-S-84109/home/91761425",
@@ -426,14 +379,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "61 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766686c"
-    },
+    "_id": "5c357a313aea496d5766686c",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/5318-Baker-St-84107/home/91801531",
@@ -453,14 +403,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "46 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766686a"
-    },
+    "_id": "5c357a313aea496d5766686a",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Midvale/167-Princeton-Dr-84047/home/91796492",
@@ -480,14 +427,11 @@
         "transit_score": "Median List Price$352,500Avg. # Offers—Median $ / Sq. Ft.$164Avg. Down Payment—Median Sale / List104%# Sold Homes20",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766686b"
-    },
+    "_id": "5c357a313aea496d5766686b",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/10115-Hickory-Point-Dr-84092/home/86509346",
@@ -507,14 +451,11 @@
         "transit_score": "27 / 100Some TransitTransit Score®",
         "biking_score": "26 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666868"
-    },
+    "_id": "5c357a313aea496d57666868",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/5006-Wood-Spring-Dr-84081/home/86488731",
@@ -534,14 +475,11 @@
         "transit_score": "23 / 100Minimal TransitTransit Score®",
         "biking_score": "44 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666873"
-    },
+    "_id": "5c357a313aea496d57666873",
     "listings": {
         "title": "4 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/5810-S-2100-E-84121/home/91804842",
@@ -561,14 +499,11 @@
         "transit_score": "30 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666871"
-    },
+    "_id": "5c357a313aea496d57666871",
     "listings": {
         "title": "3.75 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/1577-E-Ventnor-Ave-84121/home/86461248",
@@ -588,14 +523,11 @@
         "transit_score": "29 / 100Some TransitTransit Score®",
         "biking_score": "41 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766686f"
-    },
+    "_id": "5c357a313aea496d5766686f",
     "listings": {
         "title": "5.5 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/2732-Spring-Creek-Rd-84117/home/91797513",
@@ -615,14 +547,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "34 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666870"
-    },
+    "_id": "5c357a313aea496d57666870",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/11238-Jonagold-Dr-84009/home/108501507",
@@ -642,14 +571,11 @@
         "transit_score": "44 / 100Some TransitTransit Score®",
         "biking_score": "38 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766686d"
-    },
+    "_id": "5c357a313aea496d5766686d",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/1226-Meadow-Ridge-Ln-84095/home/91821386",
@@ -669,14 +595,11 @@
         "transit_score": "25 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666876"
-    },
+    "_id": "5c357a313aea496d57666876",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/14286-Daisyfield-Dr-84020/unit-3/home/91854949",
@@ -696,14 +619,11 @@
         "transit_score": "12 / 100Minimal TransitTransit Score®",
         "biking_score": "32 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666878"
-    },
+    "_id": "5c357a313aea496d57666878",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10913-Dune-Grass-Dr-84095/home/91683177",
@@ -723,14 +643,11 @@
         "transit_score": "17 / 100Minimal TransitTransit Score®",
         "biking_score": "47 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666875"
-    },
+    "_id": "5c357a313aea496d57666875",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2002-Roberta-St-84115/home/91747940",
@@ -750,14 +667,11 @@
         "transit_score": "60 / 100Good TransitTransit Score®",
         "biking_score": "81 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666872"
-    },
+    "_id": "5c357a313aea496d57666872",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1084-E-3rd-Ave-84103/home/91713963",
@@ -777,14 +691,11 @@
         "transit_score": "47 / 100Some TransitTransit Score®",
         "biking_score": "51 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666879"
-    },
+    "_id": "5c357a313aea496d57666879",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Magna/7690-Washington-Rd-84044/home/91719526",
@@ -804,14 +715,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766687a"
-    },
+    "_id": "5c357a313aea496d5766687a",
     "listings": {
         "title": "4 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10522-Stavanger-Dr-84095/unit-11-709/home/148120879",
@@ -831,14 +739,11 @@
         "transit_score": "42 / 100Some TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666882"
-    },
+    "_id": "5c357a313aea496d57666882",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/973-Freedom-Point-Way-84065/home/86501687",
@@ -858,14 +763,11 @@
         "transit_score": "34 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666880"
-    },
+    "_id": "5c357a313aea496d57666880",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15494-Heritage-Crest-Way-84065/home/148614320",
@@ -885,14 +787,11 @@
         "transit_score": "25 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766687e"
-    },
+    "_id": "5c357a313aea496d5766687e",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/2590-S-West-Temple-84115/home/91727597",
@@ -912,14 +811,11 @@
         "transit_score": "55 / 100Good TransitTransit Score®",
         "biking_score": "64 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766687f"
-    },
+    "_id": "5c357a313aea496d5766687f",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3230-Waterleaf-Way-84128/home/104043778",
@@ -939,14 +835,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "52 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766687c"
-    },
+    "_id": "5c357a313aea496d5766687c",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Midvale/808-Epic-Ct-84047/home/86501055",
@@ -966,14 +859,11 @@
         "transit_score": "49 / 100Some TransitTransit Score®",
         "biking_score": "43 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666887"
-    },
+    "_id": "5c357a313aea496d57666887",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/2816-500-E-84106/home/86433690",
@@ -993,14 +883,11 @@
         "transit_score": "40 / 100Some TransitTransit Score®",
         "biking_score": "61 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666883"
-    },
+    "_id": "5c357a313aea496d57666883",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/Kearns/4821-W-4805-S-84118/home/91765529",
@@ -1020,14 +907,11 @@
         "transit_score": "37 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666884"
-    },
+    "_id": "5c357a313aea496d57666884",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10703-Kestrel-Rise-Rd-84095/home/141086211",
@@ -1047,14 +931,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "30 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666881"
-    },
+    "_id": "5c357a313aea496d57666881",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10882-S-Gresham-Dr-84009/home/148612592",
@@ -1074,14 +955,11 @@
         "transit_score": "41 / 100Some TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766688c"
-    },
+    "_id": "5c357a313aea496d5766688c",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/1028-Heritage-Crest-Way-84065/home/148449499",
@@ -1101,14 +979,11 @@
         "transit_score": "31 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766688a"
-    },
+    "_id": "5c357a313aea496d5766688a",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15452-Heritage-Crest-Way-84065/home/148604698",
@@ -1128,14 +1003,11 @@
         "transit_score": "25 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666888"
-    },
+    "_id": "5c357a313aea496d57666888",
     "listings": {
         "title": "4.5 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/1951-E-4500-S-84117/home/87576729",
@@ -1155,14 +1027,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "56 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666889"
-    },
+    "_id": "5c357a313aea496d57666889",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15444-Heritage-Crest-Way-84065/home/148606245",
@@ -1182,14 +1051,11 @@
         "transit_score": "25 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666886"
-    },
+    "_id": "5c357a313aea496d57666886",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/12717-Diamondback-Dr-84096/home/91662860",
@@ -1209,14 +1075,11 @@
         "transit_score": "8 / 100Minimal TransitTransit Score®",
         "biking_score": "35 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666891"
-    },
+    "_id": "5c357a313aea496d57666891",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/4505-Bella-Verde-Ct-84107/unit-35/home/91855878",
@@ -1236,14 +1099,11 @@
         "transit_score": "41 / 100Some TransitTransit Score®",
         "biking_score": "58 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766688f"
-    },
+    "_id": "5c357a313aea496d5766688f",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/2285-W-12250-S-84065/home/86475667",
@@ -1263,14 +1123,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766688d"
-    },
+    "_id": "5c357a313aea496d5766688d",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/1022-Heritage-Crest-Way-84065/home/148529407",
@@ -1290,14 +1147,11 @@
         "transit_score": "31 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766688e"
-    },
+    "_id": "5c357a313aea496d5766688e",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/4893-S-1950-W-84129/home/91779518",
@@ -1317,14 +1171,11 @@
         "transit_score": "39 / 100Some TransitTransit Score®",
         "biking_score": "57 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766688b"
-    },
+    "_id": "5c357a313aea496d5766688b",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15456-Heritage-Crest-Way-84065/home/148604696",
@@ -1344,14 +1195,11 @@
         "transit_score": "25 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666896"
-    },
+    "_id": "5c357a313aea496d57666896",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/5344-E-Edgewood-Dr-84117/home/91803083",
@@ -1371,14 +1219,11 @@
         "transit_score": "27 / 100Some TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666890"
-    },
+    "_id": "5c357a313aea496d57666890",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/1611-S-russett-Ave-84119/home/91728040",
@@ -1398,14 +1243,11 @@
         "transit_score": "45 / 100Some TransitTransit Score®",
         "biking_score": "80 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666899"
-    },
+    "_id": "5c357a313aea496d57666899",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3958-S-Lance-St-84119/home/86408934",
@@ -1425,14 +1267,11 @@
         "transit_score": "43 / 100Some TransitTransit Score®",
         "biking_score": "39 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666897"
-    },
+    "_id": "5c357a313aea496d57666897",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3760-S-3325-W-St-84119/home/91731972",
@@ -1452,14 +1291,11 @@
         "transit_score": "52 / 100Good TransitTransit Score®",
         "biking_score": "52 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666898"
-    },
+    "_id": "5c357a313aea496d57666898",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1828-800-E-84105/home/91746278",
@@ -1479,14 +1315,11 @@
         "transit_score": "49 / 100Some TransitTransit Score®",
         "biking_score": "91 / 100Biker's ParadiseBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a0"
-    },
+    "_id": "5c357a313aea496d576668a0",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Magna/8333-W-Clarry-Cir-84044/home/86417714",
@@ -1506,14 +1339,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766689e"
-    },
+    "_id": "5c357a313aea496d5766689e",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/7551-S-Wood-Mesa-Dr-84081/home/91855810",
@@ -1533,14 +1363,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766689c"
-    },
+    "_id": "5c357a313aea496d5766689c",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/Kearns/5981-Loder-Dr-84118/home/91767066",
@@ -1560,14 +1387,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "28 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766689d"
-    },
+    "_id": "5c357a313aea496d5766689d",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Kearns/4949-W-5320-S-84118/home/91766677",
@@ -1587,14 +1411,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766689a"
-    },
+    "_id": "5c357a313aea496d5766689a",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/6122-Davis-View-Ln-84128/home/91676819",
@@ -1614,14 +1435,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "50 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a5"
-    },
+    "_id": "5c357a313aea496d576668a5",
     "listings": {
         "title": "4.25 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1419-1300-E-84105/home/91746061",
@@ -1641,14 +1459,11 @@
         "transit_score": "39 / 100Some TransitTransit Score®",
         "biking_score": "66 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a1"
-    },
+    "_id": "5c357a313aea496d576668a1",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/572-N-400-W-84103/home/91709869",
@@ -1668,14 +1483,11 @@
         "transit_score": "50 / 100Good TransitTransit Score®",
         "biking_score": "78 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a2"
-    },
+    "_id": "5c357a313aea496d576668a2",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Millcreek/940-Lorraine-Ave-84106/home/91757126",
@@ -1695,14 +1507,11 @@
         "transit_score": "44 / 100Some TransitTransit Score®",
         "biking_score": "62 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766689f"
-    },
+    "_id": "5c357a313aea496d5766689f",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/2063-Riggs-Dr-84092/home/91839076",
@@ -1722,14 +1531,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "32 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668aa"
-    },
+    "_id": "5c357a313aea496d576668aa",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Herriman/13053-Muzzle-Loader-Dr-84096/home/91697098",
@@ -1749,14 +1555,11 @@
         "transit_score": "13 / 100Minimal TransitTransit Score®",
         "biking_score": "26 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a8"
-    },
+    "_id": "5c357a313aea496d576668a8",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/5560-84107/home/147612323",
@@ -1776,14 +1579,11 @@
         "transit_score": "43 / 100Some TransitTransit Score®",
         "biking_score": "53 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a6"
-    },
+    "_id": "5c357a313aea496d576668a6",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/5265-W-3830-S-84120/home/91722617",
@@ -1803,14 +1603,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a7"
-    },
+    "_id": "5c357a313aea496d576668a7",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Magna/7977-Athena-Dr-84044/home/91659261",
@@ -1830,14 +1627,11 @@
         "transit_score": "31 / 100Some TransitTransit Score®",
         "biking_score": "36 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668a9"
-    },
+    "_id": "5c357a313aea496d576668a9",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3830-W-Rawhide-Dr-84120/home/91731880",
@@ -1857,14 +1651,11 @@
         "transit_score": "43 / 100Some TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668b4"
-    },
+    "_id": "5c357a313aea496d576668b4",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/6247-S-City-Vistas-Way-84128/home/91677377",
@@ -1884,14 +1675,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "18 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668b9"
-    },
+    "_id": "5c357a313aea496d576668b9",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/11341-S-2420-W-84095/home/91673649",
@@ -1911,14 +1699,11 @@
         "transit_score": "14 / 100Minimal TransitTransit Score®",
         "biking_score": "35 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ae"
-    },
+    "_id": "5c357a313aea496d576668ae",
     "listings": {
         "title": "4.25 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/10688-S-2340-E-84092/home/86508378",
@@ -1938,14 +1723,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "9 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668b7"
-    },
+    "_id": "5c357a313aea496d576668b7",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/1028-Park-Palisade-Dr-84095/home/91828834",
@@ -1965,14 +1747,11 @@
         "transit_score": "25 / 100Some TransitTransit Score®",
         "biking_score": "57 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668b6"
-    },
+    "_id": "5c357a313aea496d576668b6",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Herriman/5152-Alpen-Glow-Ct-84096/home/91866047",
@@ -1992,14 +1771,11 @@
         "transit_score": "18 / 100Minimal TransitTransit Score®",
         "biking_score": "30 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668be"
-    },
+    "_id": "5c357a313aea496d576668be",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/4273-S-6340-W-84128/home/104126531",
@@ -2019,14 +1795,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668b5"
-    },
+    "_id": "5c357a313aea496d576668b5",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/370-W-13130-S-84020/home/91864146",
@@ -2046,14 +1819,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668b3"
-    },
+    "_id": "5c357a313aea496d576668b3",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/4789-W-Udine-Ct-84084/home/91853540",
@@ -2073,14 +1843,11 @@
         "transit_score": "26 / 100Some TransitTransit Score®",
         "biking_score": "33 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668bb"
-    },
+    "_id": "5c357a313aea496d576668bb",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/5676-Cottonwood-Ln-84117/home/86460661",
@@ -2100,14 +1867,11 @@
         "transit_score": "29 / 100Some TransitTransit Score®",
         "biking_score": "33 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c3"
-    },
+    "_id": "5c357a313aea496d576668c3",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/8428-La-Croix-Dr-84070/home/91816280",
@@ -2127,14 +1891,11 @@
         "transit_score": "29 / 100Some TransitTransit Score®",
         "biking_score": "47 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c1"
-    },
+    "_id": "5c357a313aea496d576668c1",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/6465-W-4200-S-84128/home/91765209",
@@ -2154,14 +1915,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "28 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ba"
-    },
+    "_id": "5c357a313aea496d576668ba",
     "listings": {
         "title": "5 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/13454-Tuscalee-Way-84020/home/91665288",
@@ -2181,14 +1939,11 @@
         "transit_score": "15 / 100Minimal TransitTransit Score®",
         "biking_score": "18 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c0"
-    },
+    "_id": "5c357a313aea496d576668c0",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Herriman/5391-Morning-Blush-Dr-84096/home/91864160",
@@ -2208,14 +1963,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c8"
-    },
+    "_id": "5c357a313aea496d576668c8",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3668-Brook-Hollow-Ct-84128/home/148574542",
@@ -2235,14 +1987,11 @@
         "transit_score": "Median List Price$309,989Avg. # Offers—Median $ / Sq. Ft.$141Avg. Down Payment—Median Sale / List100%# Sold Homes19",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668bf"
-    },
+    "_id": "5c357a313aea496d576668bf",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2490-E-Lambourne-Ave-84109/home/86431947",
@@ -2262,14 +2011,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "65 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c6"
-    },
+    "_id": "5c357a313aea496d576668c6",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10624-Harvest-Pointe-Dr-84009/home/91702231",
@@ -2289,14 +2035,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "45 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c5"
-    },
+    "_id": "5c357a313aea496d576668c5",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/14772-Deer-Park-Ln-84020/home/103093748",
@@ -2316,14 +2059,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "8 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668cd"
-    },
+    "_id": "5c357a313aea496d576668cd",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10061-Prestwick-Cir-84095/home/91825052",
@@ -2343,14 +2083,11 @@
         "transit_score": "17 / 100Minimal TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c4"
-    },
+    "_id": "5c357a313aea496d576668c4",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10721-Lake-Terrace-Ave-84095/home/146890280",
@@ -2370,14 +2107,11 @@
         "transit_score": "38 / 100Some TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668cb"
-    },
+    "_id": "5c357a313aea496d576668cb",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10479-Sage-Vista-Way-84095/home/91670708",
@@ -2397,14 +2131,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "51 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ca"
-    },
+    "_id": "5c357a313aea496d576668ca",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/5343-Ridge-Brook-Way-S-84118/home/91857166",
@@ -2424,14 +2155,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "23 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d0"
-    },
+    "_id": "5c357a313aea496d576668d0",
     "listings": {
         "title": "2.25 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1434-S-2100-E-84108/home/86425590",
@@ -2451,14 +2179,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "81 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c9"
-    },
+    "_id": "5c357a313aea496d576668c9",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/8706-S-Spartan-Dr-84094/home/91835211",
@@ -2478,14 +2203,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c2"
-    },
+    "_id": "5c357a313aea496d576668c2",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10388-Topview-Rd-84095/home/91691937",
@@ -2505,14 +2227,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668cf"
-    },
+    "_id": "5c357a313aea496d576668cf",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/573-N-G-St-84103/home/91711245",
@@ -2532,14 +2251,11 @@
         "transit_score": "32 / 100Some TransitTransit Score®",
         "biking_score": "49 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ce"
-    },
+    "_id": "5c357a313aea496d576668ce",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2591-E-Gregson-Ave-84109/home/86431392",
@@ -2559,14 +2275,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "55 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d7"
-    },
+    "_id": "5c357a313aea496d576668d7",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/5045-W-6600-S-84081/home/91770547",
@@ -2586,14 +2299,11 @@
         "transit_score": "28 / 100Some TransitTransit Score®",
         "biking_score": "36 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d4"
-    },
+    "_id": "5c357a313aea496d576668d4",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15067-Bright-Stars-Dr-84065/unit-1/home/91700726",
@@ -2613,14 +2323,11 @@
         "transit_score": "21 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668c7"
-    },
+    "_id": "5c357a313aea496d576668c7",
     "listings": {
         "title": "3.25 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/1777-W-12210-S-84065/home/91829759",
@@ -2640,14 +2347,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "58 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d3"
-    },
+    "_id": "5c357a313aea496d576668d3",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3918-S-6515-W-84128/home/91720968",
@@ -2667,14 +2371,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "34 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668da"
-    },
+    "_id": "5c357a313aea496d576668da",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/1205-E-8860-S-84094/home/146432314",
@@ -2694,14 +2395,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "38 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d9"
-    },
+    "_id": "5c357a313aea496d576668d9",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Kearns/4301-W-5015-S-84118/home/91777094",
@@ -2721,14 +2419,11 @@
         "transit_score": "38 / 100Some TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668dc"
-    },
+    "_id": "5c357a313aea496d576668dc",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/1527-W-Cornerstone-Dr-84095/home/86473683",
@@ -2748,14 +2443,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "44 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668cc"
-    },
+    "_id": "5c357a313aea496d576668cc",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/TAYLORSVILLE/2734-W-SABLE-AVE-84129/home/91778525",
@@ -2775,14 +2467,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "52 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d8"
-    },
+    "_id": "5c357a313aea496d576668d8",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/5268-W-Bowstring-Way-84009/home/91701825",
@@ -2802,14 +2491,11 @@
         "transit_score": "40 / 100Some TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668df"
-    },
+    "_id": "5c357a313aea496d576668df",
     "listings": {
         "title": "3.25 Baths",
         "title_link": "https://www.redfin.com/UT/Riverton/12817-S-2805-W-84065/home/91831023",
@@ -2829,14 +2515,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "47 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668de"
-    },
+    "_id": "5c357a313aea496d576668de",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/3287-Water-Lily-Dr-84106/home/91758199",
@@ -2856,14 +2539,11 @@
         "transit_score": "43 / 100Some TransitTransit Score®",
         "biking_score": "61 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e1"
-    },
+    "_id": "5c357a313aea496d576668e1",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/5758-Lindon-St-84107/home/91806991",
@@ -2883,14 +2563,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "53 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d1"
-    },
+    "_id": "5c357a313aea496d576668d1",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/5325-Allendale-Dr-84123/home/86446661",
@@ -2910,14 +2587,11 @@
         "transit_score": "52 / 100Good TransitTransit Score®",
         "biking_score": "57 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668dd"
-    },
+    "_id": "5c357a313aea496d576668dd",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1858-Wasatch-Dr-E-84108/home/91743486",
@@ -2937,14 +2611,11 @@
         "transit_score": "26 / 100Some TransitTransit Score®",
         "biking_score": "33 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e4"
-    },
+    "_id": "5c357a313aea496d576668e4",
     "listings": {
         "title": "3.25 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/10214-Petaluma-Way-84095/home/91691368",
@@ -2964,14 +2635,11 @@
         "transit_score": "18 / 100Minimal TransitTransit Score®",
         "biking_score": "36 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e3"
-    },
+    "_id": "5c357a313aea496d576668e3",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/16-Gatehouse-Ln-84092/home/91840321",
@@ -2991,14 +2659,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "30 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e6"
-    },
+    "_id": "5c357a313aea496d576668e6",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Cottonwood-Heights/8660-Alpen-Cir-84121/home/86476513",
@@ -3018,14 +2683,11 @@
         "transit_score": "12 / 100Minimal TransitTransit Score®",
         "biking_score": "7 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668d6"
-    },
+    "_id": "5c357a313aea496d576668d6",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Herriman/14288-Heartstone-Cir-84096/home/110037486",
@@ -3045,14 +2707,11 @@
         "transit_score": "17 / 100Minimal TransitTransit Score®",
         "biking_score": "17 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e2"
-    },
+    "_id": "5c357a313aea496d576668e2",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/483-E-7th-Ave-84103/home/91711713",
@@ -3072,14 +2731,11 @@
         "transit_score": "37 / 100Some TransitTransit Score®",
         "biking_score": "57 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e8"
-    },
+    "_id": "5c357a313aea496d576668e8",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/6841-Grevillea-Ln-84081/home/91682393",
@@ -3099,14 +2755,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "20 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e9"
-    },
+    "_id": "5c357a313aea496d576668e9",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/5932-W-La-Salle-Dr-84123/home/86447326",
@@ -3126,14 +2779,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "49 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e7"
-    },
+    "_id": "5c357a313aea496d576668e7",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/2617-Rustic-Meadow-Cir-84095/home/86474832",
@@ -3153,14 +2803,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "38 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668db"
-    },
+    "_id": "5c357a313aea496d576668db",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Taylorsville/3948-W-Brixton-Rd-84129/home/148571140",
@@ -3180,14 +2827,11 @@
         "transit_score": "37 / 100Some TransitTransit Score®",
         "biking_score": "60 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ed"
-    },
+    "_id": "5c357a313aea496d576668ed",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Kearns/4791-S-4260-W-84118/home/91776416",
@@ -3207,14 +2851,11 @@
         "transit_score": "37 / 100Some TransitTransit Score®",
         "biking_score": "52 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ee"
-    },
+    "_id": "5c357a313aea496d576668ee",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Taylorsville/3708-W-Englewood-Dr-84129/home/148569174",
@@ -3234,14 +2875,11 @@
         "transit_score": "37 / 100Some TransitTransit Score®",
         "biking_score": "46 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f0"
-    },
+    "_id": "5c357a313aea496d576668f0",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/468-Brewster-Dr-84020/home/91860045",
@@ -3261,14 +2899,11 @@
         "transit_score": "15 / 100Minimal TransitTransit Score®",
         "biking_score": "8 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ec"
-    },
+    "_id": "5c357a313aea496d576668ec",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/3862-S-Quail-Hollow-Dr-84109/home/86437135",
@@ -3288,14 +2923,11 @@
         "transit_score": "42 / 100Some TransitTransit Score®",
         "biking_score": "51 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f2"
-    },
+    "_id": "5c357a313aea496d576668f2",
     "listings": {
         "title": "3.25 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/10133-Wasatch-Blvd-84092/home/91839878",
@@ -3315,14 +2947,11 @@
         "transit_score": "13 / 100Minimal TransitTransit Score®",
         "biking_score": "10 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f3"
-    },
+    "_id": "5c357a313aea496d576668f3",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/4722-S-Jordan-Pkwy-84095/home/91697836",
@@ -3342,14 +2971,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f5"
-    },
+    "_id": "5c357a313aea496d576668f5",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/5243-W-Cool-Water-Way-84081/home/91675856",
@@ -3369,14 +2995,11 @@
         "transit_score": "21 / 100Minimal TransitTransit Score®",
         "biking_score": "52 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668e5"
-    },
+    "_id": "5c357a313aea496d576668e5",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/11453-Oakmond-Rd-84095/home/91679674",
@@ -3396,14 +3019,11 @@
         "transit_score": "40 / 100Some TransitTransit Score®",
         "biking_score": "71 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f7"
-    },
+    "_id": "5c357a313aea496d576668f7",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/438-N-1100-W-84116/home/86413238",
@@ -3423,14 +3043,11 @@
         "transit_score": "44 / 100Some TransitTransit Score®",
         "biking_score": "85 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f8"
-    },
+    "_id": "5c357a313aea496d576668f8",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1678-Earnshaw-Ln-84116/home/86411792",
@@ -3450,14 +3067,11 @@
         "transit_score": "33 / 100Some TransitTransit Score®",
         "biking_score": "63 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668fa"
-    },
+    "_id": "5c357a313aea496d576668fa",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/267-Bubbling-Brook-Ln-84020/home/91862970",
@@ -3477,14 +3091,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ea"
-    },
+    "_id": "5c357a313aea496d576668ea",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/1556-S-1000-E-84105/home/91745628",
@@ -3504,14 +3115,11 @@
         "transit_score": "42 / 100Some TransitTransit Score®",
         "biking_score": "90 / 100Biker's ParadiseBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668fd"
-    },
+    "_id": "5c357a313aea496d576668fd",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Midvale/861-Capraia-Ct-84047/home/91700648",
@@ -3531,14 +3139,11 @@
         "transit_score": "45 / 100Some TransitTransit Score®",
         "biking_score": "56 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668ef"
-    },
+    "_id": "5c357a313aea496d576668ef",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/8427-Lantern-Hill-Ct-84093/home/91858364",
@@ -3558,14 +3163,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "8 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666901"
-    },
+    "_id": "5c357a313aea496d57666901",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Cottonwood-Heights/7005-S-Chris-Ln-84121/home/86466571",
@@ -3585,14 +3187,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "67 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666904"
-    },
+    "_id": "5c357a313aea496d57666904",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/1895-Frontier-Rd-S-84121/home/86461460",
@@ -3612,14 +3211,11 @@
         "transit_score": "31 / 100Some TransitTransit Score®",
         "biking_score": "49 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666900"
-    },
+    "_id": "5c357a313aea496d57666900",
     "listings": {
         "title": "4.25 Baths",
         "title_link": "https://www.redfin.com/UT/Cottonwood-Heights/3390-Marinda-Way-84121/home/91812126",
@@ -3639,14 +3235,11 @@
         "transit_score": "20 / 100Minimal TransitTransit Score®",
         "biking_score": "37 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f4"
-    },
+    "_id": "5c357a313aea496d576668f4",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/11643-Lake-Run-Rd-84095/home/91678649",
@@ -3666,14 +3259,11 @@
         "transit_score": "41 / 100Some TransitTransit Score®",
         "biking_score": "58 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666906"
-    },
+    "_id": "5c357a313aea496d57666906",
     "listings": {
         "title": "3.75 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/404-Azure-Cir-84020/home/91865767",
@@ -3693,14 +3283,11 @@
         "transit_score": "11 / 100Minimal TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666907"
-    },
+    "_id": "5c357a313aea496d57666907",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/1665-84117/home/148565700",
@@ -3720,14 +3307,11 @@
         "transit_score": "38 / 100Some TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666905"
-    },
+    "_id": "5c357a313aea496d57666905",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2219-E-2700-S-84109/home/86430572",
@@ -3747,14 +3331,11 @@
         "transit_score": "20 / 100Minimal TransitTransit Score®",
         "biking_score": "47 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668f9"
-    },
+    "_id": "5c357a313aea496d576668f9",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/3482-W-5585-S-84129/home/86505564",
@@ -3774,14 +3355,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766690b"
-    },
+    "_id": "5c357a313aea496d5766690b",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3714-4310-W-84120/home/91730733",
@@ -3801,14 +3379,11 @@
         "transit_score": "37 / 100Some TransitTransit Score®",
         "biking_score": "50 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766690c"
-    },
+    "_id": "5c357a313aea496d5766690c",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/3494-8245-S-84088/home/91793674",
@@ -3828,14 +3403,11 @@
         "transit_score": "44 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766690e"
-    },
+    "_id": "5c357a313aea496d5766690e",
     "listings": {
         "title": "3 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/2088-W-14200-S-84065/home/91849594",
@@ -3855,14 +3427,11 @@
         "transit_score": "32 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766690a"
-    },
+    "_id": "5c357a313aea496d5766690a",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/233-Montrose-Ave-84101/home/91704950",
@@ -3882,14 +3451,11 @@
         "transit_score": "60 / 100Good TransitTransit Score®",
         "biking_score": "89 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d576668fe"
-    },
+    "_id": "5c357a313aea496d576668fe",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Murray/940-W-Red-Oaks-Dr-84123/home/86447901",
@@ -3909,14 +3475,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "47 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666910"
-    },
+    "_id": "5c357a313aea496d57666910",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/488-Crystal-Meadow-Ln-84020/home/91664396",
@@ -3936,14 +3499,11 @@
         "transit_score": "11 / 100Minimal TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766690f"
-    },
+    "_id": "5c357a313aea496d5766690f",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/TAYLORSVILLE/2336-W-HEATHERGLEN-DR-84129/home/86499511",
@@ -3963,14 +3523,11 @@
         "transit_score": "41 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666903"
-    },
+    "_id": "5c357a313aea496d57666903",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Herriman/5068-W-Blythswood-Ln-S-84096/home/148566514",
@@ -3990,14 +3547,11 @@
         "transit_score": "18 / 100Minimal TransitTransit Score®",
         "biking_score": "37 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666915"
-    },
+    "_id": "5c357a313aea496d57666915",
     "listings": {
         "title": "4 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/691-Old-English-Rd-84020/home/86488831",
@@ -4017,14 +3571,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "37 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666918"
-    },
+    "_id": "5c357a313aea496d57666918",
     "listings": {
         "title": "2.75 Baths",
         "title_link": "https://www.redfin.com/UT/Cottonwood-Heights/2526-Campus-Dr-84121/home/91812913",
@@ -4044,14 +3595,11 @@
         "transit_score": "28 / 100Some TransitTransit Score®",
         "biking_score": "51 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666914"
-    },
+    "_id": "5c357a313aea496d57666914",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/11432-S-Abbey-Mill-Dr-84009/home/145762043",
@@ -4071,14 +3619,11 @@
         "transit_score": "25 / 100Some TransitTransit Score®",
         "biking_score": "35 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666908"
-    },
+    "_id": "5c357a313aea496d57666908",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/5694-W-4360-S-84128/home/91765060",
@@ -4098,14 +3643,11 @@
         "transit_score": "38 / 100Some TransitTransit Score®",
         "biking_score": "35 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766691b"
-    },
+    "_id": "5c357a313aea496d5766691b",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/7437-S-Sunset-Maple-Dr-84081/home/91675062",
@@ -4125,14 +3667,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "22 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766691a"
-    },
+    "_id": "5c357a313aea496d5766691a",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Kearns/4471-W-5615-S-84118/home/91785328",
@@ -4152,14 +3691,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "55 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766690d"
-    },
+    "_id": "5c357a313aea496d5766690d",
     "listings": {
         "title": "4.5 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/867-Northcrest-Dr-84103/home/91710853",
@@ -4179,14 +3715,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "29 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666924"
-    },
+    "_id": "5c357a313aea496d57666924",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/159-E-2700-S-84115/home/86428741",
@@ -4206,14 +3739,11 @@
         "transit_score": "45 / 100Some TransitTransit Score®",
         "biking_score": "73 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666912"
-    },
+    "_id": "5c357a313aea496d57666912",
     "listings": {
         "title": "3.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/4492-Milford-Dr-84095/home/91689047",
@@ -4233,14 +3763,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "50 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766692a"
-    },
+    "_id": "5c357a313aea496d5766692a",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/8791-S-3965-W-84088/home/91822886",
@@ -4260,14 +3787,11 @@
         "transit_score": "30 / 100Some TransitTransit Score®",
         "biking_score": "53 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666923"
-    },
+    "_id": "5c357a313aea496d57666923",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/155-E-2700-S-84115/home/86428742",
@@ -4287,14 +3811,11 @@
         "transit_score": "45 / 100Some TransitTransit Score®",
         "biking_score": "73 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666927"
-    },
+    "_id": "5c357a313aea496d57666927",
     "listings": {
         "title": "2.25 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/4636-Serendipity-Way-84009/unit-211/home/148562946",
@@ -4314,14 +3835,11 @@
         "transit_score": "19 / 100Minimal TransitTransit Score®",
         "biking_score": "44 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666917"
-    },
+    "_id": "5c357a313aea496d57666917",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/47-W-8710-S-84070/home/91821163",
@@ -4341,13 +3859,10 @@
         "transit_score": "46 / 100Some TransitTransit Score®",
         "biking_score": "54 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 }, {
-    "_id": {
-        "$oid": "5c357a313aea496d57666929"
-    },
+    "_id": "5c357a313aea496d57666929",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/6553-Annie-Lee-Way-84081/home/91701483",
@@ -4367,14 +3882,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "28 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666928"
-    },
+    "_id": "5c357a313aea496d57666928",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/South-Salt-Lake/2150-Main-St-84115/unit-306/home/104037941",
@@ -4394,14 +3906,11 @@
         "transit_score": "66 / 100Good TransitTransit Score®",
         "biking_score": "77 / 100Very BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766692c"
-    },
+    "_id": "5c357a313aea496d5766692c",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/2736-W-7650-S-84084/home/91792063",
@@ -4421,14 +3930,11 @@
         "transit_score": "31 / 100Some TransitTransit Score®",
         "biking_score": "50 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666934"
-    },
+    "_id": "5c357a313aea496d57666934",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/3292-W-5620-S-84129/home/86449287",
@@ -4448,14 +3954,11 @@
         "transit_score": "35 / 100Some TransitTransit Score®",
         "biking_score": "38 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666931"
-    },
+    "_id": "5c357a313aea496d57666931",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Salt-Lake-City/2275-2281-E-Atkin-Ave-84109/home/146975689",
@@ -4475,14 +3978,11 @@
         "transit_score": "16 / 100Minimal TransitTransit Score®",
         "biking_score": "68 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666921"
-    },
+    "_id": "5c357a313aea496d57666921",
     "listings": {
         "title": "4.75 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/14206-Tumbleweed-Way-E-84020/home/86507635",
@@ -4502,14 +4002,11 @@
         "transit_score": "16 / 100Minimal TransitTransit Score®",
         "biking_score": "6 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666932"
-    },
+    "_id": "5c357a313aea496d57666932",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/South-Jordan/4576-11800-S-84095/home/91673770",
@@ -4529,14 +4026,11 @@
         "transit_score": "32 / 100Some TransitTransit Score®",
         "biking_score": "50 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666933"
-    },
+    "_id": "5c357a313aea496d57666933",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/6324-Kapford-Dr-84128/home/91715654",
@@ -4556,14 +4050,11 @@
         "transit_score": "32 / 100Some TransitTransit Score®",
         "biking_score": "45 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666936"
-    },
+    "_id": "5c357a313aea496d57666936",
     "listings": {
         "title": "1.5 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/695-E-8800-S-84070/unit-A/home/91835850",
@@ -4583,14 +4074,11 @@
         "transit_score": "24 / 100Minimal TransitTransit Score®",
         "biking_score": "55 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766693b"
-    },
+    "_id": "5c357a313aea496d5766693b",
     "listings": {
         "title": "3.25 Baths",
         "title_link": "https://www.redfin.com/UT/Sandy/10853-High-Ridge-Ln-84092/home/91840329",
@@ -4610,14 +4098,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "27 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766693e"
-    },
+    "_id": "5c357a313aea496d5766693e",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/1486-W-Parkway-Ave-84119/home/91727234",
@@ -4637,14 +4122,11 @@
         "transit_score": "43 / 100Some TransitTransit Score®",
         "biking_score": "58 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766692b"
-    },
+    "_id": "5c357a313aea496d5766692b",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/6450-Clematis-Way-84081/home/91769110",
@@ -4664,14 +4146,11 @@
         "transit_score": "34 / 100Some TransitTransit Score®",
         "biking_score": "42 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666940"
-    },
+    "_id": "5c357a313aea496d57666940",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15474-Revolutionary-Way-84065/home/148538789",
@@ -4691,14 +4170,11 @@
         "transit_score": "28 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666930"
-    },
+    "_id": "5c357a313aea496d57666930",
     "listings": {
         "title": "4.5 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/6369-E-Crest-Mount-Cir-84121/home/91811151",
@@ -4718,14 +4194,11 @@
         "transit_score": "29 / 100Some TransitTransit Score®",
         "biking_score": "12 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766693c"
-    },
+    "_id": "5c357a313aea496d5766693c",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Valley-City/3752-Calvo-View-Cir-84119/unit-86/home/148539484",
@@ -4745,14 +4218,11 @@
         "transit_score": "Median List Price—Avg. # Offers—Median $ / Sq. Ft.—Avg. Down Payment—Median Sale / List—# Sold Homes—",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766693d"
-    },
+    "_id": "5c357a313aea496d5766693d",
     "listings": {
         "title": "4.5 Baths",
         "title_link": "https://www.redfin.com/UT/Draper/1522-Meadow-Bluff-Ln-84020/home/91451844",
@@ -4772,14 +4242,11 @@
         "transit_score": "0 / 100Minimal TransitTransit Score®",
         "biking_score": "6 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666945"
-    },
+    "_id": "5c357a313aea496d57666945",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Taylorsville/4757-Anna-Racquel-Cir-84123/home/91780133",
@@ -4799,14 +4266,11 @@
         "transit_score": "31 / 100Some TransitTransit Score®",
         "biking_score": "58 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666935"
-    },
+    "_id": "5c357a313aea496d57666935",
     "listings": {
         "title": "1 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/2220-E-Murray-Holladay-Rd-84117/unit-169/home/91803774",
@@ -4826,14 +4290,11 @@
         "transit_score": "36 / 100Some TransitTransit Score®",
         "biking_score": "65 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666941"
-    },
+    "_id": "5c357a313aea496d57666941",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/1087-W-Narrows-Ln-84065/home/148538787",
@@ -4853,14 +4314,11 @@
         "transit_score": "20 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666942"
-    },
+    "_id": "5c357a313aea496d57666942",
     "listings": {
         "title": "2.5 Baths",
         "title_link": "https://www.redfin.com/UT/Bluffdale/15467-Revolutionary-Way-84065/home/148538785",
@@ -4880,14 +4338,11 @@
         "transit_score": "28 / 100Somewhat BikeableBike Score®",
         "biking_score": ""
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d5766693a"
-    },
+    "_id": "5c357a313aea496d5766693a",
     "listings": {
         "title": "4 Baths",
         "title_link": "https://www.redfin.com/UT/Holladay/1877-E-3990-S-84124/home/71416899",
@@ -4907,14 +4362,11 @@
         "transit_score": "38 / 100Some TransitTransit Score®",
         "biking_score": "48 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666946"
-    },
+    "_id": "5c357a313aea496d57666946",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/West-Jordan/6709-Empress-Ln-84081/home/91677777",
@@ -4934,14 +4386,11 @@
         "transit_score": "23 / 100Minimal TransitTransit Score®",
         "biking_score": "30 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666947"
-    },
+    "_id": "5c357a313aea496d57666947",
     "listings": {
         "title": "2 Baths",
         "title_link": "https://www.redfin.com/UT/Magna/7661-Jefferson-Rd-84044/home/91719516",
@@ -4961,14 +4410,11 @@
         "transit_score": "32 / 100Some TransitTransit Score®",
         "biking_score": "40 / 100Somewhat BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 },
 {
-    "_id": {
-        "$oid": "5c357a313aea496d57666944"
-    },
+    "_id": "5c357a313aea496d57666944",
     "listings": {
         "title": "1.75 Baths",
         "title_link": "https://www.redfin.com/UT/Millcreek/3825-loretta-Dr-E-84106/home/86501224",
@@ -4988,8 +4434,7 @@
         "transit_score": "39 / 100Some TransitTransit Score®",
         "biking_score": "53 / 100BikeableBike Score®"
     },
-    "__v": {
-        "$numberInt": "0"
-    }
+    "__v": "0"
+    
 }
 ]
