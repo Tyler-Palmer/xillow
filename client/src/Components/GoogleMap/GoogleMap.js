@@ -43,7 +43,7 @@ class GoogleMap extends Component {
                                     lat={this.center.lat}
                                     lng={this.center.lng}
                                     house={true} />
-                                {this.props.newListingData.map(each => <GoogleIcon lng={each.longtitude} lat={each.latitude} house={true} />)}
+                                {this.props.newListingData.map(each => <GoogleIcon {...each} lng={each.longtitude} lat={each.latitude} house={true} />)}
                             </GoogleMapReact>
                         </div>
                         <div className="google-property__detailed-container">
