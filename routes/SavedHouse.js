@@ -24,6 +24,7 @@ SavedHouseRouter.get('/:userID', (req,res,next) => {
             res.status(500)
             return next(err)
         }
+        console.log('this route')
         return res.status(200).send(houses)
     })
 })
