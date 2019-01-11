@@ -16,10 +16,10 @@ class UserProvider extends Component {
         super()
         this.state = {
             allUsers: [],
-            user: {},
+            user: JSON.parse(localStorage.getItem('user')) ||{},
             isAuthenticated: false,
             authErr: "",
-            token: ""
+            token: localStorage.getItem('token') || ""
         }
     }
 

@@ -20,7 +20,6 @@ class SubSearch extends Component {
     handleUserSearchSubmit = (e) => {
         e.preventDefault()
         this.props.getNearbyLocationData(this.state.address)
-        this.props.history.push("/search")
     }
 
     render() {

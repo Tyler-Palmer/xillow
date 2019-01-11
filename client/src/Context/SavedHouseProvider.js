@@ -19,7 +19,7 @@ class SavedHouseProvider extends Component {
         axios.get(`/savedhouse/${userID}`).then(res => {
             console.log(res.data)
             this.setState({
-                savedHouses: res.data[0].savedHouse.map(each => each.listings)
+                savedHouses: res.data[0].savedHouse
                 
             }, () => {
                 this.setState({
@@ -52,10 +52,12 @@ class SavedHouseProvider extends Component {
     }
 
     removeHouse = (userID, houseID) => {
+        console.log("remove house here")
         axios.delete(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({
-                    savedHouses: res.data
+                    savedHouses: res.data[0].savedHouse
             })
+            console.log("removed house")
         })
     }
 

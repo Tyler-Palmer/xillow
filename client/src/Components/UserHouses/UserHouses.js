@@ -9,7 +9,7 @@ class UserHouses extends Component{
         super()
         this.state = {
             isChecking: false,
-            houseToDelete: {}
+            houseToDelete: ""
         }
     }
     componentWillReceiveProps(nextProps){
@@ -19,21 +19,24 @@ class UserHouses extends Component{
         }
     }
 
-    handleMouseOver = () => {
-        this.setState({
-            isChecking: true,
-        })
-        console.log(this.props.houseToDelete)
-    }
+    // handleMouseOver = () => {
+    //     this.setState({
+    //         isChecking: true,
+    //         houseToDelete: this.props.savedHouses._id
+    //     })
+    //     console.log("Mouse in")
+    // }
 
-    handleMouseLeave = () =>{
-        this.setState({
-            isChecking: false
-        })
-    }
+    // handleMouseLeave = () =>{
+    //     this.setState({
+    //         isChecking: false
+    //     })
+    //     console.log("Mouse out")
+    // }
 
     render(){
         console.log(this.props.savedHouses)
+        console.log(this.props.houseToDelete)
         return(
             <div className ="saved-container">
                 <h2>Welcome @{this.props.user.email}</h2>
@@ -45,11 +48,10 @@ class UserHouses extends Component{
 
                 <div className ="saved-container_small">
                 {
-                    this.props.savedHouses.map(house => < House 
+                    this.props.savedHouses.map(house => <House 
                             houseToDelete = {this.state.houseToDelete}
-                            handleMouseOver = {this.handleMouseOver}
-                            handleMouseLeave = {this.handleMouseLeave}
-                             {...house} />)
+                            _id={house._id}
+                            {...house.listings} />)
                 }
                 </div>
                 }
