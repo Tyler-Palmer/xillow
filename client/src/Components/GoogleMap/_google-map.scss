@@ -3,11 +3,21 @@
 
 .google-map__container{
     display: flex;  
-    
-    .google-property__container{
+
+
+    .google-property__detailed-container{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        flex-direction: column;
         width: 50%;
+
+        .salt-lake-city{
+            margin: 0 10px;
+        }
+        .google-property__container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
     }
 }

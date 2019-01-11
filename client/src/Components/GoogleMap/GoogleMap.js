@@ -32,8 +32,8 @@ class GoogleMap extends Component {
         return (
             <Fragment>
                 {this.center.lat > 1 &&
-                    <div className = "google-map__container">
-                    <div style={{ height: "100vh", width: "50vw" }}>
+                    <div className="google-map__container">
+                        <div style={{ height: "100vh", width: "50vw" }}>
                             <GoogleMapReact
                                 bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEKEY }}
                                 defaultCenter={this.center}
@@ -46,9 +46,13 @@ class GoogleMap extends Component {
                                 {this.props.newListingData.map(each => <GoogleIcon lng={each.longtitude} lat={each.latitude} house={true} />)}
                             </GoogleMapReact>
                         </div>
-                        <div className="google-property__container">
-                            <p>Homes at Salt Lake City:</p>
-                            {this.props.newListingData.map(each => <GoogleProperty {...each} />)}
+                        <div className="google-property__detailed-container">
+                            <div className = "salt-lake-city">
+                                <p>Homes at Salt Lake City:</p>
+                            </div>
+                            <div className="google-property__container">
+                                {this.props.newListingData.map(each => <GoogleProperty {...each} />)}
+                            </div>
                         </div>
                     </div>
                 }

@@ -2,12 +2,18 @@
     display: flex;
     width: 48%;
     margin-bottom: 10px;
+    color: whitesmoke;
 
     .google-property__image {
         width: 100%;
         height: 180px;
         background-size: cover;
         background-position: center;
+        box-shadow: inset 0 0 0 500px rgba(1,1,1,0.4);
+
+        .google-property__wish-list {
+            height: 50%;
+        }
     }
     .google-property__nessecity{
         display: flex;
