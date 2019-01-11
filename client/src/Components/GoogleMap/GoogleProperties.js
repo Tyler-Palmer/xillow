@@ -19,7 +19,7 @@ class GoogleProperties extends React.Component {
     getPlaceData = (placeid) => {
         console.log(placeid)
         const serverUrl = "https://vschool-cors.herokuapp.com?url="
-        axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&fields=name,rating,address_component,photo&key=${process.env.REACT_APP_GOOGLEPLACEKEY_T}`).then(res => {
+        axios.get(`${serverUrl}https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&fields=name,rating,address_component,photo&key=${process.env.REACT_APP_GOOGLEPLACEKEY}`).then(res => {
             // if (res.data.result.photos) {
             const photoReference = res.data.result.photos[0].photo_reference
             console.log(res.data)
