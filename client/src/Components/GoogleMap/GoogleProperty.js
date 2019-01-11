@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withServerListing } from "../../Context/ServerListingContext"
 
 class GoogleProperty extends React.Component {
-    constructor(){
+    constructor() {
         super()
+
     }
 
-    handleHoverImage = (id) =>{
+    handleHoverImage = (id) => {
         this.props.handleHoverImage(id)
     }
 
@@ -17,7 +18,7 @@ class GoogleProperty extends React.Component {
 
     render() {
         return (
-            <div className="google-property__small-container" onMouseOver = {() => this.handleHoverImage(this.props._id)} onMouseLeave = {this.handleLeaveImage}>
+            <div className="google-property__small-container" onMouseOver={() => this.handleHoverImage(this.props._id)} onMouseLeave={this.handleLeaveImage}>
                 <div className="google-property__image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}>
                     <div className="google-property__wish-list">
                         <h3><FontAwesomeIcon icon="heart" className="google-property__heart" /></h3>
@@ -40,6 +41,6 @@ class GoogleProperty extends React.Component {
         )
     }
 }
-
+// pagination.map((each, id) => <p onClick={() => this.handlePagination(id + 1)}>{each}</p>)
 
 export default withServerListing(GoogleProperty);

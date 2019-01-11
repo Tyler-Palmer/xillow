@@ -60,11 +60,9 @@ listingServerRouter.post("/", (req, res, next) => {
 })
 
 listingServerRouter.get("/pag", (req, res, next) => {
-    console.log("Im running")
-    console.log(req.query.page)
     ListingCollection.paginate({}, {
         page: req.query.page,
-        limit: 25,
+        limit: 26,
     }, (err, data) => {
         if (err) {
             res.status(500)

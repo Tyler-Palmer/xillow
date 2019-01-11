@@ -10,15 +10,25 @@ class ServerListingContext extends React.Component {
             listingsData: [],
             newListingData: [],
             checkingRightNow: "",
+            pages: undefined
         }
     }
 
-    getListingData = () => {
-        axios.get("/listing/pag?page=1").then(res => {
-            console.log(res)
-            console.log(res.data)
+    getNewListingData = () => {
+        axios.get("/listing/listings").then(res => {
             this.setState({
-                listingsData: res.data.docs
+                listingsData: res.data,
+            })
+        })
+    }
+
+    getListingData = (id) => {
+        axios.get(`/listing/pag?page=${id || 1}`).then(res => {
+            console.log(res)
+            this.setState({
+                listingsData: res.data.docs,
+                newListingData: res.data.docs,
+                pages: res.data.pages
             }, () => {
                 this.changeDataToLocation();
             })
@@ -31,30 +41,32 @@ class ServerListingContext extends React.Component {
         }, () => {
             console.log(this.state.checkingRightNow)
         })
-      
+
     }
 
-    handleLeaveImage = () =>{
+    handleLeaveImage = () => {
         this.setState({
             checkingRightNow: ""
         })
-    } 
+    }
 
 
     displayListingsData = () => {
         this.getListingData()
     }
 
-    changeDataToLocation = async () => {
+    changeDataToLocation = () => {
         this.state.listingsData.map(each => axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${each.listings.address}&key=${process.env.REACT_APP_GOOGLEKEY}`).then(res => {
             const newData = this.state.listingsData.find(house => house._id === each._id)
             newData.longtitude = res.data.results[0].geometry.location.lng;
             newData.latitude = res.data.results[0].geometry.location.lat;
-            if (this.state.newListingData.length < 25) {
+            // if (this.state.newListingData.length <= 25) {
+               
                 this.setState(prevState => ({
-                    newListingData: [...prevState.newListingData, newData]
+                    newListingData: [...prevState.newListingData, newData],
+                    listingsData: [...prevState.listingsData, newData]
                 }))
-            }
+            // }
         }
         ))
     }
@@ -66,7 +78,9 @@ class ServerListingContext extends React.Component {
                 getListingData: this.getListingData,
                 displayListingsData: this.displayListingsData,
                 handleLeaveImage: this.handleLeaveImage,
-                handleHoverImage: this.handleHoverImage
+                handleHoverImage: this.handleHoverImage,
+                getNewListingData: this.getNewListingData,
+
             }}>
                 {this.props.children}
             </Provider>
