@@ -1,0 +1,23 @@
+@import "./google-icon";
+@import "./google-property";
+
+.google-map__container{
+    display: flex;  
+
+
+    .google-property__detailed-container{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        .salt-lake-city{
+            margin: 0 10px;
+        }
+        .google-property__container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+    }
+}

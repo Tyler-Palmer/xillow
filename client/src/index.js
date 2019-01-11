@@ -16,6 +16,7 @@ import NewContext from "./Context/NewContext"
 library.add(fab, faSearch, faCircle, faQuoteLeft, faCopyright, faBars, faQuoteRight, faArrowDown, faArrowUp, faUtensils, faMugHot, faBeer, faMapMarker, faHome, faWindowClose, faBath, faBed, faArrowAltCircleLeft, faArrowAltCircleRight, faLightbulb, faWrench, faPencilAlt, faHeart);
 
 
+
 ReactDOM.render(
     <BrowserRouter>
       <SavedHouseProvider>
