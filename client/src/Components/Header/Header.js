@@ -85,7 +85,7 @@ class Header extends React.Component {
                         <source src={this.state.videos[this.state.slideNumber]} type="video/ogg" />
                     </video>
                 </div>
-            </div >
+            </div>
         )
     }
 }

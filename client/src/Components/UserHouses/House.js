@@ -7,17 +7,20 @@ class House extends Component {
 
     componentDidMount() {
         this.props.getUserHouses(this.props.user._id)
-        console.log(this.props)
-        console.log(this.props.user)
+        // console.log(this.props)
+        // console.log(this.props.user)
     }
 
     render() {
+        console.log(this.props)
+        console.log(this.props._id)
+        console.log(this.props.user._id)
         return (
                
-            <div className="listing__container" onMouseOver={this.props.handleMouseOver} onMouseOut={this.props.handleMouseLeave}>
+            <div className="listing__container">
 
                  <div className="listing__image" style={{ backgroundImage: `url(${this.props.main_image})` }}>
-                    <FontAwesomeIcon className="hearts" icon="heart" onclick={() => this.props.removeHouse(this.props.user._id, this.props.houseToDelete)}/>
+                    <FontAwesomeIcon className="hearts" icon="heart" onClick={() => this.props.removeHouse(this.props.user._id, this.props._id)}/>
                 </div>
                 <div className="listing__texts">
                     <p>{this.props.price}</p>
