@@ -8,7 +8,8 @@ class ServerListingContext extends React.Component {
         super()
         this.state = {
             listingsData: [],
-            newListingData: []
+            newListingData: [],
+            checkingRightNow: "",
         }
     }
 
@@ -22,6 +23,21 @@ class ServerListingContext extends React.Component {
         })
     }
 
+    handleHoverImage = (id) => {
+        this.setState({
+            checkingRightNow: id
+        }, () => {
+            console.log(this.state.checkingRightNow)
+        })
+      
+    }
+
+    handleLeaveImage = () =>{
+        this.setState({
+            checkingRightNow: ""
+        })
+    } 
+
 
     displayListingsData = () => {
         this.getListingData()
@@ -32,7 +48,7 @@ class ServerListingContext extends React.Component {
             const newData = this.state.listingsData.find(house => house._id === each._id)
             newData.longtitude = res.data.results[0].geometry.location.lng;
             newData.latitude = res.data.results[0].geometry.location.lat;
-            if (this.state.newListingData.length <= 25) {
+            if (this.state.newListingData.length < 25) {
                 this.setState(prevState => ({
                     newListingData: [...prevState.newListingData, newData]
                 }))
@@ -46,7 +62,9 @@ class ServerListingContext extends React.Component {
             <Provider value={{
                 ...this.state,
                 getListingData: this.getListingData,
-                displayListingsData: this.displayListingsData
+                displayListingsData: this.displayListingsData,
+                handleLeaveImage: this.handleLeaveImage,
+                handleHoverImage: this.handleHoverImage
             }}>
                 {this.props.children}
             </Provider>
