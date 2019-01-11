@@ -3,12 +3,14 @@
 
 .google-map__container{
     display: flex;  
-
+    overflow: hidden;
+    height: 100vh;
 
     .google-property__detailed-container{
         display: flex;
         flex-direction: column;
         width: 50%;
+        overflow-x: scroll;
 
         .salt-lake-city{
             margin: 0 10px;
