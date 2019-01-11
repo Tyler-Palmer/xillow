@@ -110,6 +110,7 @@ SavedHouseRouter.post('/:userID/:productID', async (req, res, next) => {
 
 SavedHouseRouter.put('/:userID/:houseID', (req, res, next) => {
     SavedHouse.findOne({ user: req.params.userID }, (err, user) => {
+        console.log("I got this far")
         if (err) {
             res.status(500)
             return next(err)
@@ -117,7 +118,7 @@ SavedHouseRouter.put('/:userID/:houseID', (req, res, next) => {
         const userHouse = user.toObject()
         console.log(userHouse)
         const found = userHouse.savedHouse.filter(house => house._id.toString() !== req.params.houseID.toString())
-            SavedHouse.findOneAndUpdate({ user: req.params.userID }, { savedHouse: found }, (err, data) => {
+            SavedHouse.findOneAndUpdate({ user: req.params.userID }, { savedHouse: found }, {new: true}, (err, data) => {
                 if (err) {
                     res.status(500)
                     return next(err)

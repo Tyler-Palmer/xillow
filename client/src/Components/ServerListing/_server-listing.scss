@@ -9,6 +9,21 @@
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
+        position: relative;
+
+        .listing-heart{
+            color: white;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            padding-left: 10px;
+            padding-top: 10px;
+            z-index: 50;
+            
+        }
+        .listing-heart:hover{
+            color:rgba(255, 0, 0, 0.7);
+        }
     }
 
     .listing__texts{

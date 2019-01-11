@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import ServerListing from "./ServerListing"
 import { withServerListing } from "../../Context/ServerListingContext"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { withHouses } from "../../Context/SavedHouseProvider"
 
 class ServerListings extends React.Component {
     constructor() {
@@ -92,4 +93,4 @@ class ServerListings extends React.Component {
     }
 }
 
-export default withServerListing(ServerListings)
+export default withHouses(withServerListing(ServerListings))

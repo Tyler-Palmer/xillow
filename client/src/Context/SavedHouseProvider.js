@@ -39,25 +39,34 @@ class SavedHouseProvider extends Component {
     }
 
     //Add house to saved houses
-    addUserHouse = (userID, houseObj) => {
-        axios.post(`/savedhouse/${userID}`, {houseObj}).then(res =>{
-            this.setstate(prevState => {
+    addUserHouse = (userID, houseID) => {
+        axios.post(`/savedhouse/${userID}/${houseID}`).then(res =>{
+            console.log("addhouse route hit client-side")
+            this.setState(prevState => {
                 return {
                 savedHouses: [...prevState.savedHouses, res.data],
                 numberSaved: res.data.length
                 }
             })
-        }).catch(err => console.log.log(err))
+            console.log("house added")
+        }).catch(err => console.log(err))
         console.log(this.state.savedHouses)
+        
     }
 
     removeHouse = (userID, houseID) => {
         console.log("remove house here")
-        axios.delete(`/savedhouse/${userID}/${houseID}`).then(res => {
+        axios.put(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({
-                    savedHouses: res.data[0].savedHouse
+                    savedHouses: res.data.savedHouse
             })
             console.log("removed house")
+        })
+    }
+
+    numberHousesSaved = () => {
+        this.setState({
+            numbersaved: this.state.savedHouses.length
         })
     }
 
@@ -82,7 +91,8 @@ class SavedHouseProvider extends Component {
                 getSelectedHouse: this.getSelectedHouse,
                 removeHouse: this.removeHouse,
                 onHover: this.onHover,
-                onLeave: this.onLeave
+                onLeave: this.onLeave,
+                numberHousesSaved: this.numberHousesSaved
             }}>
                 { this.props.children }
             </Provider>

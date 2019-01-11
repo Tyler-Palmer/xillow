@@ -12,6 +12,12 @@ class UserHouses extends Component{
             houseToDelete: ""
         }
     }
+
+    componentDidMount(){
+        this.props.getUserHouses(this.props.user._id)
+        this.props.numberHousesSaved()
+    }
+
     componentWillReceiveProps(nextProps){
         console.log(nextProps)
         if(nextProps.user._id && nextProps.savedHouses.length === 0){
