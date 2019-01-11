@@ -3,9 +3,25 @@
 .saved-container{
     font-family: "Roboto";
     position: relative;
-    height: 80vh;
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+    background-color: rgba(245, 245, 245, 1);
+    box-shadow: 0 1px 3px 1px rgba(1,1,1,.5);
+    margin-bottom: 20px;
 
+    .saved-container_small{
+        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        // grid-template-rows: 300px;
+        // grid-auto-rows: 300px;
+        // grid-gap:10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      
+    }
     h2{
         margin-top: 70px;
+        margin-left: 10px;
     }
 }

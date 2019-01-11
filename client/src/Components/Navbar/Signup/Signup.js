@@ -70,8 +70,6 @@ class Signup extends Component {
     }
 
     render() {
-        console.log(this.props)
-        console.log(this.props.signupModal)
         return (
             <div className="signup-form-container">
                 <div id="close-container">

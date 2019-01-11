@@ -44,6 +44,7 @@ class UserProvider extends Component {
                     authErr: err.response.data.message
                 })
             })
+        console.log('signed up')
     }
 
     login = userInfo => {
@@ -75,7 +76,7 @@ class UserProvider extends Component {
             token: "",
             isAuthenticated: false
         })
-        console.log("Logged out")
+        console.log("logged out")
     }
 
     handleError = (err) => {

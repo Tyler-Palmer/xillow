@@ -18,7 +18,7 @@ class SavedHouseProvider extends Component {
         axios.get(`/savedhouse/${userID}`).then(res => {
             console.log(res.data)
             this.setState({
-                savedHouses: res.data[0].savedHouse[0]
+                savedHouses: res.data[0].savedHouse.map(each => each.listings)
                 
             }, () => {
                 this.setState({
@@ -29,7 +29,7 @@ class SavedHouseProvider extends Component {
     }
 
     //Get One House
-    getSelectedHouse = (houseID, userID) => {
+    getSelectedHouse = (userID, houseID ) => {
         axios.get(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({
                 house: res.savedHouse
@@ -38,7 +38,7 @@ class SavedHouseProvider extends Component {
     }
 
     //Add house to saved houses
-    addUserHouse = (houseObj, userID) => {
+    addUserHouse = (userID, houseObj) => {
         axios.post(`/savedhouse/${userID}`, {houseObj}).then(res =>{
             this.setstate(prevState => {
                 return {
@@ -50,13 +50,24 @@ class SavedHouseProvider extends Component {
         console.log(this.state.savedHouses)
     }
 
+    removeHouse = (userID, houseID) => {
+        axios.delete(`/savedhouse/${userID}/${houseID}`).then(res => {
+            this.setState( prevState => {
+                return {
+                    savedHouses: prevState.filter(houses => houses.id !== houseID)
+                }
+            })
+        })
+    }
+
     render() {
         return (
             <Provider value={{
                 ...this.state,
                 getUserHouses: this.getUserHouses,
                 addUserHouse: this.addUserHouse,
-                getSelectedHouse: this.getSelectedHouse
+                getSelectedHouse: this.getSelectedHouse,
+                removeHouse: this.removeHouse
             }}>
                 { this.props.children }
             </Provider>

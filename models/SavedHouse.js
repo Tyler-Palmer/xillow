@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const uuid = require('uuid')
 
 const SavedHouseSchema = new Schema({
     user: {
@@ -10,7 +11,7 @@ const SavedHouseSchema = new Schema({
     savedHouse: [{
         type: Object,
         default: []
-    }]
+    }],
 })
 
 module.exports = mongoose.model("SavedHouse", SavedHouseSchema)
