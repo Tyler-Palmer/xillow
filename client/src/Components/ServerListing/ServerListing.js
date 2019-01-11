@@ -1,11 +1,14 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { withUser } from '../../Context/UserProvider'
+import { withHouses } from '../../Context/SavedHouseProvider'
 
 const ServerListing = (props) => {
     console.log(props)
     return (
         <div className="listing__container">
             <div className="listing__image" style={{ backgroundImage: `url(${props.listings.main_image})` }}>
+                <FontAwesomeIcon className="listing-heart" icon="heart" onClick={() => this.props.removeHouse(this.props.user._id, this.props._id)} />
             </div>
             <div className="listing__texts">
                 <p>{props.listings.price}</p>
@@ -21,4 +24,4 @@ const ServerListing = (props) => {
     )
 
 }
-export default ServerListing
+export default withHouses(withUser(ServerListing))

@@ -3,6 +3,7 @@
     color: crimson;
     z-index: -1;
     cursor: pointer;
+    transition: all 0.8 linear;
 
     &:hover{
         color: darkcyan

@@ -13,7 +13,13 @@
         overflow-x: scroll;
 
         .salt-lake-city{
-            margin: 0 10px;
+            margin: 0 7px;
+            padding: 5px;
+            p{
+                margin-left: 5px;
+                font-weight: bolder;
+                font-size: 1.5em;
+            }
         }
         .google-property__container{
             display: flex;
@@ -29,6 +35,10 @@
                 height: 20px;
                 width: 20px;
                 cursor: pointer;
+                font-weight: bold;
+                margin-right: 5px;
+                margin-top: 13px;
+
             }
         }
     }
