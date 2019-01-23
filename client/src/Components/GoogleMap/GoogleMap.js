@@ -3,7 +3,6 @@ import GoogleMapReact from "google-map-react";
 import { withGoogleData } from "../../Context/NearbyData";
 import { withServerListing } from "../../Context/ServerListingContext";
 import GoogleIcon from "./GoogleIcons"
-import GoogleProperties from "./GoogleProperties"
 import GoogleProperty from "./GoogleProperty"
 
 class GoogleMap extends Component {
@@ -42,7 +41,6 @@ class GoogleMap extends Component {
         for (let i = 1; i <= this.props.pages; i++) {
             pagination.push(i)
         }
-        console.log(pagination)
         return (
             <Fragment>
                 {this.center.lat > 1 &&
@@ -81,13 +79,3 @@ class GoogleMap extends Component {
 
 export default withServerListing(withGoogleData(GoogleMap));
 
-{/* console.log(each)
-
-                    console.log(each.geometry.location)
-                    console.log(typeof each.geometry.location.lat)
-                    console.log(typeof each.geometry.location.lng) */}
-
-{/* {this.props.nearbyInfos.length > 1 && this.props.nearbyInfos.map(each => console.log)} */ }
-                     // {this.props.nearbyInfos.map(each => <GoogleIcon lat ={each.geometry.location.lat} lng = {each.geometry.location.lng} icon = {each.icon}/>)}  
-
-                     //{this.props.nearbyInfos.map(each => <GoogleProperties {...each} />)}

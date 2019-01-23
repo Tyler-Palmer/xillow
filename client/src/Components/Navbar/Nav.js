@@ -109,7 +109,6 @@ class Nav extends React.Component {
 
 
     toggleLogSign = () => {
-        console.log('togglelogsign works')
         this.setState(prevState => ({
             signupModal: !prevState.signupModal,
             loginModal: !prevState.signupModal,

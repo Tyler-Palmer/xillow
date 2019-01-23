@@ -23,9 +23,7 @@ class GoogleIcon extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return (
-            
             <div className="google-icon-container" style ={{display: this.props.address === null && "none"}} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>
                 {
                     this.props.house ? <FontAwesomeIcon className="home-icon" icon="home" style ={{ color: this.props._id === this.props.checkingRightNow && "darkCyan"}}/> :
