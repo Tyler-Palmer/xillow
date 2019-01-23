@@ -1,11 +1,18 @@
-.first-section {
+@import "../../ComponentStyles/base";
+
+.article__links{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+.first-section {
+    display: flex;
     margin-top: 50px;
     margin-right: 10px;
     color: whitesmoke;
     width: 33%;
-    justify-content: space-between;
+
 
     h4 {
         font-size: 17px;

@@ -38,13 +38,10 @@ class UserProvider extends Component {
                 //Pass on response so that it can be used again
                 return res
             }).catch(err => {
-                console.log(err)
-                console.log(typeof err)
                 this.setState({
                     authErr: err.response.data.message
                 })
             })
-        console.log('signed up')
     }
 
     login = userInfo => {
@@ -91,8 +88,6 @@ class UserProvider extends Component {
     }
 
     render() {
-        console.log(this.state.authErr)
-        console.log(this.state.token)
         return (
             <Provider value={{
                 signup: this.signup,

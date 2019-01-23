@@ -1,4 +1,5 @@
 @import "./new";
+@import "../../ComponentStyles/base";
 
 .xillow-news__container{
     font-family: "Roboto";
@@ -67,4 +68,8 @@
             }
         }
     }
+}
+
+@include tablet{
+    
 }
