@@ -15,7 +15,6 @@ const New = (props) => {
 
     const generateTool = () => {
         const randomNumber = Math.floor(Math.random() * 3)
-        console.log(randomNumber);
         if (randomNumber === 1) {
             return "home"
         }
@@ -28,6 +27,7 @@ const New = (props) => {
     }
 
     return (
+
         <div className={generateClass()} style={{ display: generateClass() === "section" && !props.urlToImage && "none" }}>
             <div
                 className="xillow__new-image"
@@ -35,23 +35,27 @@ const New = (props) => {
             </div>
             {generateClass() === "first-section" ?
                 <Fragment>
-                    <div>
-                        <p className="xillow__new-tools"><FontAwesomeIcon className="xillow__new-tool" icon={generateTool()} />{generateClass() === "section" && <p>/ Story <FontAwesomeIcon icon="pencil-alt" /> </p>}</p>
-                    </div>
-                    <h4 className="xillow__new-title">{props.title}</h4>
-                    <div className="xillow__new-source">
-                        <p><b style={{ color: "#0074e4" }}>{props.author}</b> {moment(props.publishedAt).format("lll")}</p>
-                    </div>
+                    <a href={`${props.url}`} className="article__links" style={{ color: generateClass() === "first-section" && "whiteSmoke" }} target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <p className="xillow__new-tools"><FontAwesomeIcon className="xillow__new-tool" icon={generateTool()} />{generateClass() === "section" && <p>/ Story <FontAwesomeIcon icon="pencil-alt" /> </p>}</p>
+                        </div>
+                        <h4 className="xillow__new-title">{props.title.length >= 70 ? props.title.slice(0, 70) + "[...]" : props.title}</h4>
+                        <div className="xillow__new-source">
+                            <p><b style={{ color: "#0074e4" }}>{props.author}</b> {moment(props.publishedAt).format("lll")}</p>
+                        </div>
+                    </a>
                 </Fragment>
                 :
                 <div className="xillow__new-small-container">
-                    <div>
-                        <p className="xillow__new-tools"><FontAwesomeIcon className="xillow__new-tool" icon={generateTool()} />{generateClass() === "section" && <p>/ Story <FontAwesomeIcon icon="pencil-alt" /> </p>}</p>
-                    </div>
-                    <h4 className="xillow__new-title">{props.title}</h4>
-                    <div className="xillow__new-source">
-                        <p><b style={{ color: "#0074e4" }}>{props.author}</b> {moment(props.publishedAt).format("lll")}</p>
-                    </div>
+                    <a href={`${props.url}`} className="article__links" target="_blank" rel="noopener noreferrer">
+                        <div>
+                            <p className="xillow__new-tools"><FontAwesomeIcon className="xillow__new-tool" icon={generateTool()} />{generateClass() === "section" && <p>/ Story <FontAwesomeIcon icon="pencil-alt" /> </p>}</p>
+                        </div>
+                        <h4 className="xillow__new-title">{props.title}</h4>
+                        <div className="xillow__new-source">
+                            <p><b style={{ color: "#0074e4" }}>{props.author}</b> {moment(props.publishedAt).format("lll")}</p>
+                        </div>
+                    </a>
                 </div>
             }
         </div>
