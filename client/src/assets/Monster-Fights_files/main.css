@@ -1,0 +1,79 @@
+
+h2 {
+    color: violet;
+    text-align: center;
+}
+
+.user-interaction {
+    display: flex;
+    justify-content: center;
+}
+
+#app .button-game {
+    display: flex;
+    justify-content: center;
+}
+
+.button-game button{
+    font-size: 17px;
+    border-radius: 5px;
+    background: hotpink;
+    color: white
+}
+
+.user-interaction button {
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+.user-interaction button:hover{
+    color: springgreen    
+}
+
+.user-interaction button:nth-child(4):hover{
+    color: red;
+}
+
+.user-and-enemy{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.user h2{
+    color: green
+}
+
+.enemy h2{
+    color: red
+}
+
+.health-bar-container{
+    width: 300px;
+    background: white;
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.health-bar{
+    width: 100%;
+    height:30px;
+    background: green;
+}
+
+.enemy-healh-bar{
+    width: 100%;
+    height: 30px;
+    background: red;
+}
+
+.conversation{
+    display: flex;
+    justify-content: center;
+}
+.dialouge{
+    border: 2px solid black;
+    width: 50%;
+}

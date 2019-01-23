@@ -1,5 +1,5 @@
 @import "./server-listing";
-
+@import "../../ComponentStyles/base";
 
 .listings__container {
     margin: 30px 0 30px 50px;
@@ -10,20 +10,23 @@
         display: flex;
         overflow: hidden;
     }
-    .is-selected-listing{
+
+    .is-selected-listing {
         animation: selected-listing 0.5 ease-in;
         transition: all 1s linear;
     }
+
     @keyframes selected-listing {
-        from{
+        from {
             transform: translateX(2000px)
         }
-        to{
+
+        to {
             transform: translateX(0)
         }
     }
 
-    .not-selected-listing{
+    .not-selected-listing {
         position: absolute;
         right: 100%;
         animation: not-selected-listing 0.5 ease-out;
@@ -31,36 +34,52 @@
     }
 
     @keyframes not-selected-listing {
-        from{
+        from {
             left: 0;
         }
-        to{
-           left: -100%
+
+        to {
+            left: -100%
         }
     }
 
-    .left-arrow-icons{
+    .left-arrow-icons {
         font-size: 40px;
         position: absolute;
-        left:0;
+        left: 0;
         bottom: 50%;
         top: 50%;
         cursor: pointer;
+        z-index: 100;
 
-        &:hover{
+        &:hover {
             color: darkcyan
         }
     }
-    .right-arrow-icons{
+
+    .right-arrow-icons {
         font-size: 40px;
         position: absolute;
         right: 0;
         bottom: 50%;
         top: 50%;
         cursor: pointer;
+        z-index: 100;
 
-        &:hover{
+        &:hover {
             color: darkcyan
         }
+    }
+}
+
+@include tablet {
+    .listings__container {
+        margin: 30px 0;
+    }
+}
+
+@include mobile {
+    .listings__container {
+        margin: 30px 0;
     }
 }
