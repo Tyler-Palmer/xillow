@@ -45,7 +45,7 @@ class GoogleMap extends Component {
             <Fragment>
                 {this.center.lat > 1 &&
                     <div className="google-map__container">
-                        <div style={{ height: "100vh", width: "50vw" }}>
+                        <div className = "google-map__allocation">
                             <GoogleMapReact
                                 bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEKEY }}
                                 defaultCenter={this.center}

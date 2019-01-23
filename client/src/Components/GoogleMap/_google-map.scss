@@ -1,37 +1,47 @@
 @import "./google-icon";
 @import "./google-property";
+@import "./base";
 
-.google-map__container{
-    display: flex;  
+.google-map__container {
+    display: flex;
     overflow: hidden;
     height: 100vh;
 
-    .google-property__detailed-container{
+    .google-map__allocation {
+        width: 50%;
+        height: 100vh
+    }
+
+    .google-property__detailed-container {
         display: flex;
         flex-direction: column;
         width: 50%;
         overflow-x: scroll;
 
-        .salt-lake-city{
+        .salt-lake-city {
             margin: 0 7px;
             padding: 5px;
-            p{
+
+            p {
                 margin-left: 5px;
                 font-weight: bolder;
                 font-size: 1.5em;
             }
         }
-        .google-property__container{
+
+        .google-property__container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             width: 100%;
         }
-        .pagination__section{
+
+        .pagination__section {
             display: flex;
             position: absolute;
             right: 0;
-            p{
+
+            p {
                 height: 20px;
                 width: 20px;
                 cursor: pointer;
@@ -40,6 +50,53 @@
                 margin-top: 13px;
 
             }
+        }
+    }
+}
+
+@include tablet {
+    .google-map__container {
+        height: 100%;
+        flex-direction: column;
+        overflow: visible;
+
+        .google-property__detailed-container {
+            width: 100%;
+        }
+
+        .google-map__allocation {
+            width: 100%;
+        }
+    }
+}
+
+@include mobile {
+    .google-map__container {
+        height: 100%;
+        flex-direction: column;
+        overflow: visible;
+
+        .google-property__detailed-container {
+            width: 100%;
+            
+            .google-property__container{
+                flex-direction: column;
+            }
+            
+            .salt-lake-city{
+                display: flex;
+                align-items: center;
+                height: 50px;
+                p{
+                    font-size: 15px;
+                    margin: 0;
+                }
+            }
+        }
+
+        .google-map__allocation {
+            width: 100%;
+            height: 50vh
         }
     }
 }

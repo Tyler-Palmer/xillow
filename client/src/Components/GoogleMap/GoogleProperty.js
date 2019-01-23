@@ -21,7 +21,7 @@ class GoogleProperty extends React.Component {
 
     render() {
         return (
-            <Link to ={`/search/${this.props._id}`} style ={{width: "48%"}}>
+            <Link to ={`/search/${this.props._id}`} className="property__link">
             <div className="google-property__small-container" onMouseOver={() => this.handleHoverImage(this.props._id)} onMouseLeave={this.handleLeaveImage}>
                 <div className="google-property__image" style={{ backgroundImage: `url(${this.props.listings.main_image})` }}>
                     <div className="google-property__wish-list">
