@@ -1,3 +1,5 @@
+@import "../../ComponentStyles/base";
+
 .each-house__container {
     display: flex;
     justify-content: center;
@@ -52,6 +54,84 @@
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
+        }
+    }
+}
+
+@include tablet {
+    .each-house__container {
+        margin: 100px 0;
+
+        .each-house__small-container {
+            .each-house__address-price-container {
+                p {
+                    font-size: 15px;
+                }
+
+                h4 {
+                    font-size: 17px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+            }
+            .each-house__images {
+                .each-house__image {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .each-house__container {
+        margin: 100px 0;
+
+        .each-house__small-container {
+
+            .each-house__address-price-container {
+                position: relative;
+
+                p {
+                    font-size: 11px;
+                }
+
+                h4 {
+                    font-size: 13px;
+                }
+
+                h3 {
+                    font-size: 17px;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 0;
+                }
+            }
+
+            .each-house__images {
+                .each-house__image {
+                    height: 250px;
+                }
+            }
+
+            .each-house__overview {
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .each-house__advantages {
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    font-size: 11px;
+                }
+            }
+
         }
     }
 }
