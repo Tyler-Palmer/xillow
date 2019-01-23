@@ -1,19 +1,19 @@
 @import "../../ComponentStyles/base";
 
+.property__link {
+    width: 48%
+}
 .google-property__small-container {
     display: flex;
     width: 100%;
     margin-bottom: 10px;
     color: whitesmoke;
 
-    &:hover{
+    &:hover {
         border: 2px solid darkcyan;
         cursor: pointer;
     }
 
-    .property__link{
-        width: 48%
-    }
     .google-property__image {
         width: 100%;
         height: 180px;
@@ -26,40 +26,46 @@
             display: flex;
             justify-content: flex-end;
 
-            h3{
+            h3 {
                 margin-right: 5px;
                 z-index: 100;
             }
-            h3:hover{
-                color:rgba(255, 0, 0, 0.7);
-                text-shadow: 0px 2px 2px #fff, 0 0 0 #000, 1px 4px 6px transparent; 
+
+            h3:hover {
+                color: rgba(255, 0, 0, 0.7);
+                text-shadow: 0px 2px 2px #fff, 0 0 0 #000, 1px 4px 6px transparent;
             }
         }
 
         .google-property__listing-area {
 
-            h3{
+            h3 {
                 margin: 0 5px;
-                font-size: 18px;    
+                font-size: 18px;
             }
-            p{
+
+            p {
                 margin: 0;
             }
-            .home-for-sale__circle{
+
+            .home-for-sale__circle {
                 color: crimson;
                 border: 2px solid white;
                 border-radius: 50%;
                 margin: 0 5px;
                 height: auto;
 
-            }            
-            .google-property__nessecity{
+            }
+
+            .google-property__nessecity {
                 display: flex;
                 justify-content: space-between;
             }
-            .google-property__address-container{
+
+            .google-property__address-container {
                 margin: 0 5px;
-                p{
+
+                p {
                     font-size: 14px;
                     font-weight: 100;
 
@@ -70,11 +76,9 @@
 
 }
 
-@include mobile{
-    .google-property__small-container{
-        .property__link{
-            width: 100%;
 
-        }
+@include mobile {
+    .property__link {
+        width: 100%;
     }
 }

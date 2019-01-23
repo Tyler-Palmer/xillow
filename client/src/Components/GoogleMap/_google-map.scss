@@ -82,14 +82,23 @@
             .google-property__container{
                 flex-direction: column;
             }
-            
+
             .salt-lake-city{
                 display: flex;
                 align-items: center;
                 height: 50px;
+                margin: 0;
                 p{
-                    font-size: 15px;
+                    font-size: 11px;
                     margin: 0;
+                    
+                }
+            }
+            .pagination__section{
+                p{
+                    font-size: 11px;
+                    margin-right: 0;
+                    margin-top: 17px;
                 }
             }
         }
