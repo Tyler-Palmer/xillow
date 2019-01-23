@@ -1,3 +1,33 @@
+$laptop: 1024px;
+$tablet: 768px;
+$mobileL: 425px;
+$mobileS: 320px;
+
+@mixin laptop {
+    @media (max-width: $laptop) and (min-width: $tablet) {
+        @content
+    }
+}
+
+;
+
+@mixin tablet {
+    @media (max-width: $tablet) and (min-width: $mobileL) {
+        @content
+    }
+}
+
+;
+
+@mixin mobile {
+    @media (max-width: $mobileL) and (min-width: $mobileS) {
+        @content
+    }
+}
+
+;
+
+
 $bg-cover: cover;
 $bg-center: center;
 $bg-no-repeat: no-repeat;
