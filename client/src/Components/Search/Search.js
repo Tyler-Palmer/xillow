@@ -16,5 +16,3 @@ class Search extends React.Component {
 
 export default withSearchData(Search);
 
-// 95 Chapel St. 
-// Wyoming, MI 49509

@@ -46,6 +46,5 @@ class GoogleProperty extends React.Component {
         )
     }
 }
-// pagination.map((each, id) => <p onClick={() => this.handlePagination(id + 1)}>{each}</p>)
 
 export default withHouses(withUser(withServerListing(GoogleProperty)));
