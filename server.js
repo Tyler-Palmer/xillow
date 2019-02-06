@@ -3,7 +3,7 @@ const app = express()
 require("dotenv").config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-const PORT = process.env.PORT || 8000
+const port = process.env.PORT || 8000
 const expressJwt = require("express-jwt")
 const path = require("path")
 
@@ -40,6 +40,6 @@ app.get("*", (req,res) => {
 })
 
 // Server listen
-app.listen(PORT, () => {
+app.listen(port, () => {
     console.log("I'm running!")
 })
