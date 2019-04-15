@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import ServerListing from "./ServerListing"
 import { withServerListing } from "../../Context/ServerListingContext"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,6 +15,7 @@ class ServerListings extends React.Component {
     }
     componentDidMount() {
         this.props.getNewListingData()
+        console.log('trying to get listing data')
     }
 
     handleSwitchingListing = (id) => {
@@ -64,23 +65,23 @@ class ServerListings extends React.Component {
 
 
                 <div className={`listings__small-container ${this.state.currentListing === 1 ? "is-selected-listing" : "not-selected-listing"}`}>
-                    {this.props.listingsData.slice().splice(0.5).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(0.5).map((each, index) => <ServerListing key={index} {...each} />)}
                 </div>
 
 
                 <div className={`listings__small-container ${this.state.currentListing === 2 ? "is-selected-listing" : "not-selected-listing"}`}>
-                    {this.props.listingsData.slice().splice(5.10).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(5.10).map((each, index) => <ServerListing key={index} {...each} />)}
                 </div>
 
 
 
                 <div className={`listings__small-container ${this.state.currentListing === 3 ? "is-selected-listing" : "not-selected-listing"}`}>
-                    {this.props.listingsData.slice().splice(10.15).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(10.15).map((each, index) => <ServerListing key={index} {...each} />)}
                 </div>
 
 
                 <div className={`listings__small-container ${this.state.currentListing === 4 ? "is-selected-listing" : "not-selected-listing"}`}>
-                    {this.props.listingsData.slice().splice(15.20).map(each => <ServerListing {...each} />)}
+                    {this.props.listingsData.slice().splice(15.20).map((each, index) => <ServerListing key={index} {...each} />)}
                 </div>
 
 

@@ -27,6 +27,7 @@ class NearbyData extends React.Component {
             latitude: geocoding.data.results[0].geometry.location.lat,
             nearbyInfos: data.data.results
         })
+        console.log(data)
     }
 
 

@@ -20,7 +20,7 @@ class Footer extends React.Component {
         return (
             <div>
                 <div className="sub-footer__container">
-                    {this.state.list.map(each => <SubFooter {...each} />)}
+                    {this.state.list.map((each, index) => <SubFooter key={index} {...each} />)}
                 </div>
                 <div className="footer-infos__container">
                     <ul className="xillow-group__container">

@@ -4,6 +4,8 @@ const ListingSchema = require("../models/listingServer")
 const ListingCollection = require("../models/listingCollection")
 const data = require("../data/UpdatedHouses.json")
 
+
+//Get all
 listingServerRouter.get("/", (req, res, next) => {
     ListingCollection.find((err, data) => {
         if (err) {
@@ -14,6 +16,7 @@ listingServerRouter.get("/", (req, res, next) => {
     })
 })
 
+//Get all listings
 
 listingServerRouter.get("/listings", (req, res, next) =>{
     ListingCollection.find()

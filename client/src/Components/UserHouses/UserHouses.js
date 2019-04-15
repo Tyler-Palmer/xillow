@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { withHouses } from '../../Context/SavedHouseProvider'
 import { withUser } from '../../Context/UserProvider'
-import { Link } from 'react-router-dom'
 import House from '../UserHouses/House'
 
 class UserHouses extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             isChecking: false,
             houseToDelete: ""
@@ -25,21 +24,6 @@ class UserHouses extends Component{
         }
     }
 
-    // handleMouseOver = () => {
-    //     this.setState({
-    //         isChecking: true,
-    //         houseToDelete: this.props.savedHouses._id
-    //     })
-    //     console.log("Mouse in")
-    // }
-
-    // handleMouseLeave = () =>{
-    //     this.setState({
-    //         isChecking: false
-    //     })
-    //     console.log("Mouse out")
-    // }
-
     render(){
         console.log(this.props.savedHouses)
         console.log(this.props.houseToDelete)
@@ -54,9 +38,10 @@ class UserHouses extends Component{
 
                 <div className ="saved-container_small">
                 {
-                    this.props.savedHouses.map(house => <House 
+                    this.props.savedHouses.map((house,index) => <House 
                             houseToDelete = {this.state.houseToDelete}
-                            _id={house._id}
+                            _id= {house._id}
+                            key={index}
                             {...house.listings} />)
                 }
                 </div>

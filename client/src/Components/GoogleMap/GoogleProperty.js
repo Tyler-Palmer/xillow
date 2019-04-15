@@ -6,10 +6,6 @@ import { withHouses } from '../../Context/SavedHouseProvider'
 import { Link } from "react-router-dom"
 
 class GoogleProperty extends React.Component {
-    constructor() {
-        super()
-
-    }
 
     handleHoverImage = (id) => {
         this.props.handleHoverImage(id)

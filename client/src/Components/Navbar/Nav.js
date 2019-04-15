@@ -150,7 +150,7 @@ class Nav extends React.Component {
                                     ""
                                     :
                                     <li className="nav-item" onClick={this.openSignupModal}>
-                                        <a href="#">Signup</a>
+                                        <a>Signup</a>
                                     </li>
                             }
                             {
@@ -158,24 +158,25 @@ class Nav extends React.Component {
                                     ""
                                     :
                                     <li className="nav-item" onClick={this.openLoginModal}>
-                                        <a href="#">Login</a>
+                                        <a>Login</a>
                                     </li>
                             }
                             {
                                 this.props.token ?
-                                <li className="nav-item">
-                                    <Link to='/savedHouses/'>Saved</Link>
-                                    </li>
-                                    :
-                                    ""
-                            }
-                            {
-                                this.props.token ?
-                                    <li className="nav-item" onClick={this.props.logOut}>
-                                        <a href="#">Log out</a>
-                                    </li>
-                                    :
-                                    ""
+                            <Fragment>
+                                <li>My Zillow
+                                    <ul>
+                                        <li className="nav-item">
+                                            <Link to='/savedHouses/'>Saved</Link>
+                                        </li>
+                                        <li className="nav-item" onClick={this.props.logOut}>
+                                            <a href="#">Log out</a>
+                                        </li> 
+                                    </ul>
+                                </li>    
+                            </Fragment>
+                            :
+                            "" 
                             }
                         </ul>
                     </div>
@@ -229,6 +230,13 @@ class Nav extends React.Component {
                                     {this.state.isCurious === "myXillow" &&
                                         <ul>
                                             <li onClick={this.openLoginModal}>Login</li>
+                                        </ul>
+                                    }
+                                    {this.state.isCurious ==="myXillow" &&
+                                        <ul>
+                                            <li>
+                                                <Link to='/savedHouses/'>Saved</Link>
+                                            </li>
                                         </ul>
                                     }
                                 </Fragment>

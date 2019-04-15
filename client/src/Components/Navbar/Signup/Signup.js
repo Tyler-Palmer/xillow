@@ -95,7 +95,6 @@ class Signup extends Component {
                         toggleLogSign={this.props.toggleLogSign}
                         signIn={this.signIn}
                         signInButton={this.state.signInButton}
-                        isAuthenticated={this.props.isAuthenticated}
                     />
                     :
                     <SignupForm
@@ -107,7 +106,6 @@ class Signup extends Component {
                         toggleLogSign={this.props.toggleLogSign}
                         signIn={this.signIn}
                         signInButton={this.state.signInButton}
-                        isAuthenticated={this.props.isAuthenticated}
                     />
                 }
                 {

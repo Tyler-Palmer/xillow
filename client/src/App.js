@@ -6,10 +6,8 @@ import { Switch, Route } from "react-router-dom"
 import Nav from "./Components/Navbar/Nav"
 import Search from "./Components/Search/Search"
 import ServerListings from "./Components/ServerListing/ServerListings"
-import Mortgage from "./Components/Mortgage/Mortgage";
 import News from "./Components/News/News"
 import UserHouses from "./Components/UserHouses/UserHouses"
-import House from "./Components/UserHouses/House";
 import EachHouse from "./Components/EachHouse/EachHouse";
 
 
@@ -59,7 +57,6 @@ class App extends React.Component {
                     />
                     <Route path="/search/:id" component={EachHouse} />
                     <Route path="/search" component={Search} />
-                    <Route path="/mortgage" component={Mortgage} />
                     <Route path="/news" component={News} />
                     <Route path="/savedHouses" render={props => < UserHouses {...props} />} />
                 </Switch>

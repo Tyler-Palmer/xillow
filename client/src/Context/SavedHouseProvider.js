@@ -54,8 +54,9 @@ class SavedHouseProvider extends Component {
         
     }
 
-    removeHouse = (userID, houseID) => {
-        console.log("remove house here")
+    removeHouse = (userID, houseID, event) => {
+        event.preventDefault()
+        console.log(`removed house: ${houseID}here`)
         axios.put(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({
                     savedHouses: res.data.savedHouse

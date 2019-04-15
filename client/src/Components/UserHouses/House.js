@@ -1,15 +1,26 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withUser } from '../../Context/UserProvider'
 import { withHouses } from '../../Context/SavedHouseProvider'
 
 class House extends Component {
+    constructor(props){
+        super(props)
+        this.state ={
+            user: this.props.user._id,
+            house: this.props._id
+        }
+    }
+
+    removeHouseHandler = (userid, houseid) => {
+        this.props.removeHouse(userid, houseid)
+    }
 
     componentDidMount() {
         this.props.getUserHouses(this.props.user._id)
         // console.log(this.props)
         // console.log(this.props.user)
-    }
+    } 
 
     render() {
         console.log(this.props)
@@ -20,7 +31,7 @@ class House extends Component {
             <div className="listing__container">
 
                  <div className="listing__image" style={{ backgroundImage: `url(${this.props.main_image})` }}>
-                    <FontAwesomeIcon className="hearts" icon="heart" onClick={() => this.props.removeHouse(this.props.user._id, this.props._id)}/>
+                    <FontAwesomeIcon className="hearts" icon="heart" onClick={this.removeHouseHandler(this.props.user._id, this.props._id)}/>
                 </div>
                 <div className="listing__texts">
                     <p>{this.props.price}</p>

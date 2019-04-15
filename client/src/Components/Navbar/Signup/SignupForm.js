@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SignupForm = (props) => {
-    const { handleChange, handleSubmit, btnText, email, password, toggleLogSign, signInButton, signIn, isAuthenticated} = props
+    const { handleChange, handleSubmit, btnText, email, password, toggleLogSign, signInButton, signIn} = props
     return (
         <form className="signup-form" onSubmit={handleSubmit}>
             <div className="form-group">

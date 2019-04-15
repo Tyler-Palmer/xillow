@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import axios from "axios"
 
 const { Provider, Consumer } = React.createContext()
@@ -20,6 +20,7 @@ class ServerListingContext extends React.Component {
                 listingsData: res.data,
             })
         })
+        console.log('getNewListingData sent this')
     }
 
     getListingData = (id) => {
