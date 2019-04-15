@@ -26,7 +26,7 @@ app.use("/savedhouse", require("./routes/SavedHouse"))
 //For Deployment
 //process.env.MONGODB.URI ||
 
-mongoose.connect(process.env.MONGODB.URI || "mongodb://localhost:27017/myapp", {useNewUrlParser: true }, () => {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/myapp", {useNewUrlParser: true }, () => {
     console.log("The database is connected, Guv'nor!")
 })
 
