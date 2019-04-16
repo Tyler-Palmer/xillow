@@ -45,7 +45,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="background">
                 <Nav currentWidth={this.state.currentWidth} alreadyChange={this.state.alredyChange} />
                 <Switch>
                     <Route exact path="/" render={props =>
