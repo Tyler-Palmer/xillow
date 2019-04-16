@@ -4,12 +4,17 @@ import { withUser } from '../../Context/UserProvider'
 import { withHouses } from '../../Context/SavedHouseProvider'
 
 class House extends Component {
-    constructor(props){
-        super(props)
-        this.state ={
-            user: this.props.user._id,
-            house: this.props._id
-        }
+    // constructor(props){
+    //     super(props)
+    //     this.state ={
+    //         user: this.props.user._id,
+    //         house: this.props._id
+    //     }
+    // }
+
+    selectedHouseHandler = () => {
+        console.log(`hit selectedHouseHandler: $`)
+        this.props.getSelectedHouse(this.props.houseID)
     }
 
     removeHouseHandler = (userid, houseid) => {
@@ -24,14 +29,14 @@ class House extends Component {
 
     render() {
         console.log(this.props)
-        console.log(this.props._id)
-        console.log(this.props.user._id)
+        console.log(this.props.userID)
+        console.log(this.props.houseID)
         return (
                
             <div className="listing__container">
 
-                 <div className="listing__image" style={{ backgroundImage: `url(${this.props.main_image})` }}>
-                    <FontAwesomeIcon className="hearts" icon="heart" onClick={this.removeHouseHandler(this.props.user._id, this.props._id)}/>
+                 <div className="listing__image" style={{ backgroundImage: `url(${this.props.main_image})` }} onClick={this.selectedHouseHandler}>
+                    <FontAwesomeIcon className="hearts" icon="heart" onClick={this.removeHouseHandler}/>
                 </div>
                 <div className="listing__texts">
                     <p>{this.props.price}</p>

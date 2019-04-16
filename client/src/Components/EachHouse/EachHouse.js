@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import { withHouses } from '../../Context/SavedHouseProvider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class EachHouse extends React.Component {
@@ -8,6 +9,11 @@ class EachHouse extends React.Component {
         this.state = {
             houseData: {}
         }
+    }
+
+    componentWillReceiveProps(nextProps){
+        console.log(`EachHouse: ${nextProps}`)
+        // this.props.getSelectedHouse()
     }
 
     componentDidMount() {
@@ -62,4 +68,4 @@ class EachHouse extends React.Component {
 }
 
 
-export default EachHouse
+export default withHouses(EachHouse)

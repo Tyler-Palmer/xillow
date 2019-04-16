@@ -58,7 +58,7 @@ class App extends React.Component {
                     <Route path="/search/:id" component={EachHouse} />
                     <Route path="/search" component={Search} />
                     <Route path="/news" component={News} />
-                    <Route path="/savedHouses" render={props => < UserHouses {...props} />} />
+                    <Route path="/savedHouses" render={props => <UserHouses {...props} />} />
                 </Switch>
                 <Footer currentWidth={this.state.currentWidth} />
             </div>

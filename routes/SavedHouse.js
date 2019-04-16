@@ -41,7 +41,6 @@ SavedHouseRouter.get('/:userID/:productID', (req, res, next) => {
     })
 })
 
-
 //Post one to db (nonspecific)
 
 SavedHouseRouter.post('/', (req, res, next) => {
