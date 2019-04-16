@@ -12,7 +12,7 @@ class ServerListingContext extends React.Component {
             checkingRightNow: "",
             pages: undefined,
             searchPage: true,
-            modalIsOpen: false,
+            modalIsOpen: true,
         }
     }
 

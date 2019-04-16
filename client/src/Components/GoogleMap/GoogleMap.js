@@ -39,7 +39,7 @@ class GoogleMap extends Component {
     }
 
     componentWillUnmount() {
-        this.props.toggleSearch();
+        // this.props.toggleSearch();
     }
 
     render() {
