@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { withHouses } from '../../Context/SavedHouseProvider'
 import { withUser } from '../../Context/UserProvider'
 import House from '../UserHouses/House'
 import { Link } from 'react-router-dom'
+import SubSearch from './../Search/SubSearch'
 
 class UserHouses extends Component{
     constructor(props){
@@ -28,6 +29,8 @@ class UserHouses extends Component{
     render(){
 
         return(
+            <Fragment>
+            <SubSearch />
             <div className ="saved-container">
                 <h2>Welcome @{this.props.user.email}</h2>
                 { this.props.numberSaved > 0 &&
@@ -49,6 +52,7 @@ class UserHouses extends Component{
                 </div>
                 }
             </div>
+            </Fragment>
         )
     }
 }

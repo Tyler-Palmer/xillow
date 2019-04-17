@@ -16,7 +16,7 @@
         margin-left: 150px;
 
         form {
-            width: 40vw;
+            width: 50vw;
 
             input {
                 width: 100%;
@@ -33,6 +33,7 @@
                 height: 50px;
                 font-size: 20px;
                 background: white;
+                border-radius: 5px;
             }
         }
     }
@@ -47,10 +48,9 @@
         .sub-search-container-small {
             grid-row: 2;
             grid-column: 1/-1;
-            margin: 0;
-
+            margin-left: 5%;
             form {
-                width: 100%;
+                width: 70%;
 
                 input {
                     width: 100%;
@@ -59,6 +59,10 @@
                     padding: 10px 10px;
                     border-radius: 5px;
                     z-index: 100;
+                }
+
+                button {
+                    right: 31%;
                 }
             }
         }
@@ -74,10 +78,9 @@
         .sub-search-container-small {
             grid-row: 2;
             grid-column: 1/-1;
-            margin: 0;
 
             form {
-                width: 100%;
+                width: 90%;
 
                 input {
                     width: 100%;
@@ -91,6 +94,7 @@
                 button{
                     font-size: 15px;
                     height: 40px;
+                    right: 20%;
                 }
             }
         }
