@@ -6,13 +6,15 @@ const mongoose = require('mongoose')
 //process.env.PORT || 
 const PORT = process.env.PORT || 8000
 const expressJwt = require("express-jwt")
-const path = require("path")
+
+// const path = require("path")
 
 
 //Middleware
 app.use(express.json({limit: '200mb'}))
 app.use(morgan('dev'))
-app.use(express.static(path.join(__dirname, "client", "build")))
+
+// app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 app.use("/api", expressJwt({secret: process.env.SECRET}))
@@ -40,9 +42,9 @@ app.use((err,req, res,next) => {
 })
 
 //For Deployment
-app.get("*", (req,res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"))
-})
+// app.get("*", (req,res) => {
+//     res.sendFile(path.join(__dirname, "client", "build", "index.html"))
+// })
 
 // Server listen
 app.listen(PORT, () => {

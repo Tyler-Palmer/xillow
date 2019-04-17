@@ -30,8 +30,9 @@ class SavedHouseProvider extends Component {
     }
 
     //Get One House
-    getSelectedHouse = (userID, houseID ) => {
-        axios.get(`/savedhouse/${userID}/${houseID}`).then(res => {
+    getSelectedHouse = (houseID) => {
+        console.log(`getSelectedHouse fired in context`)
+        axios.get(`/listing/listings/${houseID}`).then(res => {
             this.setState({
                 house: res.savedHouse
             })
@@ -54,8 +55,7 @@ class SavedHouseProvider extends Component {
         
     }
 
-    removeHouse = (userID, houseID, event) => {
-        event.preventDefault()
+    removeHouse = (userID, houseID) => {
         console.log(`removed house: ${houseID}here`)
         axios.put(`/savedhouse/${userID}/${houseID}`).then(res => {
             this.setState({

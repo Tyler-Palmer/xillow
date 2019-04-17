@@ -4,7 +4,7 @@ import { withUser } from '../../Context/UserProvider'
 import { withHouses } from '../../Context/SavedHouseProvider'
 
 const ServerListing = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className="listing__container">
             <div className="listing__image" style={{ backgroundImage: `url(${props.listings.main_image})` }}>

@@ -10,8 +10,24 @@ class ServerListingContext extends React.Component {
             listingsData: [],
             newListingData: [],
             checkingRightNow: "",
-            pages: undefined
+            pages: undefined,
+            searchPage: true,
+            modalIsOpen: true,
         }
+    }
+
+    toggleModal = () => {
+        this.setState(prevState => ({
+            modalIsOpen: !prevState.modalIsOpen
+        }))
+    }
+
+    toggleSearch = () => {
+        this.setState(prevState =>({
+            searchPage: !prevState.searchPage
+        }))
+        console.log('toggleSearch hit')
+        console.log(`${this.state.searchPage}`)
     }
 
     getNewListingData = () => {
@@ -81,6 +97,10 @@ class ServerListingContext extends React.Component {
                 handleLeaveImage: this.handleLeaveImage,
                 handleHoverImage: this.handleHoverImage,
                 getNewListingData: this.getNewListingData,
+                toggleSearch: this.toggleSearch,
+                toggleModal: this.toggleModal,
+                modalIsOpen: this.state.modalIsOpen,
+                searchPage: this.state.searchPage
 
             }}>
                 {this.props.children}

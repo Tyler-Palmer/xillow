@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withHouses } from '../../Context/SavedHouseProvider'
 import { withUser } from '../../Context/UserProvider'
 import House from '../UserHouses/House'
+import { Link } from 'react-router-dom'
 
 class UserHouses extends Component{
     constructor(props){
@@ -12,11 +13,6 @@ class UserHouses extends Component{
         }
     }
 
-    componentDidMount(){
-        this.props.getUserHouses(this.props.user._id)
-        this.props.numberHousesSaved()
-    }
-
     componentWillReceiveProps(nextProps){
         console.log(nextProps)
         if(nextProps.user._id && nextProps.savedHouses.length === 0){
@@ -24,9 +20,13 @@ class UserHouses extends Component{
         }
     }
 
+    componentDidMount(){
+        this.props.getUserHouses(this.props.user._id)
+        this.props.numberHousesSaved()
+    }
+
     render(){
-        console.log(this.props.savedHouses)
-        console.log(this.props.houseToDelete)
+
         return(
             <div className ="saved-container">
                 <h2>Welcome @{this.props.user.email}</h2>
@@ -38,11 +38,13 @@ class UserHouses extends Component{
 
                 <div className ="saved-container_small">
                 {
-                    this.props.savedHouses.map((house,index) => <House 
+                    this.props.savedHouses.map((house,index) => <Link to={`/search/${house._id}`}><House
+                            getSelectedHouse ={this.props.getSelectedHouse} 
                             houseToDelete = {this.state.houseToDelete}
-                            _id= {house._id}
+                            userID = {this.props.user._id}
+                            houseID= {house._id}
                             key={index}
-                            {...house.listings} />)
+                            {...house.listings} /></Link>)
                 }
                 </div>
                 }
