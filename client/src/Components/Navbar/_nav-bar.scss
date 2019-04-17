@@ -51,8 +51,8 @@
     }
 
     .nav-container__list-container {
-        width: 50%;
-        margin-left: 100px;
+        width: 60%;
+        margin-left: 120px;
 
         .nav-container__list-small-container {
             display: flex;
@@ -67,6 +67,10 @@
                 a {
                     color: black;
                 }
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
             }
         }
     }
