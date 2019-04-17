@@ -7,39 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
 
-const customStyle = {
-    overlay: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(255, 255, 255, 0.75)",
-        zIndex: 150,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    },
-    content: {
-        position: "absolute",
-        border: "1px solid #ccc",
-        background: "#fff",
-        overflow: "auto",
-        WebkitOverflowScrolling: "touch",
-        borderRadius: "4px",
-        outline: "none",
-        padding: "20px",
-        height: "90vh",
-        width: "90vw",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    }
-};
-
-Modal.defaultStyles.overlay.backgroundColor = "rgba(1,1,1,0.6)";
-Modal.defaultStyles.overlay.zIndex = 100;
-
 class EachHouse extends React.Component {
     constructor() {
         super();
