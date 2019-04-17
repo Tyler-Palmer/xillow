@@ -17,8 +17,8 @@ class House extends Component {
         this.props.getSelectedHouse(this.props.houseID)
     }
 
-    removeHouseHandler = (userid, houseid) => {
-        this.props.removeHouse(userid, houseid)
+    removeHouseHandler = () => {
+        this.props.removeHouse(this.props.userID, this.props.houseID)
     }
 
     componentDidMount() {

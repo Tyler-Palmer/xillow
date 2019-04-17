@@ -26,8 +26,7 @@ class UserHouses extends Component{
     }
 
     render(){
-        console.log(this.props.savedHouses)
-        console.log(this.props.houseToDelete)
+
         return(
             <div className ="saved-container">
                 <h2>Welcome @{this.props.user.email}</h2>
